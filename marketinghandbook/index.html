@@ -21,6 +21,8 @@
   .site-header-title{font-family:var(--font-heading);font-weight:300;font-size:var(--text-sm);color:var(--bm-warmgrey);margin-left:var(--lg);letter-spacing:.06em;text-transform:uppercase;padding-left:var(--lg);border-left:1px solid rgba(255,255,255,.2);}
   .layout{display:flex;min-height:calc(100vh - 56px);max-width:1280px;margin:0 auto;}
   .sidebar{width:272px;flex-shrink:0;background:var(--bm-white);border-right:1px solid var(--bm-warmgrey);padding:var(--lg) 0 var(--2xl);position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;}
+  .subcat-row td{background:#faf9fb;color:var(--bm-lilacgrey);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;padding:6px 14px;border:none;}
+  .nav-subcat{font-family:var(--font-heading);font-weight:400;font-size:10px;color:var(--bm-lilacgrey);letter-spacing:.08em;text-transform:uppercase;padding:8px var(--md) 2px 20px;opacity:.75;}
   .nav-section-label{font-family:var(--font-heading);font-weight:500;font-size:var(--text-xs);color:var(--bm-lilacgrey);letter-spacing:.12em;text-transform:uppercase;padding:var(--lg) var(--md) var(--xs);margin-top:var(--sm);}
   .nav-item{display:block;padding:7px var(--md);font-size:var(--text-sm);color:var(--bm-bluegrey);text-decoration:none;border-left:3px solid transparent;cursor:pointer;line-height:1.4;}
   .nav-item:hover{background:var(--bm-offwhite);color:var(--bm-blue);}
@@ -145,13 +147,11 @@
   <nav class="top-nav">
     <a onclick="showSection('home')">Action plan</a>
     <a onclick="navCat('')">Registry</a>
-    <a onclick="navCat('Role and operating rhythm')">Planning</a>
-    <a onclick="navCat('Stakeholders, approvals and governance')">Governance</a>
     <a onclick="navCat('Content and communications')">Content</a>
-    <a onclick="navCat('Events and forums')">Events</a>
-    <a onclick="navCat('Website, digital and data')">Website</a>
+    <a onclick="navCat('Events')">Events</a>
     <a onclick="navCat('Brand, collateral and templates')">Brand</a>
-    <a onclick="navCat('AI, automation and systems')">AI</a>
+    <a onclick="navCat('Admin, data and tools')">Admin & tools</a>
+    <a onclick="navCat('Operations')">Operations</a>
     <a onclick="navCat('Quick reference scenarios')">Quick ref</a>
   </nav>
 </header>
@@ -162,104 +162,117 @@
   <a class="nav-item active" onclick="showSection('home')">Overview / action plan</a>
   <a class="nav-item" onclick="showSection('registry')">Process registry</a>
 
-  <div class="nav-section-label">Role and operating rhythm</div>
+  <div class="nav-section-label">Content and communications</div>
+  <div class="nav-subcat">Admin and PR</div>
+  <a class="nav-item" onclick="showSection('p016')">PR and media management</a>
+  <div class="nav-subcat">News</div>
+  <a class="nav-item" onclick="showSection('p012')">News sweep</a>
+  <a class="nav-item" onclick="showSection('p013')">Portfolio news</a>
+  <a class="nav-item" onclick="showSection('p014')">Bowmark news</a>
+  <a class="nav-item" onclick="showSection('p015')">Charity / soft news</a>
+  <div class="nav-subcat">Press releases</div>
+  <a class="nav-item" onclick="showSection('p017')">Deal-related press release checklist</a>
+  <a class="nav-item" onclick="showSection('p018')">New investment announcement</a>
+  <a class="nav-item" onclick="showSection('p019')">Exit announcement</a>
+  <a class="nav-item" onclick="showSection('p020')">New joiner announcement</a>
+  <a class="nav-item" onclick="showSection('p021')">Promotion announcement</a>
+  <a class="nav-item" onclick="showSection('p022')">Investment update</a>
+  <div class="nav-subcat">Website content</div>
+  <a class="nav-item" onclick="showSection('p046')">Website investment pages</a>
+  <a class="nav-item" onclick="showSection('p047')">Website team pages</a>
+  <a class="nav-item" onclick="showSection('p048')">Website page edits</a>
+  <a class="nav-item" onclick="showSection('p045')">Website CMS management</a>
+  <div class="nav-subcat">Insights</div>
+  <a class="nav-item" onclick="showSection('p025')">Event insight production</a>
+  <a class="nav-item" onclick="showSection('p024')">Thought leadership process</a>
+  <div class="nav-subcat">LinkedIn</div>
+  <a class="nav-item" onclick="showSection('p026')">LinkedIn posts</a>
+  <div class="nav-subcat">Campaigns and reporting</div>
+  <a class="nav-item" onclick="showSection('p027')">Awards submissions</a>
+  <a class="nav-item" onclick="showSection('p028')">Annual highlights</a>
+  <a class="nav-item" onclick="showSection('p029')">Alumni newsletter</a>
+  <div class="nav-subcat">Crisis</div>
+  <a class="nav-item" onclick="showSection('p023')">Crisis / sensitive communications</a>
+  <div class="nav-section-label">Events</div>
+  <div class="nav-subcat">Origination events</div>
+  <a class="nav-item" onclick="showSection('p030')">Flagship dinner</a>
+  <a class="nav-item" onclick="showSection('p031')">Roundtable dinner</a>
+  <a class="nav-item" onclick="showSection('p032')">Drinks reception</a>
+  <a class="nav-item" onclick="showSection('p033')">Smaller sector-focused dinner</a>
+  <div class="nav-subcat">Portfolio and value creation</div>
+  <a class="nav-item" onclick="showSection('p034')">Portfolio and value creation forums</a>
+  <a class="nav-item" onclick="showSection('p044')">Event follow-up</a>
+  <div class="nav-subcat">AGM</div>
+  <a class="nav-item" onclick="showSection('p043')">AGM support</a>
+  <div class="nav-subcat">Other events</div>
+  <a class="nav-item" onclick="showSection('p040')">Internal events</a>
+  <a class="nav-item" onclick="showSection('p041')">Hospitality</a>
+  <a class="nav-item" onclick="showSection('p042')">Third-party / sponsored events</a>
+  <div class="nav-subcat">Event tools and templates</div>
+  <a class="nav-item" onclick="showSection('p064')">Event invitation templates</a>
+  <a class="nav-item" onclick="showSection('p051')">DealCloud event campaigns</a>
+  <div class="nav-section-label">Brand, collateral and templates</div>
+  <div class="nav-subcat">Design and requests</div>
+  <a class="nav-item" onclick="showSection('p066')">Ad hoc team support and design requests</a>
+  <div class="nav-subcat">Brand system</div>
+  <a class="nav-item" onclick="showSection('p058')">Brand guidelines management</a>
+  <a class="nav-item" onclick="showSection('p069')">Branded merchandise</a>
+  <a class="nav-item" onclick="showSection('p059')">Tone of voice governance</a>
+  <div class="nav-subcat">Presentations</div>
+  <a class="nav-item" onclick="showSection('p060')">PowerPoint template and UpSlide system</a>
+  <a class="nav-item" onclick="showSection('p061')">Slide library management</a>
+  <a class="nav-item" onclick="showSection('p079')">Management presentation update</a>
+  <div class="nav-subcat">Assets</div>
+  <a class="nav-item" onclick="showSection('p067')">Asset library management</a>
+  <a class="nav-item" onclick="showSection('p068')">Photography and headshots</a>
+  <div class="nav-subcat">Templates</div>
+  <a class="nav-item" onclick="showSection('p063')">Email and calendar hold templates</a>
+  <a class="nav-item" onclick="showSection('p065')">Flyers and one-pagers</a>
+  <a class="nav-item" onclick="showSection('p062')">Word and Excel templates</a>
+  <div class="nav-subcat">Data upkeep</div>
+  <a class="nav-item" onclick="showSection('p080')">Data bible update</a>
+  <div class="nav-section-label">Admin, data and tools</div>
+  <div class="nav-subcat">Data</div>
+  <a class="nav-item" onclick="showSection('p081')">Glassdoor management</a>
+  <a class="nav-item" onclick="showSection('p053')">Google Analytics reporting</a>
+  <a class="nav-item" onclick="showSection('p054')">LinkedIn admin and analytics</a>
+  <div class="nav-subcat">Web apps and tools</div>
+  <a class="nav-item" onclick="showSection('p056')">WeTransfer use</a>
+  <a class="nav-item" onclick="showSection('p055')">Vimeo management</a>
+  <a class="nav-item" onclick="showSection('p074')">RSS feed and monitoring</a>
+  <a class="nav-item" onclick="showSection('p052')">Dispatch email campaigns</a>
+  <div class="nav-subcat">AI tools</div>
+  <a class="nav-item" onclick="showSection('p070')">Artemis GPT / copyediting workflow</a>
+  <a class="nav-item" onclick="showSection('p071')">Brand guardian GPT / skill</a>
+  <a class="nav-item" onclick="showSection('p072')">Claude / ChatGPT usage protocol</a>
+  <div class="nav-subcat">Automation</div>
+  <a class="nav-item" onclick="showSection('p073')">GitHub / technical workflows</a>
+  <a class="nav-item" onclick="showSection('p075')">Zapier / automation workflows</a>
+  <div class="nav-subcat">Website systems</div>
+  <a class="nav-item" onclick="showSection('p050')">Hosting and dev support</a>
+  <a class="nav-item" onclick="showSection('p049')">Website sweep</a>
+  <a class="nav-item" onclick="showSection('p057')">SEO audit and improvement</a>
+  <div class="nav-subcat">Access</div>
+  <a class="nav-item" onclick="showSection('p082')">Passwords and access handover</a>
+  <div class="nav-section-label">Operations</div>
+  <div class="nav-subcat">Planning</div>
   <a class="nav-item" onclick="showSection('p001')">Annual marketing planning</a>
   <a class="nav-item" onclick="showSection('p002')">Marketing strategy framework</a>
   <a class="nav-item" onclick="showSection('p003')">Team planning and workstream management</a>
   <a class="nav-item" onclick="showSection('p004')">Marketing reporting and KPIs</a>
   <a class="nav-item" onclick="showSection('p005')">Budget framework and supplier renewals</a>
   <a class="nav-item" onclick="showSection('p006')">Marketing information audit</a>
-
-  <div class="nav-section-label">Stakeholders, approvals and governance</div>
+  <div class="nav-subcat">Approvals and governance</div>
   <a class="nav-item" onclick="showSection('p007')">Senior approval process</a>
   <a class="nav-item" onclick="showSection('p008')">Deal team approval management</a>
   <a class="nav-item" onclick="showSection('p009')">Portfolio marketing contact management</a>
   <a class="nav-item" onclick="showSection('p010')">Supplier and agency management</a>
   <a class="nav-item" onclick="showSection('p011')">Approval escalation for sensitive comms</a>
-
-  <div class="nav-section-label">Content and communications</div>
-  <a class="nav-item" onclick="showSection('p012')">News sweep</a>
-  <a class="nav-item" onclick="showSection('p013')">Portfolio news</a>
-  <a class="nav-item" onclick="showSection('p014')">Bowmark news</a>
-  <a class="nav-item" onclick="showSection('p015')">Charity / soft news</a>
-  <a class="nav-item" onclick="showSection('p016')">PR and media management</a>
-  <a class="nav-item" onclick="showSection('p017')">Press release process</a>
-  <a class="nav-item" onclick="showSection('p018')">New investment announcement</a>
-  <a class="nav-item" onclick="showSection('p019')">Exit announcement</a>
-  <a class="nav-item" onclick="showSection('p020')">New joiner announcement</a>
-  <a class="nav-item" onclick="showSection('p021')">Promotion announcement</a>
-  <a class="nav-item" onclick="showSection('p022')">Investment update</a>
-  <a class="nav-item" onclick="showSection('p023')">Crisis / sensitive communications</a>
-  <a class="nav-item" onclick="showSection('p024')">Thought leadership process</a>
-  <a class="nav-item" onclick="showSection('p025')">Event insight production</a>
-  <a class="nav-item" onclick="showSection('p026')">LinkedIn posts</a>
-  <a class="nav-item" onclick="showSection('p027')">Awards submissions</a>
-  <a class="nav-item" onclick="showSection('p028')">Annual highlights</a>
-  <a class="nav-item" onclick="showSection('p029')">Alumni newsletter</a>
-
-  <div class="nav-section-label">Events and forums</div>
-  <a class="nav-item" onclick="showSection('p030')">Flagship dinner</a>
-  <a class="nav-item" onclick="showSection('p031')">Roundtable dinner</a>
-  <a class="nav-item" onclick="showSection('p032')">Drinks reception</a>
-  <a class="nav-item" onclick="showSection('p033')">Smaller sector-focused dinner</a>
-  <a class="nav-item" onclick="showSection('p034')">CFO Forum</a>
-  <a class="nav-item" onclick="showSection('p035')">CRO Forum</a>
-  <a class="nav-item" onclick="showSection('p036')">Tech Forum</a>
-  <a class="nav-item" onclick="showSection('p037')">HR Forum</a>
-  <a class="nav-item" onclick="showSection('p038')">Carbon Forum</a>
-  <a class="nav-item" onclick="showSection('p039')">People Forum</a>
-  <a class="nav-item" onclick="showSection('p040')">Internal events</a>
-  <a class="nav-item" onclick="showSection('p041')">Hospitality</a>
-  <a class="nav-item" onclick="showSection('p042')">Third-party / sponsored events</a>
-  <a class="nav-item" onclick="showSection('p043')">AGM support</a>
-  <a class="nav-item" onclick="showSection('p044')">Event follow-up</a>
-
-  <div class="nav-section-label">Website, digital and data</div>
-  <a class="nav-item" onclick="showSection('p045')">Website CMS management</a>
-  <a class="nav-item" onclick="showSection('p046')">Website investment pages</a>
-  <a class="nav-item" onclick="showSection('p047')">Website team pages</a>
-  <a class="nav-item" onclick="showSection('p048')">Website page edits</a>
-  <a class="nav-item" onclick="showSection('p049')">Website sweep</a>
-  <a class="nav-item" onclick="showSection('p050')">Hosting and dev support</a>
-  <a class="nav-item" onclick="showSection('p051')">DealCloud event campaigns</a>
-  <a class="nav-item" onclick="showSection('p052')">Dispatch email campaigns</a>
-  <a class="nav-item" onclick="showSection('p053')">Google Analytics reporting</a>
-  <a class="nav-item" onclick="showSection('p054')">LinkedIn admin and analytics</a>
-  <a class="nav-item" onclick="showSection('p055')">Vimeo management</a>
-  <a class="nav-item" onclick="showSection('p056')">WeTransfer use</a>
-  <a class="nav-item" onclick="showSection('p057')">SEO audit and improvement</a>
-
-  <div class="nav-section-label">Brand, collateral and templates</div>
-  <a class="nav-item" onclick="showSection('p058')">Brand guidelines management</a>
-  <a class="nav-item" onclick="showSection('p059')">Tone of voice governance</a>
-  <a class="nav-item" onclick="showSection('p060')">PowerPoint template and UpSlide system</a>
-  <a class="nav-item" onclick="showSection('p061')">Slide library management</a>
-  <a class="nav-item" onclick="showSection('p062')">Word and Excel templates</a>
-  <a class="nav-item" onclick="showSection('p063')">Email and calendar hold templates</a>
-  <a class="nav-item" onclick="showSection('p064')">Event invitation templates</a>
-  <a class="nav-item" onclick="showSection('p065')">Flyers and one-pagers</a>
-  <a class="nav-item" onclick="showSection('p066')">Ad hoc team support and design requests</a>
-  <a class="nav-item" onclick="showSection('p067')">Asset library management</a>
-  <a class="nav-item" onclick="showSection('p068')">Photography and headshots</a>
-  <a class="nav-item" onclick="showSection('p069')">Branded merchandise</a>
-
-  <div class="nav-section-label">AI, automation and systems</div>
-  <a class="nav-item" onclick="showSection('p070')">Artemis GPT / copyediting workflow</a>
-  <a class="nav-item" onclick="showSection('p071')">Brand guardian GPT / skill</a>
-  <a class="nav-item" onclick="showSection('p072')">Claude / ChatGPT usage protocol</a>
-  <a class="nav-item" onclick="showSection('p073')">GitHub / technical workflows</a>
-  <a class="nav-item" onclick="showSection('p074')">RSS feed and monitoring</a>
-  <a class="nav-item" onclick="showSection('p075')">Zapier / automation workflows</a>
-
   <div class="nav-section-label">Quick reference scenarios</div>
   <a class="nav-item" onclick="showSection('p076')">Portfolio company acquisition</a>
   <a class="nav-item" onclick="showSection('p077')">Bowmarker speaks on a panel</a>
-  <a class="nav-item" onclick="showSection('p078')">Logo, headshot or boilerplate request</a>
-  <a class="nav-item" onclick="showSection('p079')">Management presentation update</a>
-  <a class="nav-item" onclick="showSection('p080')">Data bible update</a>
-  <a class="nav-item" onclick="showSection('p081')">Glassdoor management</a>
-  <a class="nav-item" onclick="showSection('p082')">Passwords and access handover</a>
-</nav>
+  <a class="nav-item" onclick="showSection('p078')">Someone asks for a logo, headshot or boilerplate</a>
+  </nav>
 <main class="main">
 <!-- HOME -->
 <div id="home" class="section active">
@@ -270,7 +283,7 @@
     <span><strong>Version</strong> 1.1</span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> 82</span>
-    <span><strong>Last updated</strong> 6 August 2026 – build 1.6</span>
+    <span><strong>Last updated</strong> 6 August 2026 – build 2.5</span>
   </div>
 
   <h3 class="sub-title">Progress</h3>
@@ -347,13 +360,11 @@
   <p class="body-text">82 processes across six categories. Click any row to open that process page.</p>
   <div class="cat-bar" id="cat-bar">
     <button class="cat-btn active" data-cat="" onclick="setCat(this)">All categories</button>
-    <button class="cat-btn" data-cat="Role and operating rhythm" onclick="setCat(this)">Role and rhythm</button>
-    <button class="cat-btn" data-cat="Stakeholders, approvals and governance" onclick="setCat(this)">Stakeholders and governance</button>
     <button class="cat-btn" data-cat="Content and communications" onclick="setCat(this)">Content and comms</button>
-    <button class="cat-btn" data-cat="Events and forums" onclick="setCat(this)">Events and forums</button>
-    <button class="cat-btn" data-cat="Website, digital and data" onclick="setCat(this)">Website and digital</button>
+    <button class="cat-btn" data-cat="Events" onclick="setCat(this)">Events</button>
     <button class="cat-btn" data-cat="Brand, collateral and templates" onclick="setCat(this)">Brand and templates</button>
-    <button class="cat-btn" data-cat="AI, automation and systems" onclick="setCat(this)">AI and systems</button>
+    <button class="cat-btn" data-cat="Admin, data and tools" onclick="setCat(this)">Admin, data and tools</button>
+    <button class="cat-btn" data-cat="Operations" onclick="setCat(this)">Operations</button>
     <button class="cat-btn" data-cat="Quick reference scenarios" onclick="setCat(this)">Quick reference</button>
   </div>
   <div class="filter-bar">
@@ -1447,6 +1458,20 @@
   <h3 class="sub-title">Tagging people and companies</h3>
   <p class="sop-para">Use @ immediately before the name. If the correct person does not appear, continue typing more of their name, try placing the @ before another part of their name, or add the company they work for. After inserting a tag, press backspace once to shorten the displayed name while retaining the underlying tag.</p>
   <div class="callout"><strong>Tagging sensitivities.</strong> Speakers at events from intermediaries may cause friction with other advisers – confirm if sensitive. Attendees of origination events should never be visible within imagery, copy or tagging.</div>
+  <h3 class="sub-title">Reposting to the Bowmark page</h3>
+  <p class="sop-para">A repost shares an existing LinkedIn post (for example a portfolio company announcement or an award) from the Bowmark Capital page, optionally with a short framing comment. It is a lighter-touch alternative to writing an original post, and a useful format when Charles has had his fill of full write-ups – how often it is used depends on how busy he is.</p>
+  <ul class="sop-list">
+    <li>Open the original post on LinkedIn</li>
+    <li>Click Repost, then select <strong>Repost with your thoughts</strong> to add a comment (as opposed to a plain repost)</li>
+    <li>Change the posting identity from your personal name to <strong>Bowmark</strong> – it defaults to your own profile, so this must be switched</li>
+    <li>Add a short framing line – e.g. "CubeLogic has been named a market disruptor" – keeping any award reference lower-case and understated</li>
+    <li>Tag the relevant company or person in the comment (see tagging guidance below)</li>
+    <li>If the framing line is very short, keep it inline rather than as a separate paragraph – a standalone one-liner can look oddly isolated above the reposted card</li>
+    <li>Reread the wording, then publish</li>
+  </ul>
+  <div class="callout"><strong>Getting a clean post link.</strong> To share the published post, use the three-dot (•••) menu on the post and choose <strong>Copy link to post</strong> rather than copying the URL from the browser bar – it opens more reliably and cleanly. When pasting a link over existing hyperlinked text (e.g. into an email or subject line), always test the link afterwards, as pasting can carry over the old hyperlink rather than the new one.</div>
+  <h3 class="sub-title">Timing</h3>
+  <p class="sop-para">Post between <strong>10am and 2pm</strong> – 10am and 2pm specifically are strong slots – and ideally <strong>Tuesday to Thursday</strong>. Monday also works. Avoid Fridays, when posts tend not to get seen. This applies to reposts as much as original posts.</p>
   <h3 class="sub-title">Final checks before publication</h3>
   <div class="toolbar"><button class="btn" onclick="resetAllChecks('p026')">Reset checklist</button></div>
   <ul class="checklist"><li><input type="checkbox" id="li1" onchange="toggleCheck(this)"><label for="li1">The final approved wording has been used</label><span class="owner">Marketing</span></li>
@@ -1657,20 +1682,13 @@
 <li><input type="checkbox" id="fo15" onchange="toggleCheck(this)"><label for="fo15">Capture lessons learned within 1–2 weeks</label><span class="owner">Marketing</span></li></ul>
 </div>
 
-<!-- Redirect stubs for ->
-<div id="p035" class="section"><a class="back-link" onclick="showSection('registry')">← Back to registry</a><p class="eyebrow">Standard operating procedure</p><h2 class="section-title">CRO Forum</h2><div class="callout">This forum follows the same 12-phase SOP as the CFO Forum. <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p034')">View the Portfolio and value creation forums SOP →</a></div></div>
-<div id="p036" class="section"><a class="back-link" onclick="showSection('registry')">← Back to registry</a><p class="eyebrow">Standard operating procedure</p><h2 class="section-title">Tech Forum</h2><div class="callout">This forum follows the same 12-phase SOP as the CFO Forum. <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p034')">View the Portfolio and value creation forums SOP →</a></div></div>
-<div id="p037" class="section"><a class="back-link" onclick="showSection('registry')">← Back to registry</a><p class="eyebrow">Standard operating procedure</p><h2 class="section-title">HR Forum</h2><div class="callout">This forum follows the same 12-phase SOP as the CFO Forum. <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p034')">View the Portfolio and value creation forums SOP →</a></div></div>
-<div id="p038" class="section"><a class="back-link" onclick="showSection('registry')">← Back to registry</a><p class="eyebrow">Standard operating procedure</p><h2 class="section-title">Carbon Forum</h2><div class="callout">This forum follows the same 12-phase SOP as the CFO Forum. <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p034')">View the Portfolio and value creation forums SOP →</a></div></div>
-<div id="p039" class="section"><a class="back-link" onclick="showSection('registry')">← Back to registry</a><p class="eyebrow">Standard operating procedure</p><h2 class="section-title">People Forum</h2><div class="callout">This forum follows the same 12-phase SOP as the CFO Forum. <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p034')">View the Portfolio and value creation forums SOP →</a></div></div>
-
 <!-- P045 WEBSITE CMS MANAGEMENT -->
 <div id="p045" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">Website CMS management</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Website, digital and data</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Published website update</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ongoing</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -2356,7 +2374,7 @@
   <p class="eyebrow">Quick reference scenario</p>
   <h2 class="section-title">Management presentation update</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Quick reference scenarios</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Updated management presentation slides</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc / periodic</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -2515,7 +2533,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">Event invitation templates</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Invitation copy and design</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -2618,7 +2636,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">Website investment pages</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Website, digital and data</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Updated investment page</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -2867,7 +2885,7 @@
   <p class="eyebrow">Quick reference scenario</p>
   <h2 class="section-title">Data bible update</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Quick reference scenarios</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Current data bible and synced systems</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc / periodic</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -2894,10 +2912,10 @@
 <!-- P001 ANNUAL MARKETING PLANNING -->
 <div id="p001" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Role and operating rhythm</p>
+  <p class="eyebrow">Operations</p>
   <h2 class="section-title">Annual marketing planning</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Role and operating rhythm</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Operations</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Prioritised marketing plan and calendar</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Annual</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -2945,10 +2963,10 @@
 <!-- P002 MARKETING STRATEGY FRAMEWORK -->
 <div id="p002" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Role and operating rhythm</p>
+  <p class="eyebrow">Operations</p>
   <h2 class="section-title">Marketing strategy framework</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Role and operating rhythm</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Operations</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Objectives, pillars, KPIs and activity principles</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Annual / ad hoc</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -3000,10 +3018,10 @@
 <!-- P004 MARKETING REPORTING AND KPIS -->
 <div id="p004" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Role and operating rhythm</p>
+  <p class="eyebrow">Operations</p>
   <h2 class="section-title">Marketing reporting and KPIs</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Role and operating rhythm</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Operations</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Engagement, campaign and activity reporting</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Monthly / quarterly</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
@@ -3065,7 +3083,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">AGM support</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events and forums</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">AGM presentation, video and materials</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Annual</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -3261,10 +3279,10 @@
 <!-- P073 GITHUB EVENT PAGES -->
 <div id="p073" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">AI, automation and systems</p>
+  <p class="eyebrow">Admin, data and tools</p>
   <h2 class="section-title">GitHub / technical workflows – event pages</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">AI, automation and systems</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Updated live event holding page</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Per event</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
@@ -3465,7 +3483,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">Origination events – dinners and drinks</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events and forums</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Covers</span><span class="sop-meta-value">Flagship dinner, roundtable dinner, drinks reception, sector-focused dinner</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Delivered event, attendee list, follow-up and insight where relevant</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -3564,7 +3582,7 @@
 <!-- P031 ROUNDTABLE STUB -->
 <div id="p031" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Events and forums</p>
+  <p class="eyebrow">Events</p>
   <h2 class="section-title">Roundtable dinner</h2>
   <p class="body-text">Roundtable dinners follow the standard origination events process – 47 tasks across 11 phases from initial meeting to post-event reporting.</p>
   <div class="callout"><strong>Full process.</strong> See the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events – dinners and drinks SOP →</a> for the complete checklist, roles and timings.</div>
@@ -3573,7 +3591,7 @@
 <!-- P032 DRINKS STUB -->
 <div id="p032" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Events and forums</p>
+  <p class="eyebrow">Events</p>
   <h2 class="section-title">Drinks reception</h2>
   <p class="body-text">Drinks receptions follow the standard origination events process – 47 tasks across 11 phases from initial meeting to post-event reporting.</p>
   <div class="callout"><strong>Full process.</strong> See the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events – dinners and drinks SOP →</a> for the complete checklist, roles and timings.</div>
@@ -3582,7 +3600,7 @@
 <!-- P033 SECTOR DINNER STUB -->
 <div id="p033" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Events and forums</p>
+  <p class="eyebrow">Events</p>
   <h2 class="section-title">Smaller sector-focused dinner</h2>
   <p class="body-text">Smaller sector-focused dinners follow the standard origination events process – 47 tasks across 11 phases from initial meeting to post-event reporting.</p>
   <div class="callout"><strong>Full process.</strong> See the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events – dinners and drinks SOP →</a> for the complete checklist, roles and timings.</div>
@@ -3594,7 +3612,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">DealCloud event campaigns</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Website, digital and data</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Target lists and campaign records</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Owner</span><span class="sop-meta-value">Lauren</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -3634,7 +3652,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">Team planning and workstream management</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Role and operating rhythm</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Operations</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Weekly workstreams email and resourcing plan</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Weekly</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -3671,6 +3689,16 @@
 <li><input type="checkbox" id="tp7" onchange="toggleCheck(this)"><label for="tp7">Send to Charles and Tom ahead of the weekly meeting</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="tp8" onchange="toggleCheck(this)"><label for="tp8">Run the weekly marketing catch-up; capture agreed actions</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="tp9" onchange="toggleCheck(this)"><label for="tp9">Carry agreed actions into the Marketing Notebook and next week’s plan</label><span class="owner">Maya</span></li></ul>
+  
+  <h3 class="sub-title">Activities time guide – resourcing benchmarks</h3>
+  <p class="sop-para">Planning estimates for how long typical marketing activities take and how the hours split across roles. Use these when scoping the weekly plan and the annual calendar – they are benchmarks, not fixed budgets, and the hour ranges reflect natural variation in scope. Roles: Manager (Mgr), Assistant (Ast), Writer (Wr), Designer (Des), Events Assistant (EA), Other.</p>
+  <div style="overflow-x:auto">
+  <table class="roles"><thead><tr><th>Category</th><th>Task type</th><th>Hours</th><th>Mgr</th><th>Ast</th><th>Wr</th><th>Des</th><th>EA</th><th>Other</th></tr></thead><tbody>
+  <tr><td><strong>Content & Thought Leadership</strong></td><td>Quick, light-touch content</td><td>1–2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>Standard content</td><td>3–5</td><td>0</td><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>In-depth content</td><td>6–10</td><td>0</td><td>8</td><td>2</td><td>0</td><td>0</td><td>0</td></tr><tr><td><strong>Events & Planning</strong></td><td>Simple event</td><td>5–10</td><td>3</td><td>5</td><td>0</td><td>0</td><td>2</td><td>0</td></tr><tr><td></td><td>Complex event</td><td>15–30</td><td>6</td><td>10</td><td>0</td><td>0</td><td>4</td><td>10</td></tr><tr><td><strong>Brand & Creative</strong></td><td>Simple design task</td><td>2–4</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td></tr><tr><td></td><td>Standard creative</td><td>5–10</td><td>0</td><td>0</td><td>0</td><td>6</td><td>2</td><td>0</td></tr><tr><td></td><td>Complex design</td><td>15–30</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td></tr><tr><td><strong>Marketing Operations & Systems</strong></td><td>Simple update</td><td>1–3</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>Moderate build</td><td>5–10</td><td>2</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td></tr><tr><td></td><td>Large-scale operations</td><td>20–50</td><td>6</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td></tr><tr><td><strong>Strategy & Planning</strong></td><td>Quick review & updates</td><td>2–5</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>Standard planning</td><td>10–20</td><td>8</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>High-level strategic work</td><td>30–50</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+  </tbody></table>
+  </div>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Source: Bowmark Marketing Plan workbook, Activities Time Guide sheet. Hours are per activity, split by role.</p>
+
   <div class="callout"><strong>Related.</strong> The activity dashboard and KPI mapping live in <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p004')">Marketing reporting and KPIs →</a>; the annual view is set in <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p001')">Annual marketing planning →</a>.</div>
 </div>
 
@@ -3680,7 +3708,7 @@
   <p class="eyebrow">Standard operating procedure</p>
   <h2 class="section-title">Website team pages</h2>
   <div class="sop-meta">
-    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Website, digital and data</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Updated team bios</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc / per completion</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
@@ -3833,6 +3861,99 @@
   <div class="callout"><strong>Related.</strong> Inserting slides and assets from the library into a new deck is covered in <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p060')">PowerPoint template and UpSlide system →</a></div>
 </div>
 
+<!-- P076 QUICK REF -->
+<div id="p076" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Quick reference scenario</p>
+  <h2 class="section-title">A portfolio company makes an acquisition</h2>
+  <p class="sop-para">A bolt-on or acquisition by one of our portfolio companies. Marketing supports the announcement and updates the record.</p>
+  <div class="callout"><strong>This is a pointer checklist.</strong> Each step links to the full SOP that owns it – work through them in order. Nothing here duplicates SOP content.</div>
+  <h3 class="sub-title">What to do</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p076')">Reset checklist</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="sc761" onchange="toggleCheck(this)"><label for="sc761">Confirm the facts and exact company name spelling with the deal team <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p013')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc762" onchange="toggleCheck(this)"><label for="sc762">Decide the treatment: portfolio news item and/or LinkedIn post <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p013')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc763" onchange="toggleCheck(this)"><label for="sc763">Draft and fact-check the news item <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p013')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc764" onchange="toggleCheck(this)"><label for="sc764">Prepare the LinkedIn post or repost <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p026')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc765" onchange="toggleCheck(this)"><label for="sc765">Obtain sign-off (Charles; deal team rep) <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p008')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc766" onchange="toggleCheck(this)"><label for="sc766">Publish website news, then LinkedIn <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p045')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc767" onchange="toggleCheck(this)"><label for="sc767">Update the data bible / bolt-ons record <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
+  </ul>
+</div>
+
+<!-- P077 QUICK REF -->
+<div id="p077" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Quick reference scenario</p>
+  <h2 class="section-title">A Bowmarker is speaking on a panel</h2>
+  <p class="sop-para">Someone from the team has a speaking slot at an external event and needs supporting materials and promotion.</p>
+  <div class="callout"><strong>This is a pointer checklist.</strong> Each step links to the full SOP that owns it – work through them in order. Nothing here duplicates SOP content.</div>
+  <h3 class="sub-title">What to do</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p077')">Reset checklist</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="sc771" onchange="toggleCheck(this)"><label for="sc771">Gather event details, date and what the organiser needs (bio, headshot, logo) <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p078')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc772" onchange="toggleCheck(this)"><label for="sc772">Provide the approved bio and headshot from the asset library <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p067')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc773" onchange="toggleCheck(this)"><label for="sc773">Supply the logo / boilerplate if requested <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p078')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc774" onchange="toggleCheck(this)"><label for="sc774">Confirm any tagging sensitivities (intermediaries, other advisers) <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p026')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc775" onchange="toggleCheck(this)"><label for="sc775">Prepare a LinkedIn post or repost promoting the appearance, if agreed <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p026')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc776" onchange="toggleCheck(this)"><label for="sc776">Check whether the appearance warrants a Bowmark news item <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p014')">→ open SOP</a></label></li>
+  </ul>
+</div>
+
+<!-- P078 QUICK REF -->
+<div id="p078" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Quick reference scenario</p>
+  <h2 class="section-title">Someone asks for a logo, headshot or boilerplate</h2>
+  <p class="sop-para">A common ad hoc request, internally or from a portfolio company / adviser. Point them to the approved assets – never send unapproved versions.</p>
+  <div class="callout"><strong>This is a pointer checklist.</strong> Each step links to the full SOP that owns it – work through them in order. Nothing here duplicates SOP content.</div>
+  <h3 class="sub-title">What to do</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p078')">Reset checklist</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="sc781" onchange="toggleCheck(this)"><label for="sc781">Identify exactly what is needed: logo (which format), headshot, or boilerplate text <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p067')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc782" onchange="toggleCheck(this)"><label for="sc782">Logo and imagery: pull the approved file from the asset library <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p067')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc783" onchange="toggleCheck(this)"><label for="sc783">Boilerplate: use the current approved wording (H/Advisors add it to press releases themselves) <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p017')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc784" onchange="toggleCheck(this)"><label for="sc784">Headshots: supply the approved team photograph <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p068')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc785" onchange="toggleCheck(this)"><label for="sc785">If a bespoke or new asset is needed, treat it as an ad hoc design request <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p066')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc786" onchange="toggleCheck(this)"><label for="sc786">Passwords / account access needed? Reference the register, never share credentials in copy <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p082')">→ open SOP</a></label></li>
+  </ul>
+</div>
+
+<!-- P081 QUICK REF -->
+<div id="p081" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Quick reference scenario</p>
+  <h2 class="section-title">Glassdoor needs updating</h2>
+  <p class="sop-para">Glassdoor tracking is updated on completion day for new and realised investments, and reviewed periodically.</p>
+  <div class="callout"><strong>This is a pointer checklist.</strong> Each step links to the full SOP that owns it – work through them in order. Nothing here duplicates SOP content.</div>
+  <h3 class="sub-title">What to do</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p081')">Reset checklist</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="sc811" onchange="toggleCheck(this)"><label for="sc811">Trigger check: new investment or realised investment on completion day <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc812" onchange="toggleCheck(this)"><label for="sc812">Update the Glassdoor tracking file via the Excel macro <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc813" onchange="toggleCheck(this)"><label for="sc813">Reflect any headcount / entity changes flowing from the deal <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc814" onchange="toggleCheck(this)"><label for="sc814">Record the update in the data bible <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
+  </ul>
+</div>
+
+<!-- P082 QUICK REF -->
+<div id="p082" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Quick reference scenario</p>
+  <h2 class="section-title">Passwords and access are needed / handed over</h2>
+  <p class="sop-para">Access to marketing tools is governed through the password register – credentials are never stored in the handbook or in copy.</p>
+  <div class="callout"><strong>This is a pointer checklist.</strong> Each step links to the full SOP that owns it – work through them in order. Nothing here duplicates SOP content.</div>
+  <h3 class="sub-title">What to do</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p082')">Reset checklist</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="sc821" onchange="toggleCheck(this)"><label for="sc821">Locate the credential in Sites and password.xlsx – never in the handbook</label></li>
+<li><input type="checkbox" id="sc822" onchange="toggleCheck(this)"><label for="sc822">For a new joiner / leaver, update access across the relevant systems <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc823" onchange="toggleCheck(this)"><label for="sc823">CMS access: add or remove members / editors / admins as appropriate <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p045')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc824" onchange="toggleCheck(this)"><label for="sc824">For admin changes, log in via the dedicated Bowmark admin account rather than promoting an individual <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p045')">→ open SOP</a></label></li>
+<li><input type="checkbox" id="sc825" onchange="toggleCheck(this)"><label for="sc825">Update the register once access has changed</label></li>
+  </ul>
+</div>
+
 <!-- GENERIC PLACEHOLDER -->
 <div id="process-placeholder" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -3848,92 +3969,87 @@
 </div>
 <script>
 const processes = [
-  {id:'P001',cat:'Role and operating rhythm',name:'Annual marketing planning',notes:'',output:'Prioritised marketing plan and calendar',freq:'Annual',pri:'P1',status:'partial',fmt:'Category playbook section',owner:'',trained:'',signoff:'Charles; Tom Shelford',sid:'p001'},
-  {id:'P002',cat:'Role and operating rhythm',name:'Marketing strategy framework',notes:'',output:'Objectives, pillars, KPIs and activity principles',freq:'Annual / ad hoc',pri:'P1',status:'partial',fmt:'Category playbook section',owner:'',trained:'',signoff:'Charles; Tom Shelford',sid:'p002'},
-  {id:'P003',cat:'Role and operating rhythm',name:'Team planning and workstream management',notes:'Weekly workstreams email format recovered from Outlook',output:'Prioritised task list and resource plan',freq:'Weekly',pri:'P1',status:'live',fmt:'Checklist + tracker',owner:'',trained:'',signoff:'Marketing internal',sid:'p003'},
-  {id:'P004',cat:'Role and operating rhythm',name:'Marketing reporting and KPIs',notes:'Annual digital comms report structure added',output:'Engagement, campaign and activity reporting',freq:'Monthly / quarterly',pri:'P2',status:'partial',fmt:'SOP + dashboard notes',owner:'',trained:'',signoff:'Charles; Tom Shelford',sid:'p004'},
-  {id:'P005',cat:'Role and operating rhythm',name:'Budget framework and supplier renewals',notes:'',output:'Budget plan, approvals and renewal decisions',freq:'Annual / ad hoc',pri:'P1',status:'needed',fmt:'SOP + supplier register',owner:'',trained:'',signoff:'Charles; Tom Shelford',sid:'p005'},
-  {id:'P006',cat:'Role and operating rhythm',name:'Marketing information audit',notes:'',output:'Correct team, investment and marketing data',freq:'Quarterly / ad hoc',pri:'P2',status:'partial',fmt:'Checklist',owner:'',trained:'',signoff:'Marketing internal',sid:'p006'},
-  {id:'P007',cat:'Stakeholders, approvals and governance',name:'Senior approval process',notes:'',output:'Approved final copy / asset',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Decision tree',owner:'',trained:'Xuti, Lauren, Meagan, Alice',signoff:'Charles',sid:'p007'},
-  {id:'P008',cat:'Stakeholders, approvals and governance',name:'Deal team approval management',notes:'',output:'Approved announcement, news item or case study',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'SOP section',owner:'',trained:'',signoff:'Deal Team Rep',sid:'p008'},
-  {id:'P009',cat:'Stakeholders, approvals and governance',name:'Portfolio marketing contact management',notes:'',output:'Updated contact map and communication route',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Stakeholder guide section',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sid:'p009'},
-  {id:'P010',cat:'Stakeholders, approvals and governance',name:'Supplier and agency management',notes:'',output:'Supplier brief, delivery and feedback loop',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Supplier register + SOP',owner:'Xuti',trained:'Xuti, Meagan, Mollie',signoff:'Marketing internal',sid:'p010'},
-  {id:'P011',cat:'Stakeholders, approvals and governance',name:'Approval escalation for sensitive comms',notes:'',output:'Controlled escalation and approved response',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Decision tree',owner:'',trained:'',signoff:'Charles',sid:'p011'},
-  {id:'P012',cat:'Content and communications',name:'News sweep',notes:'Portfolio and Bowmark news selection',output:'Shortlist of items for website or LinkedIn',freq:'Weekly / ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p012'},
-  {id:'P013',cat:'Content and communications',name:'Portfolio news',notes:'',output:'Website news item and LinkedIn post',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p013'},
-  {id:'P014',cat:'Content and communications',name:'Bowmark news',notes:'',output:'Website / LinkedIn / internal post',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p014'},
-  {id:'P015',cat:'Content and communications',name:'Charity / soft news',notes:'',output:'LinkedIn / website post',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p015'},
-  {id:'P016',cat:'Content and communications',name:'PR and media management',notes:'H/Advisors and media inbox',output:'Approved media response or PR output',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP + escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sid:'p016'},
-  {id:'P017',cat:'Content and communications',name:'Deal-related press release checklist',notes:'General process',output:'Approved press release',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sid:'p017'},
-  {id:'P018',cat:'Content and communications',name:'New investment announcement',notes:'Press release, website, LinkedIn, data updates',output:'Announcement package and updated systems',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP + checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sid:'p018'},
-  {id:'P019',cat:'Content and communications',name:'Exit announcement',notes:'',output:'Press release, website and LinkedIn update',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sid:'p019'},
-  {id:'P020',cat:'Content and communications',name:'New joiner announcement',notes:'',output:'Website bio, LinkedIn post, internal comms',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p020'},
-  {id:'P021',cat:'Content and communications',name:'Promotion announcement',notes:'',output:'Website / LinkedIn / internal copy',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p021'},
-  {id:'P022',cat:'Content and communications',name:'Investment update',notes:'',output:'Website / LinkedIn / press item',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sid:'p022'},
-  {id:'P023',cat:'Content and communications',name:'Crisis / sensitive communications',notes:'',output:'Agreed response or holding line',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Standalone SOP / escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sid:'p023'},
-  {id:'P024',cat:'Content and communications',name:'Thought leadership process',notes:'Sector and event-led insights',output:'Website insight and LinkedIn PDF / post',freq:'Several per year',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sid:'p024'},
-  {id:'P025',cat:'Content and communications',name:'Event insight production',notes:'Post-event refinement, survey results and quotes',output:'Published insight and social assets',freq:'Several per year',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sid:'p025'},
-  {id:'P026',cat:'Content and communications',name:'LinkedIn posts',notes:'Firm, portfolio, event and people posts',output:'LinkedIn post copy and asset',freq:'Weekly / ad hoc',pri:'P1',status:'live',fmt:'Checklist + copy principles',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p026'},
-  {id:'P027',cat:'Content and communications',name:'Awards submissions',notes:'Mergermarket, Real Deals and others',output:'Submission and supporting material',freq:'Annual / ad hoc',pri:'P2',status:'live',fmt:'SOP + awards calendar',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sid:'p027'},
-  {id:'P028',cat:'Content and communications',name:'Annual highlights',notes:'',output:'Annual highlights content / campaign',freq:'Annual',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Charles',sid:'p028'},
-  {id:'P029',cat:'Content and communications',name:'Alumni newsletter',notes:'',output:'Email campaign',freq:'Periodic',pri:'P3',status:'partial',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan, Alice',signoff:'Charles',sid:'p029'},
-  {id:'P030',cat:'Events and forums',name:'Flagship dinner',notes:'Full origination events SOP – 47 tasks, 11 phases',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p030'},
-  {id:'P031',cat:'Events and forums',name:'Roundtable dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p031'},
-  {id:'P032',cat:'Events and forums',name:'Drinks reception',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p032'},
-  {id:'P033',cat:'Events and forums',name:'Smaller sector-focused dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna, Meagan',signoff:'Event Sponsor',sid:'p033'},
-  {id:'P034',cat:'Events and forums',name:'CFO Forum',notes:'Portfolio / value creation forum',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p034'},
-  {id:'P035',cat:'Events and forums',name:'CRO Forum',notes:'Portfolio / value creation forum',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p035'},
-  {id:'P036',cat:'Events and forums',name:'Tech Forum',notes:'Portfolio / value creation forum',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p036'},
-  {id:'P037',cat:'Events and forums',name:'HR Forum',notes:'Portfolio / value creation forum',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p037'},
-  {id:'P038',cat:'Events and forums',name:'Carbon Forum',notes:'Portfolio / value creation forum',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p038'},
-  {id:'P039',cat:'Events and forums',name:'People Forum',notes:'Portfolio / value creation forum',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sid:'p039'},
-  {id:'P040',cat:'Events and forums',name:'Internal events',notes:'',output:'Internal event communications and assets',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Lauren, Anna, Mollie',signoff:'Marketing internal',sid:'p040'},
-  {id:'P041',cat:'Events and forums',name:'Hospitality',notes:'',output:'Invitations, guest management and logistics',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Mollie',signoff:'Marketing internal',sid:'p041'},
-  {id:'P042',cat:'Events and forums',name:'Third-party / sponsored events',notes:'Megabuyte and ad hoc',output:'Sponsorship, guest management and comms',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'SOP section',owner:'Lauren',trained:'Lauren, Meagan, Alice',signoff:'Charles',sid:'p042'},
-  {id:'P043',cat:'Events and forums',name:'AGM support',notes:'Presentation, video and event collateral',output:'AGM presentation, video and materials',freq:'Annual',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Charles',sid:'p043'},
-  {id:'P044',cat:'Events and forums',name:'Event follow-up',notes:'Survey, materials, WhatsApp / community links',output:'Follow-up email, survey responses and shared materials',freq:'After each event',pri:'P1',status:'partial',fmt:'Checklist + templates',owner:'Lauren',trained:'Lauren, Anna',signoff:'Event Sponsor',sid:'p044'},
-  {id:'P045',cat:'Website, digital and data',name:'Website CMS management',notes:'Scribe guides: press release publishing + CMS orientation',output:'Published website update',freq:'Ongoing',pri:'P1',status:'live',fmt:'Digital playbook SOP',owner:'Meagan',trained:'Xuti, Meagan, Alice, Molly',signoff:'Marketing internal',sid:'p045'},
-  {id:'P046',cat:'Website, digital and data',name:'Website investment pages',notes:'Case study structure + CMS add-investment Scribe',output:'Updated investment page',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles; Deal Team Rep',sid:'p046'},
-  {id:'P047',cat:'Website, digital and data',name:'Website team pages',notes:'Bio framework + bulk update process from handover session',output:'Updated bio, photo and role information',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sid:'p047'},
-  {id:'P048',cat:'Website, digital and data',name:'Website page edits',notes:'General pages',output:'Updated web page',freq:'Ad hoc',pri:'P2',status:'partial',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sid:'p048'},
-  {id:'P049',cat:'Website, digital and data',name:'Website sweep',notes:'',output:'List of fixes and updates',freq:'Quarterly',pri:'P2',status:'partial',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Charles',sid:'p049'},
-  {id:'P050',cat:'Website, digital and data',name:'Hosting and dev support',notes:'Hosting moved from Fortrabbit to Servd (May 2025); Brandpie supports',output:'Resolved issue or supported development',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Supplier SOP',owner:'',trained:'',signoff:'',sid:'p050'},
-  {id:'P051',cat:'Website, digital and data',name:'DealCloud event campaigns',notes:'Contact tiers live; campaign build Scribes to follow',output:'Target lists and campaign records',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'Standalone SOP',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sid:'p051'},
-  {id:'P052',cat:'Website, digital and data',name:'Dispatch email campaigns',notes:'Campaigns, pages and sequences',output:'Built and sent email campaign',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'SOP section',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sid:'p052'},
-  {id:'P053',cat:'Website, digital and data',name:'Google Analytics reporting',notes:'',output:'Traffic and content performance readout',freq:'Monthly / quarterly',pri:'P2',status:'needed',fmt:'Checklist',owner:'',trained:'',signoff:'',sid:'p053'},
-  {id:'P054',cat:'Website, digital and data',name:'LinkedIn admin and analytics',notes:'',output:'Published posts and analytics',freq:'Weekly / monthly',pri:'P2',status:'needed',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice, Molly',signoff:'Marketing internal',sid:'p054'},
-  {id:'P055',cat:'Website, digital and data',name:'Vimeo management',notes:'',output:'Hosted video and embed link',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sid:'p055'},
-  {id:'P056',cat:'Website, digital and data',name:'WeTransfer use',notes:'',output:'Shared files',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Short note',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Marketing internal',sid:'p056'},
-  {id:'P057',cat:'Website, digital and data',name:'SEO audit and improvement',notes:'',output:'SEO recommendations and implementation plan',freq:'Annual / ad hoc',pri:'P2',status:'partial',fmt:'SOP section',owner:'',trained:'',signoff:'Marketing internal',sid:'p057'},
-  {id:'P058',cat:'Brand, collateral and templates',name:'Brand guidelines management',notes:'',output:'Updated brand guidelines',freq:'Annual / ad hoc',pri:'P1',status:'partial',fmt:'Brand playbook section',owner:'Xuti',trained:'Xuti',signoff:'Charles',sid:'p058'},
-  {id:'P059',cat:'Brand, collateral and templates',name:'Tone of voice governance',notes:'',output:'Copy aligned to Bowmark tone',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Principles + examples',owner:'Xuti',trained:'Xuti, Meagan',signoff:'Marketing internal',sid:'p059'},
-  {id:'P060',cat:'Brand, collateral and templates',name:'PowerPoint template and UpSlide system',notes:'Includes Scribe guide',output:'Working PowerPoint / UpSlide system',freq:'Ongoing',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p060'},
-  {id:'P061',cat:'Brand, collateral and templates',name:'Slide library management',notes:'Library update process with embedded visual guide',output:'Current slide library',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP section',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p061'},
-  {id:'P062',cat:'Brand, collateral and templates',name:'Word and Excel templates',notes:'',output:'Current Word / Excel templates',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p062'},
-  {id:'P063',cat:'Brand, collateral and templates',name:'Email and calendar hold templates',notes:'',output:'Reusable invite and diary-hold copy',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Template register',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p063'},
-  {id:'P064',cat:'Brand, collateral and templates',name:'Event invitation templates',notes:'DealCloud RSVP page + email campaign',output:'Invitation copy and design',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Checklist + templates',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p064'},
-  {id:'P065',cat:'Brand, collateral and templates',name:'Flyers and one-pagers',notes:'Bowmark A5 flyers',output:'Designed flyer / one-pager',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p065'},
-  {id:'P066',cat:'Brand, collateral and templates',name:'Ad hoc team support and design requests',notes:'',output:'Slide, document, design or copy support',freq:'Ongoing',pri:'P1',status:'live',fmt:'Decision tree + intake checklist',owner:'Xuti',trained:'Xuti',signoff:'Requesting stakeholder',sid:'p066'},
-  {id:'P067',cat:'Brand, collateral and templates',name:'Asset library management',notes:'Logos, imagery, templates and photos',output:'Searchable and current asset library',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Register + SOP',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p067'},
-  {id:'P068',cat:'Brand, collateral and templates',name:'Photography and headshots',notes:'',output:'Approved headshots / photos',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p068'},
-  {id:'P069',cat:'Brand, collateral and templates',name:'Branded merchandise',notes:'Tote bags, umbrellas and similar',output:'Ordered branded items',freq:'Ad hoc',pri:'P3',status:'partial',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p069'},
-  {id:'P070',cat:'AI, automation and systems',name:'Artemis GPT / copyediting workflow',notes:'',output:'Edited Bowmark-style copy',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Prompt guide + examples',owner:'',trained:'',signoff:'',sid:'p070'},
-  {id:'P071',cat:'AI, automation and systems',name:'Brand guardian GPT / skill',notes:'',output:'Brand-aligned review / edits',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Prompt guide',owner:'',trained:'',signoff:'',sid:'p071'},
-  {id:'P072',cat:'AI, automation and systems',name:'Claude / ChatGPT usage protocol',notes:'',output:'Drafts, summaries or process support',freq:'Ongoing',pri:'P2',status:'needed',fmt:'Usage principles',owner:'',trained:'',signoff:'',sid:'p072'},
-  {id:'P073',cat:'AI, automation and systems',name:'GitHub / technical workflows',notes:'Event pages on GitHub Pages, with Scribe guide',output:'Maintained repository / workflow',freq:'Ad hoc',pri:'P2',status:'live',fmt:'System note',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p073'},
-  {id:'P074',cat:'AI, automation and systems',name:'RSS feed and monitoring',notes:'',output:'Current news sweep / alerts',freq:'Ongoing',pri:'P2',status:'needed',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sid:'p074'},
-  {id:'P075',cat:'AI, automation and systems',name:'Zapier / automation workflows',notes:'Newsletters, monitoring and other flows',output:'Automated trigger-action workflow',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Automation register',owner:'',trained:'',signoff:'',sid:'p075'},
-  {id:'P076',cat:'Quick reference scenarios',name:'Portfolio company acquisition',notes:'',output:'News item, LinkedIn post and/or press support',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Scenario checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep',sid:'p076'},
-  {id:'P077',cat:'Quick reference scenarios',name:'Bowmarker speaks on a panel',notes:'',output:'Bio, headshot, social post or event support',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Scenario checklist',owner:'',trained:'',signoff:'Charles',sid:'p077'},
-  {id:'P078',cat:'Quick reference scenarios',name:'Someone asks for a logo, headshot or boilerplate',notes:'',output:'Correct approved asset supplied',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sid:'p078'},
-  {id:'P079',cat:'Quick reference scenarios',name:'Management presentation update',notes:'',output:'Updated management presentation slides',freq:'Ad hoc / periodic',pri:'P1',status:'live',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Charles; Tom Shelford',sid:'p079'},
-  {id:'P080',cat:'Quick reference scenarios',name:'Data bible update',notes:'Team, investment and Chronograph sync',output:'Current data bible and synced systems',freq:'Ad hoc / periodic',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Sam P',trained:'Sam P',signoff:'Marketing internal',sid:'p080'},
-  {id:'P081',cat:'Quick reference scenarios',name:'Glassdoor management',notes:'',output:'Updated employer profile / response route',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Short note',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sid:'p081'},
-  {id:'P082',cat:'Quick reference scenarios',name:'Passwords and access handover',notes:'',output:'Access checklist with owners',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Access register – no passwords',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sid:'p082'},
+  {id:'P016',cat:'Content and communications',name:'PR and media management',notes:'H/Advisors and media inbox',output:'Approved media response or PR output',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP + escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Admin and PR',sid:'p016'},
+  {id:'P012',cat:'Content and communications',name:'News sweep',notes:'Portfolio and Bowmark news selection',output:'Shortlist of items for website or LinkedIn',freq:'Weekly / ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p012'},
+  {id:'P013',cat:'Content and communications',name:'Portfolio news',notes:'',output:'Website news item and LinkedIn post',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p013'},
+  {id:'P014',cat:'Content and communications',name:'Bowmark news',notes:'',output:'Website / LinkedIn / internal post',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p014'},
+  {id:'P015',cat:'Content and communications',name:'Charity / soft news',notes:'',output:'LinkedIn / website post',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p015'},
+  {id:'P017',cat:'Content and communications',name:'Deal-related press release checklist',notes:'General process',output:'Approved press release',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p017'},
+  {id:'P018',cat:'Content and communications',name:'New investment announcement',notes:'Press release, website, LinkedIn, data updates',output:'Announcement package and updated systems',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP + checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p018'},
+  {id:'P019',cat:'Content and communications',name:'Exit announcement',notes:'',output:'Press release, website and LinkedIn update',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p019'},
+  {id:'P020',cat:'Content and communications',name:'New joiner announcement',notes:'',output:'Website bio, LinkedIn post, internal comms',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'Press releases',sid:'p020'},
+  {id:'P021',cat:'Content and communications',name:'Promotion announcement',notes:'',output:'Website / LinkedIn / internal copy',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'Press releases',sid:'p021'},
+  {id:'P022',cat:'Content and communications',name:'Investment update',notes:'',output:'Website / LinkedIn / press item',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p022'},
+  {id:'P046',cat:'Content and communications',name:'Website investment pages',notes:'Case study structure + CMS add-investment Scribe',output:'Updated investment page',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles; Deal Team Rep',sub:'Website content',sid:'p046'},
+  {id:'P047',cat:'Content and communications',name:'Website team pages',notes:'Bio framework + bulk update process from handover session',output:'Updated bio, photo and role information',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sub:'Website content',sid:'p047'},
+  {id:'P048',cat:'Content and communications',name:'Website page edits',notes:'General pages',output:'Updated web page',freq:'Ad hoc',pri:'P2',status:'partial',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sub:'Website content',sid:'p048'},
+  {id:'P045',cat:'Content and communications',name:'Website CMS management',notes:'Scribe guides: press release publishing + CMS orientation',output:'Published website update',freq:'Ongoing',pri:'P1',status:'live',fmt:'Digital playbook SOP',owner:'Meagan',trained:'Xuti, Meagan, Alice, Molly',signoff:'Marketing internal',sub:'Website content',sid:'p045'},
+  {id:'P025',cat:'Content and communications',name:'Event insight production',notes:'Post-event refinement, survey results and quotes',output:'Published insight and social assets',freq:'Several per year',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sub:'Insights',sid:'p025'},
+  {id:'P024',cat:'Content and communications',name:'Thought leadership process',notes:'Sector and event-led insights',output:'Website insight and LinkedIn PDF / post',freq:'Several per year',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sub:'Insights',sid:'p024'},
+  {id:'P026',cat:'Content and communications',name:'LinkedIn posts',notes:'Company posts, reposts and optimal timing',output:'LinkedIn post copy and asset',freq:'Weekly / ad hoc',pri:'P1',status:'live',fmt:'Checklist + copy principles',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'LinkedIn',sid:'p026'},
+  {id:'P027',cat:'Content and communications',name:'Awards submissions',notes:'Mergermarket, Real Deals and others',output:'Submission and supporting material',freq:'Annual / ad hoc',pri:'P2',status:'live',fmt:'SOP + awards calendar',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p027'},
+  {id:'P028',cat:'Content and communications',name:'Annual highlights',notes:'',output:'Annual highlights content / campaign',freq:'Annual',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p028'},
+  {id:'P029',cat:'Content and communications',name:'Alumni newsletter',notes:'',output:'Email campaign',freq:'Periodic',pri:'P3',status:'partial',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p029'},
+  {id:'P023',cat:'Content and communications',name:'Crisis / sensitive communications',notes:'',output:'Agreed response or holding line',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Standalone SOP / escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Crisis',sid:'p023'},
+  {id:'P030',cat:'Events',name:'Flagship dinner',notes:'Full origination events SOP – 47 tasks, 11 phases',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p030'},
+  {id:'P031',cat:'Events',name:'Roundtable dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p031'},
+  {id:'P032',cat:'Events',name:'Drinks reception',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p032'},
+  {id:'P033',cat:'Events',name:'Smaller sector-focused dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna, Meagan',signoff:'Event Sponsor',sub:'Origination events',sid:'p033'},
+  {id:'P034',cat:'Events',name:'Portfolio and value creation forums',notes:'12-phase forum playbook',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p034'},
+  {id:'P044',cat:'Events',name:'Event follow-up',notes:'Survey, materials, WhatsApp / community links',output:'Follow-up email, survey responses and shared materials',freq:'After each event',pri:'P1',status:'partial',fmt:'Checklist + templates',owner:'Lauren',trained:'Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p044'},
+  {id:'P043',cat:'Events',name:'AGM support',notes:'Presentation, video and event collateral',output:'AGM presentation, video and materials',freq:'Annual',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Charles',sub:'AGM',sid:'p043'},
+  {id:'P040',cat:'Events',name:'Internal events',notes:'',output:'Internal event communications and assets',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Lauren, Anna, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p040'},
+  {id:'P041',cat:'Events',name:'Hospitality',notes:'',output:'Invitations, guest management and logistics',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p041'},
+  {id:'P042',cat:'Events',name:'Third-party / sponsored events',notes:'Megabuyte and ad hoc',output:'Sponsorship, guest management and comms',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'SOP section',owner:'Lauren',trained:'Lauren, Meagan, Alice',signoff:'Charles',sub:'Other events',sid:'p042'},
+  {id:'P064',cat:'Events',name:'Event invitation templates',notes:'DealCloud RSVP page + email campaign',output:'Invitation copy and design',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Checklist + templates',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Event tools and templates',sid:'p064'},
+  {id:'P051',cat:'Events',name:'DealCloud event campaigns',notes:'Contact tiers live; campaign build Scribes to follow',output:'Target lists and campaign records',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'Standalone SOP',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sub:'Event tools and templates',sid:'p051'},
+  {id:'P066',cat:'Brand, collateral and templates',name:'Ad hoc team support and design requests',notes:'',output:'Slide, document, design or copy support',freq:'Ongoing',pri:'P1',status:'live',fmt:'Decision tree + intake checklist',owner:'Xuti',trained:'Xuti',signoff:'Requesting stakeholder',sub:'Design and requests',sid:'p066'},
+  {id:'P058',cat:'Brand, collateral and templates',name:'Brand guidelines management',notes:'',output:'Updated brand guidelines',freq:'Annual / ad hoc',pri:'P1',status:'partial',fmt:'Brand playbook section',owner:'Xuti',trained:'Xuti',signoff:'Charles',sub:'Brand system',sid:'p058'},
+  {id:'P069',cat:'Brand, collateral and templates',name:'Branded merchandise',notes:'Tote bags, umbrellas and similar',output:'Ordered branded items',freq:'Ad hoc',pri:'P3',status:'partial',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Brand system',sid:'p069'},
+  {id:'P059',cat:'Brand, collateral and templates',name:'Tone of voice governance',notes:'',output:'Copy aligned to Bowmark tone',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Principles + examples',owner:'Xuti',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Brand system',sid:'p059'},
+  {id:'P060',cat:'Brand, collateral and templates',name:'PowerPoint template and UpSlide system',notes:'Includes Scribe guide',output:'Working PowerPoint / UpSlide system',freq:'Ongoing',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Presentations',sid:'p060'},
+  {id:'P061',cat:'Brand, collateral and templates',name:'Slide library management',notes:'Library update process with embedded visual guide',output:'Current slide library',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP section',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Presentations',sid:'p061'},
+  {id:'P079',cat:'Brand, collateral and templates',name:'Management presentation update',notes:'',output:'Updated management presentation slides',freq:'Ad hoc / periodic',pri:'P1',status:'live',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Charles; Tom Shelford',sub:'Presentations',sid:'p079'},
+  {id:'P067',cat:'Brand, collateral and templates',name:'Asset library management',notes:'Logos, imagery, templates and photos',output:'Searchable and current asset library',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Register + SOP',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Assets',sid:'p067'},
+  {id:'P068',cat:'Brand, collateral and templates',name:'Photography and headshots',notes:'',output:'Approved headshots / photos',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Assets',sid:'p068'},
+  {id:'P063',cat:'Brand, collateral and templates',name:'Email and calendar hold templates',notes:'',output:'Reusable invite and diary-hold copy',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Template register',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Templates',sid:'p063'},
+  {id:'P065',cat:'Brand, collateral and templates',name:'Flyers and one-pagers',notes:'Bowmark A5 flyers',output:'Designed flyer / one-pager',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Templates',sid:'p065'},
+  {id:'P062',cat:'Brand, collateral and templates',name:'Word and Excel templates',notes:'',output:'Current Word / Excel templates',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Templates',sid:'p062'},
+  {id:'P080',cat:'Brand, collateral and templates',name:'Data bible update',notes:'Team, investment and Chronograph sync',output:'Current data bible and synced systems',freq:'Ad hoc / periodic',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Sam P',trained:'Sam P',signoff:'Marketing internal',sub:'Data upkeep',sid:'p080'},
+  {id:'P081',cat:'Admin, data and tools',name:'Glassdoor management',notes:'Pointer checklist to relevant SOPs',output:'Updated employer profile / response route',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Short note',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Data',sid:'p081'},
+  {id:'P053',cat:'Admin, data and tools',name:'Google Analytics reporting',notes:'',output:'Traffic and content performance readout',freq:'Monthly / quarterly',pri:'P2',status:'needed',fmt:'Checklist',owner:'',trained:'',signoff:'',sub:'Data',sid:'p053'},
+  {id:'P054',cat:'Admin, data and tools',name:'LinkedIn admin and analytics',notes:'',output:'Published posts and analytics',freq:'Weekly / monthly',pri:'P2',status:'needed',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice, Molly',signoff:'Marketing internal',sub:'Data',sid:'p054'},
+  {id:'P056',cat:'Admin, data and tools',name:'WeTransfer use',notes:'',output:'Shared files',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Short note',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p056'},
+  {id:'P055',cat:'Admin, data and tools',name:'Vimeo management',notes:'',output:'Hosted video and embed link',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p055'},
+  {id:'P074',cat:'Admin, data and tools',name:'RSS feed and monitoring',notes:'',output:'Current news sweep / alerts',freq:'Ongoing',pri:'P2',status:'needed',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p074'},
+  {id:'P052',cat:'Admin, data and tools',name:'Dispatch email campaigns',notes:'Campaigns, pages and sequences',output:'Built and sent email campaign',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'SOP section',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p052'},
+  {id:'P070',cat:'Admin, data and tools',name:'Artemis GPT / copyediting workflow',notes:'',output:'Edited Bowmark-style copy',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Prompt guide + examples',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p070'},
+  {id:'P071',cat:'Admin, data and tools',name:'Brand guardian GPT / skill',notes:'',output:'Brand-aligned review / edits',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Prompt guide',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p071'},
+  {id:'P072',cat:'Admin, data and tools',name:'Claude / ChatGPT usage protocol',notes:'',output:'Drafts, summaries or process support',freq:'Ongoing',pri:'P2',status:'needed',fmt:'Usage principles',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p072'},
+  {id:'P073',cat:'Admin, data and tools',name:'GitHub / technical workflows',notes:'Event pages on GitHub Pages, with Scribe guide',output:'Maintained repository / workflow',freq:'Ad hoc',pri:'P2',status:'live',fmt:'System note',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Automation',sid:'p073'},
+  {id:'P075',cat:'Admin, data and tools',name:'Zapier / automation workflows',notes:'Newsletters, monitoring and other flows',output:'Automated trigger-action workflow',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Automation register',owner:'',trained:'',signoff:'',sub:'Automation',sid:'p075'},
+  {id:'P050',cat:'Admin, data and tools',name:'Hosting and dev support',notes:'Hosting moved from Fortrabbit to Servd (May 2025); Brandpie supports',output:'Resolved issue or supported development',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Supplier SOP',owner:'',trained:'',signoff:'',sub:'Website systems',sid:'p050'},
+  {id:'P049',cat:'Admin, data and tools',name:'Website sweep',notes:'',output:'List of fixes and updates',freq:'Quarterly',pri:'P2',status:'partial',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Website systems',sid:'p049'},
+  {id:'P057',cat:'Admin, data and tools',name:'SEO audit and improvement',notes:'',output:'SEO recommendations and implementation plan',freq:'Annual / ad hoc',pri:'P2',status:'partial',fmt:'SOP section',owner:'',trained:'',signoff:'Marketing internal',sub:'Website systems',sid:'p057'},
+  {id:'P082',cat:'Admin, data and tools',name:'Passwords and access handover',notes:'Pointer checklist to relevant SOPs',output:'Access checklist with owners',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Access register – no passwords',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Access',sid:'p082'},
+  {id:'P001',cat:'Operations',name:'Annual marketing planning',notes:'',output:'Prioritised marketing plan and calendar',freq:'Annual',pri:'P1',status:'partial',fmt:'Category playbook section',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p001'},
+  {id:'P002',cat:'Operations',name:'Marketing strategy framework',notes:'',output:'Objectives, pillars, KPIs and activity principles',freq:'Annual / ad hoc',pri:'P1',status:'partial',fmt:'Category playbook section',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p002'},
+  {id:'P003',cat:'Operations',name:'Team planning and workstream management',notes:'Weekly workstreams email + activities time guide benchmarks',output:'Prioritised task list and resource plan',freq:'Weekly',pri:'P1',status:'live',fmt:'Checklist + tracker',owner:'',trained:'',signoff:'Marketing internal',sub:'Planning',sid:'p003'},
+  {id:'P004',cat:'Operations',name:'Marketing reporting and KPIs',notes:'Annual digital comms report structure added',output:'Engagement, campaign and activity reporting',freq:'Monthly / quarterly',pri:'P2',status:'partial',fmt:'SOP + dashboard notes',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p004'},
+  {id:'P005',cat:'Operations',name:'Budget framework and supplier renewals',notes:'',output:'Budget plan, approvals and renewal decisions',freq:'Annual / ad hoc',pri:'P1',status:'needed',fmt:'SOP + supplier register',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p005'},
+  {id:'P006',cat:'Operations',name:'Marketing information audit',notes:'',output:'Correct team, investment and marketing data',freq:'Quarterly / ad hoc',pri:'P2',status:'partial',fmt:'Checklist',owner:'',trained:'',signoff:'Marketing internal',sub:'Planning',sid:'p006'},
+  {id:'P007',cat:'Operations',name:'Senior approval process',notes:'',output:'Approved final copy / asset',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Decision tree',owner:'',trained:'Xuti, Lauren, Meagan, Alice',signoff:'Charles',sub:'Approvals and governance',sid:'p007'},
+  {id:'P008',cat:'Operations',name:'Deal team approval management',notes:'',output:'Approved announcement, news item or case study',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'SOP section',owner:'',trained:'',signoff:'Deal Team Rep',sub:'Approvals and governance',sid:'p008'},
+  {id:'P009',cat:'Operations',name:'Portfolio marketing contact management',notes:'',output:'Updated contact map and communication route',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Stakeholder guide section',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Approvals and governance',sid:'p009'},
+  {id:'P010',cat:'Operations',name:'Supplier and agency management',notes:'',output:'Supplier brief, delivery and feedback loop',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Supplier register + SOP',owner:'Xuti',trained:'Xuti, Meagan, Mollie',signoff:'Marketing internal',sub:'Approvals and governance',sid:'p010'},
+  {id:'P011',cat:'Operations',name:'Approval escalation for sensitive comms',notes:'',output:'Controlled escalation and approved response',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Decision tree',owner:'',trained:'',signoff:'Charles',sub:'Approvals and governance',sid:'p011'},
+  {id:'P076',cat:'Quick reference scenarios',name:'Portfolio company acquisition',notes:'Pointer checklist to relevant SOPs',output:'News item, LinkedIn post and/or press support',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Scenario checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep',sub:'',sid:'p076'},
+  {id:'P077',cat:'Quick reference scenarios',name:'Bowmarker speaks on a panel',notes:'Pointer checklist to relevant SOPs',output:'Bio, headshot, social post or event support',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Scenario checklist',owner:'',trained:'',signoff:'Charles',sub:'',sid:'p077'},
+  {id:'P078',cat:'Quick reference scenarios',name:'Someone asks for a logo, headshot or boilerplate',notes:'Pointer checklist to relevant SOPs',output:'Correct approved asset supplied',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'',sid:'p078'}
 ];
 
 // IDs with fully built dedicated sections
-const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p035','p036','p037','p038','p039','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p073','p079','p080','process-placeholder']);
+const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p073','p076','p077','p078','p079','p080','p081','p082','process-placeholder']);
 
 let activeFilters = {p1:false, live:false, partial:false};
 
@@ -3947,6 +4063,7 @@ function buildRegistry(data){
   const tbody=document.getElementById('reg-body');
   tbody.innerHTML='';
   let lastCat='';
+  let lastSub='';
   data.forEach(p=>{
     if(p.cat!==lastCat){
       const tr=document.createElement('tr');
@@ -3956,7 +4073,14 @@ function buildRegistry(data){
       const catName=p.cat;
       tr.onclick=()=>{const btn=document.querySelector(`.cat-btn[data-cat="${catName}"]`);if(btn)setCat(btn);};
       tbody.appendChild(tr);
-      lastCat=p.cat;
+      lastCat=p.cat;lastSub='';
+    }
+    if(p.sub && p.sub!==lastSub){
+      const sr=document.createElement('tr');
+      sr.className='subcat-row';
+      sr.innerHTML=`<td colspan="5">${p.sub}</td>`;
+      tbody.appendChild(sr);
+      lastSub=p.sub;
     }
     const statusLabel={live:'Completed',partial:'In progress',needed:'Not started'};
     const tr=document.createElement('tr');
@@ -3984,7 +4108,7 @@ function filterRegistry(){
   const owner=document.getElementById('f-owner').value;
   const status=document.getElementById('f-status').value;
   let data=processes.filter(p=>{
-    const text=(p.id+p.name+p.cat+p.output+p.fmt+p.notes+p.owner+p.trained+p.signoff).toLowerCase();
+    const text=(p.id+p.name+p.cat+p.sub+p.output+p.fmt+p.notes+p.owner+p.trained+p.signoff).toLowerCase();
     if(q&&!text.includes(q))return false;
     if(cat&&p.cat!==cat)return false;
     if(owner==='__none__'){if(p.owner)return false;}
