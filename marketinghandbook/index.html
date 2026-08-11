@@ -283,7 +283,7 @@
     <span><strong>Version</strong> 1.1</span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> 82</span>
-    <span><strong>Last updated</strong> 6 August 2026 – build 2.5</span>
+    <span><strong>Last updated</strong> 6 August 2026 – build 2.8</span>
   </div>
 
   <h3 class="sub-title">Progress</h3>
@@ -459,7 +459,9 @@
 <li><input type="checkbox" id="ns7" onchange="toggleCheck(this)"><label for="ns7">Await response for next steps</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="ns8" onchange="toggleCheck(this)"><label for="ns8">Complete weekly recommendation digest</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="ns9" onchange="toggleCheck(this)"><label for="ns9">Complete monthly review of tracker and content balance</label><span class="owner">Alice</span></li></ul>
-</div>
+  <h3 class="sub-title">Writing up a sweep item</h3>
+  <p class="sop-para">You don't need every tracker entry to be detailed. But if you are actually going to <strong>recommend</strong> something, be really clear about what it is you're recommending and why – a bare link invites a quick “no”, whereas “this looks relevant because it touches the growth strategy and it's UK-gov so likely a permanent accreditation” invites a fuller answer and helps you learn the patterns of what is and isn't relevant. Write a clear summary at sweep stage, then elaborate in the email when you send it on. For award / accreditation items, work out whether it's a one-off award or a permanent accreditation (government bodies are usually the latter) and make it clear enough that a reader immediately understands what it means – Charles will ask otherwise.</p>
+  </div>
 
 <!-- P013 PORTFOLIO NEWS -->
 <div id="p013" class="section">
@@ -1471,7 +1473,7 @@
   </ul>
   <div class="callout"><strong>Getting a clean post link.</strong> To share the published post, use the three-dot (•••) menu on the post and choose <strong>Copy link to post</strong> rather than copying the URL from the browser bar – it opens more reliably and cleanly. When pasting a link over existing hyperlinked text (e.g. into an email or subject line), always test the link afterwards, as pasting can carry over the old hyperlink rather than the new one.</div>
   <h3 class="sub-title">Timing</h3>
-  <p class="sop-para">Post between <strong>10am and 2pm</strong> – 10am and 2pm specifically are strong slots – and ideally <strong>Tuesday to Thursday</strong>. Monday also works. Avoid Fridays, when posts tend not to get seen. This applies to reposts as much as original posts.</p>
+  <p class="sop-para">Post between <strong>10am and 2pm</strong> – 10am and 2pm specifically are strong slots – and ideally <strong>Tuesday to Thursday</strong>. Monday also works. Avoid Fridays, when posts tend not to get seen. This applies to reposts as much as original posts. <strong>Cadence:</strong> around one post or repost a week is a good target, though in practice it often averages closer to two a month and can cluster around news. Where several items are due close together, it's fine to space them; sequencing is usually driven by what else is going out that week.</p>
   <h3 class="sub-title">Final checks before publication</h3>
   <div class="toolbar"><button class="btn" onclick="resetAllChecks('p026')">Reset checklist</button></div>
   <ul class="checklist"><li><input type="checkbox" id="li1" onchange="toggleCheck(this)"><label for="li1">The final approved wording has been used</label><span class="owner">Marketing</span></li>
@@ -1700,10 +1702,50 @@
     <tr><td><strong>Maintenance and dev support</strong></td><td>Brandpie</td><td></td><td></td></tr>
     <tr><td><strong>Assets</strong></td><td>AWS</td><td></td><td></td></tr>
   </tbody></table>
-  <h3 class="sub-title">CMS login</h3>
-  <ul class="sop-list"><li>Username: Bowmark</li><li>Email: finance@bowmark.com</li><li>See Sites and password.xlsx for current password</li></ul>
-  <h3 class="sub-title">CMS editors</h3>
-  <ul class="sop-list"><li>Meagan, Abbey, Alice Fyffe, Hatti, Xuti</li><li>If admin rights are needed: login as Admin using marketing@bowmark.com</li></ul>
+  <h3 class="sub-title">Access and user roles</h3>
+  <p class="sop-para">Each person has their own login – request a password-reset link rather than sharing credentials. See Sites and password.xlsx for account details.</p>
+  <table class="roles"><thead><tr><th>Role</th><th>What they can do</th><th>Who</th></tr></thead><tbody>
+    <tr><td><strong>Editor</strong></td><td>Create and edit entries – the day-to-day role. Left-hand menu shows Dashboard, Entries, Assets only.</td><td>Meagan, Abbey, Alice Fyffe, Hatti, Xuti</td></tr>
+    <tr><td><strong>Admin</strong></td><td>Everything, including Globals and Users. Needed only to edit footer / cookie policy / address or manage users.</td><td>A dedicated admin account exists (marketing email address) – log in as that admin to make admin-level changes rather than promoting an individual. Credentials in the handover notes / Sites and password.xlsx.</td></tr>
+  </tbody></table>
+  <div class="callout"><strong>Never delete a user.</strong> Deleting a user also deletes every page they created. To remove someone's access, make them <strong>inactive / deactivated</strong> in the members area – never delete. (Brandpie people appear as admins because they built the site – leave them.)</div>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Note: finance@bowmark.com is the invoicing address for Brandpie, not a CMS login – do not use it to sign in.</p>
+  <h3 class="sub-title">How the CMS is organised</h3>
+  <p class="sop-para">Everything is an <strong>entry</strong>. The key distinction to understand:</p>
+  <ul class="sop-list">
+    <li><strong>Pages</strong> (under Entries &gt; Pages) are the literal website pages – e.g. the Investments <em>landing</em> page. Editing here changes that page's text or which articles are featured. You do <strong>not</strong> add a new investment here.</li>
+    <li><strong>Content entries</strong> are the things themselves – to add an investment, go to Investments &gt; New entry (not Pages).</li>
+    <li><strong>Meta entries</strong> are tags shared between pages – business models, growth strategies, verticals, departments, news categories. They exist so an investment or news item can be tagged and automatically link through to the relevant page (e.g. tagging “Data and Insight” links the case study to that page). A new growth strategy must be created as a meta entry <em>before</em> it can be tagged on an investment.</li>
+  </ul>
+  <div class="callout"><strong>Meta entries note.</strong> Verticals are set up but not currently used – leave blank. Departments exist for people but don't affect the live site. The Meta tab within an entry has changed under John / Brandpie's recent work – John may walk the team through the new behaviour separately; for setting up a standard page you only need Summary and Content.</div>
+  <h3 class="sub-title">Working in an entry</h3>
+  <ul class="sop-list">
+    <li><strong>Preview</strong> populates live as you fill fields, merging the Summary and Content tabs into one scrollable view. A page can't be created until all required fields are present – the preview tells you what's still missing.</li>
+    <li><strong>Author</strong> is just back-end record of who set the page up – it doesn't affect anything.</li>
+    <li><strong>Snippet</strong> = the short summary that appears on the thumbnail (not on the page). No full stop on snippets.</li>
+    <li><strong>Paragraph spacing:</strong> proper spacing shows as no visible line-break between lines; if you see an editable gap / cursor mark between them it's wrong – backspace and press Enter. (Enter = new paragraph; Shift+Enter = line break without paragraph spacing.)</li>
+    <li><strong>Forcing a refresh:</strong> the preview sometimes won't show a change (e.g. a new image) until you force another change – press Enter then Backspace to nudge it.</li>
+    <li><strong>Growth strategies</strong> usually come in twos (typically Organic accelerators + one other). Hold Ctrl / Shift to multi-select, and drag to reorder – Organic accelerators conventionally goes first.</li>
+  </ul>
+  <h3 class="sub-title">Slug, post date and going live</h3>
+  <ul class="sop-list">
+    <li><strong>Slug</strong> = the URL segment after /investments/ (or /news/). It auto-generates from the title. If a duplicate exists it appends “_2” – never publish a page whose slug ends “_2”, as it looks messy.</li>
+    <li><strong>To keep a page unpublished:</strong> Save as draft, then also un-tick <strong>Enabled</strong> before creating the entry – no green dot means it isn't visible.</li>
+    <li><strong>To take it live:</strong> tick Enabled and save.</li>
+    <li><strong>Post date</strong> defaults to the moment you create the entry. For investments this doesn't matter (the date is set manually), but for news it controls when the item appears – a future post date shows the entry as “pending” until that time passes. Simplest is to publish at the time rather than scheduling; a scheduled item can require a manual cache refresh to appear.</li>
+  </ul>
+  <h3 class="sub-title">Sharing a preview, drafts and version history</h3>
+  <ul class="sop-list">
+    <li><strong>View</strong> gives a full-page preview with a shareable URL – send it to Charles for review (it isn't live). The link can time out; if so, click View again and resend the fresh URL. You can also preview the thumbnail view.</li>
+    <li><strong>Drafts:</strong> click Create a draft to branch a version while keeping the current one intact – useful for showing Charles two options (e.g. two thumbnails) via two URLs. Name drafts to stay organised; delete or apply when done. Don't Apply draft (which overwrites the current version) until it's approved.</li>
+    <li><strong>Version history</strong> is retained for all time – you can view an old version and revert to it if something has gone wrong.</li>
+  </ul>
+  <h3 class="sub-title">Globals and assets</h3>
+  <ul class="sop-list">
+    <li><strong>Globals</strong> hold site-wide elements – footer, header bar, Bowmark address, cookie-policy links. Editing requires admin login.</li>
+    <li><strong>Assets</strong> hold all website imagery and documents. Uploading a document lets you share it anywhere via its URL (e.g. the responsible investment policy download) – a tidy way to share documents publicly by link.</li>
+    <li><strong>Members area</strong> is the logged-in area of the site – complex, rarely edited; each member is shown a specific landing page. This is also where you deactivate a leaver.</li>
+  </ul>
   <h3 class="sub-title">Publishing a news entry – step by step</h3>
   <ul class="sop-list">
     <li>Save the press release in: Marketing &gt; Content and Comms &gt; Content &gt; 2026 &gt; Press Releases</li>
@@ -2683,6 +2725,8 @@
     <li>Trigger check: the deal team members may want the new investment reflected in their website bios – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p047')">Website team pages →</a> – and flag that workstream at the bottom of the approval email to Charles</li>
     <li>Quotes used in the case study come from the press release and must not be reworded without written sign-off – see the quote integrity rules in <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p017')">Deal-related press releases →</a></li>
   </ul>
+  <h4 class="sub-sub">Preparing the square logo</h4>
+  <p class="sop-para">The investment card needs the company logo in a square. Xuti normally does this, triggered by an ask from Maya or Meagan. To do it yourself: in PowerPoint open the UpSlide tab &gt; Library, search the company (e.g. “SFG20”) and double-click the logo. Place it with roughly equal padding on both sides, centre-centre, group it, then Save as picture. Upload that as the logo in the CMS. The thumbnail image is separate – a new investment gets an agreed photograph with a brand colour treatment (Xuti does the treatment and swaps it in).</p>
   <h3 class="sub-title">CMS walkthrough – adding a new investment entry</h3>
   <div class="callout"><strong>Visual guide.</strong> The full click-by-click screenshot guide is embedded at the end of this section.</div>
   <ul class="sop-list">
@@ -3954,6 +3998,75 @@
   </ul>
 </div>
 
+<!-- P070 ARTEMIS -->
+<div id="p070" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Artemis GPT / copyediting workflow</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Edited Bowmark-style copy</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ongoing</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+  <h3 class="sub-title">What it is</h3>
+  <p class="sop-para">Artemis is a custom GPT tuned to Bowmark tone of voice. Use it as a default second pair of eyes on anything you write.</p>
+  <h3 class="sub-title">How to use it</h3>
+  <p class="sop-para">Run anything you write through Artemis – ask it to <strong>proof</strong> rather than fully rewrite, so it suggests edits you can accept or reject rather than replacing your copy. Its suggestions are tuned to Bowmark tone of voice rather than change for its own sake, and it will often catch things you've missed.</p>
+  <div class="callout"><strong>Two assistants, pinned.</strong> Pin both in the ChatGPT left-hand sidebar: <strong>Artemis</strong> for tone-of-voice proofing, and the <strong>Marketing comms assistant</strong>, which knows more about how marketing pieces are formatted – e.g. “write a LinkedIn repost on this” gives a better starting draft because it holds the rules for different team members. Neither is perfect; both are a default starting point to edit from rather than a finished output.</div>
+  <div class="callout"><strong>To be completed.</strong> The build / maintenance of the GPTs, and the prompt patterns behind them, are scheduled for verbal capture in Session 5 (Brand and AI).</div>
+</div>
+
+<!-- P007 SENIOR APPROVAL PROCESS -->
+<div id="p007" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Operations</p>
+  <h2 class="section-title">Senior approval process</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Operations</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Approved final copy or asset</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Sign-off</span><span class="sop-meta-value">Charles Ind (and, where relevant, Tom Shelford, deal team, portfolio company)</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+  <h3 class="sub-title">Purpose</h3>
+  <p class="sop-para">Most external marketing content is signed off by Charles, with Tom and others added depending on the subject. This page sets out how to route work for approval so it is easy to review, quick to turn around, and right first time.</p>
+
+  <h3 class="sub-title">Who signs off what</h3>
+  <table class="roles"><thead><tr><th>Content</th><th>Sign-off</th></tr></thead><tbody>
+    <tr><td>Deal-related press releases</td><td>Charles; relevant deal team member; portfolio company (quotes and facts)</td></tr>
+    <tr><td>Website investment pages and team bios</td><td>Charles; deal team where investment detail is involved</td></tr>
+    <tr><td>Bowmark news, LinkedIn, awards, soft news</td><td>Charles</td></tr>
+    <tr><td>Strategy, planning and budget</td><td>Charles; Tom Shelford</td></tr>
+    <tr><td>Event content and insights</td><td>Charles; event sponsor</td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title">How to send work for review</h3>
+  <ul class="sop-list">
+    <li><strong>Make the ask unambiguous.</strong> Say clearly what you need – approval, a decision between options, or just a sighting – and by when.</li>
+    <li><strong>Give enough context to decide.</strong> A recommendation lands better than a bare link: say what it is, why it's relevant and what you propose. This is especially true for anything niche – e.g. whether an industry recognition is a one-off award or a standing accreditation – so the reviewer isn't left to work it out.</li>
+    <li><strong>Show changes to anything already approved.</strong> If wording has moved since a previous version – particularly a quote – flag it explicitly with tracked changes so it can be checked. Quotes must be signed off in their exact wording (see the quote-integrity rules in the deal press release SOP).</li>
+    <li><strong>Send a clean preview.</strong> For website items, share the preview URL so it can be read in situ; for two options, share both draft URLs side by side.</li>
+  </ul>
+
+  <h3 class="sub-title">Timing</h3>
+  <ul class="sop-list">
+    <li>Reviews are usually turned around quickly, so send things when they are genuinely ready for attention.</li>
+    <li>For anything with a <strong>planned publication date</strong>, aim to have it signed off <strong>at least a week ahead</strong> of publication – this should always be prioritised where a date is known. Reactive newsflow obviously can’t follow this, but planned pieces (events, campaigns, scheduled announcements) should.</li>
+    <li>Aim to send by <strong>Thursday morning</strong> where possible – sending late on a Friday can read as a request to work over the weekend.</li>
+    <li>Where several items are due together, it can help to <strong>bundle them into one review</strong> rather than sending a stream of separate requests – easier to look at as a set. Use judgement where one item has a different timeline (e.g. a video still in production).</li>
+    <li>Keeping one or two approved pieces ready to publish gives useful flexibility on timing.</li>
+  </ul>
+
+  <h3 class="sub-title">After sign-off</h3>
+  <ul class="sop-list">
+    <li>Confirm approvals in writing – keep the email trail.</li>
+    <li>Where a decision has been delegated or a change waved through verbally, note who approved it and when.</li>
+    <li>Prepare the item ready to publish, and agree timing rather than assuming immediate release.</li>
+  </ul>
+
+  <div class="callout"><strong>Related.</strong> Quote integrity and the tracked-changes flagging method sit in the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p017')">Deal-related press releases SOP →</a>. Escalation for sensitive or time-critical items is covered under <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p011')">Approval escalation for sensitive comms →</a>.</div>
+</div>
+
 <!-- GENERIC PLACEHOLDER -->
 <div id="process-placeholder" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -4038,7 +4151,7 @@ const processes = [
   {id:'P004',cat:'Operations',name:'Marketing reporting and KPIs',notes:'Annual digital comms report structure added',output:'Engagement, campaign and activity reporting',freq:'Monthly / quarterly',pri:'P2',status:'partial',fmt:'SOP + dashboard notes',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p004'},
   {id:'P005',cat:'Operations',name:'Budget framework and supplier renewals',notes:'',output:'Budget plan, approvals and renewal decisions',freq:'Annual / ad hoc',pri:'P1',status:'needed',fmt:'SOP + supplier register',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p005'},
   {id:'P006',cat:'Operations',name:'Marketing information audit',notes:'',output:'Correct team, investment and marketing data',freq:'Quarterly / ad hoc',pri:'P2',status:'partial',fmt:'Checklist',owner:'',trained:'',signoff:'Marketing internal',sub:'Planning',sid:'p006'},
-  {id:'P007',cat:'Operations',name:'Senior approval process',notes:'',output:'Approved final copy / asset',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Decision tree',owner:'',trained:'Xuti, Lauren, Meagan, Alice',signoff:'Charles',sub:'Approvals and governance',sid:'p007'},
+  {id:'P007',cat:'Operations',name:'Senior approval process',notes:'Routing, timing and sign-off matrix',output:'Approved final copy / asset',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Decision tree',owner:'',trained:'Xuti, Lauren, Meagan, Alice',signoff:'Charles',sub:'Approvals and governance',sid:'p007'},
   {id:'P008',cat:'Operations',name:'Deal team approval management',notes:'',output:'Approved announcement, news item or case study',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'SOP section',owner:'',trained:'',signoff:'Deal Team Rep',sub:'Approvals and governance',sid:'p008'},
   {id:'P009',cat:'Operations',name:'Portfolio marketing contact management',notes:'',output:'Updated contact map and communication route',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Stakeholder guide section',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Approvals and governance',sid:'p009'},
   {id:'P010',cat:'Operations',name:'Supplier and agency management',notes:'',output:'Supplier brief, delivery and feedback loop',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Supplier register + SOP',owner:'Xuti',trained:'Xuti, Meagan, Mollie',signoff:'Marketing internal',sub:'Approvals and governance',sid:'p010'},
@@ -4049,7 +4162,7 @@ const processes = [
 ];
 
 // IDs with fully built dedicated sections
-const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p073','p076','p077','p078','p079','p080','p081','p082','process-placeholder']);
+const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','process-placeholder']);
 
 let activeFilters = {p1:false, live:false, partial:false};
 
