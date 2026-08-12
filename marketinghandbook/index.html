@@ -137,6 +137,9 @@
   .visual-guide summary:hover{color:var(--bm-coral);}
   .vg-step{margin:16px 0;}
   .vg-img{max-width:100%;border:1px solid var(--bm-warmgrey);border-radius:6px;display:block;margin-top:6px;}
+  .callout-important{border:2px solid var(--bm-coral);background:#FFF4F3;border-radius:8px;padding:14px 16px 14px 44px;margin:16px 0;position:relative;font-size:13.5px;}
+  .callout-important::before{content:"\2605";position:absolute;left:14px;top:12px;color:var(--bm-coral);font-size:17px;}
+  .callout-important .ci-label{display:block;font-family:var(--font-heading);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--bm-coral);margin-bottom:4px;}
   @media print{.sidebar,.site-header,.top-nav,.toolbar,.filter-bar,.back-link{display:none!important;}.main{padding:0;}.section{display:block!important;}}
 </style>
 </head>
@@ -161,6 +164,11 @@
   <div class="nav-section-label">Getting started</div>
   <a class="nav-item active" onclick="showSection('home')">Overview / action plan</a>
   <a class="nav-item" onclick="showSection('registry')">Process registry</a>
+  <a class="nav-item" onclick="showSection('strategy')">Strategy and judgement</a>
+
+  <div class="nav-section-label">Shared reference</div>
+  <a class="nav-item" onclick="showSection('useful-logins')">Useful logins</a>
+  <a class="nav-item" onclick="showSection('useful-links')">Useful links</a>
 
   <div class="nav-section-label">Content and communications</div>
   <div class="nav-subcat">Admin and PR</div>
@@ -240,18 +248,15 @@
   <a class="nav-item" onclick="showSection('p056')">WeTransfer use</a>
   <a class="nav-item" onclick="showSection('p055')">Vimeo management</a>
   <a class="nav-item" onclick="showSection('p074')">RSS feed and monitoring</a>
-  <a class="nav-item" onclick="showSection('p052')">Dispatch email campaigns</a>
+  <a class="nav-item" onclick="showSection('p083')">Google Business Profile</a>
   <div class="nav-subcat">AI tools</div>
   <a class="nav-item" onclick="showSection('p070')">Artemis GPT / copyediting workflow</a>
   <a class="nav-item" onclick="showSection('p071')">Brand guardian GPT / skill</a>
-  <a class="nav-item" onclick="showSection('p072')">Claude / ChatGPT usage protocol</a>
   <div class="nav-subcat">Automation</div>
   <a class="nav-item" onclick="showSection('p073')">GitHub / technical workflows</a>
-  <a class="nav-item" onclick="showSection('p075')">Zapier / automation workflows</a>
   <div class="nav-subcat">Website systems</div>
   <a class="nav-item" onclick="showSection('p050')">Hosting and dev support</a>
   <a class="nav-item" onclick="showSection('p049')">Website sweep</a>
-  <a class="nav-item" onclick="showSection('p057')">SEO audit and improvement</a>
   <div class="nav-subcat">Access</div>
   <a class="nav-item" onclick="showSection('p082')">Passwords and access handover</a>
   <div class="nav-section-label">Operations</div>
@@ -283,7 +288,7 @@
     <span><strong>Version</strong> 1.1</span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> 82</span>
-    <span><strong>Last updated</strong> 6 August 2026 – build 2.8</span>
+    <span><strong>Last updated</strong> 6 August 2026 – build 3.5</span>
   </div>
 
   <h3 class="sub-title">Progress</h3>
@@ -303,6 +308,27 @@
 <li><input type="checkbox" id="pl4" onchange="toggleCheck(this)"><label for="pl4">Probe Outlook: approval threads, crisis / no comment examples, alumni newsletter sends</label><span class="owner">Claude + Maya</span></li>
 <li><input type="checkbox" id="pl5" onchange="toggleCheck(this)"><label for="pl5">Probe Teams: Xuti design threads, Brandpie dev support threads</label><span class="owner">Claude + Maya</span></li>
 <li><input type="checkbox" id="pl6" onchange="toggleCheck(this)"><label for="pl6">Verify recovered AGM SOP against current arrangements (2023 source)</label><span class="owner">Maya</span></li></ul>
+  <h3 class="sub-title">Outstanding for Maya</h3>
+  <p class="sop-para">Specific to-dos surfaced during the handover reviews – things only Maya can complete (account moves, decisions, source material, guides to record). Each links to the page it affects.</p>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('home')">Reset (affects all plan ticks)</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="om1" onchange="toggleCheck(this)"><label for="om1">Supply the two award URLs (Emerging Markets / British PE Awards; Real Deals PE Awards) to link on the page and Useful links (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p027')">Awards submissions →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om2" onchange="toggleCheck(this)"><label for="om2">Move the WeTransfer account to the marketing email address and confirm the login (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p056')">WeTransfer →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om3" onchange="toggleCheck(this)"><label for="om3">Move the Vimeo account to the generic marketing email address and confirm the login (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om4" onchange="toggleCheck(this)"><label for="om4">Record a guide for the Glassdoor macro (Scribe → Word export → embed) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p081')">Glassdoor →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om5" onchange="toggleCheck(this)"><label for="om5">Add a generic WeTransfer how-to guide (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p056')">WeTransfer →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om6" onchange="toggleCheck(this)"><label for="om6">Add generic Vimeo management instructions (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om7" onchange="toggleCheck(this)"><label for="om7">Add Brandpie contact details and a website-infrastructure diagram (hosting / image hosting / ownership) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p050')">Hosting and dev support →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om8" onchange="toggleCheck(this)"><label for="om8">Clean up the LinkedIn Report spreadsheet and set the year-end 365-day export reminder (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p054')">LinkedIn admin and analytics →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om9" onchange="toggleCheck(this)"><label for="om9">Upload the event email-templates document into the handbook (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p044')">Event follow-up →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om10" onchange="toggleCheck(this)"><label for="om10">Agree the marketing data bible update process with Sam Price; decide how it ties to the website data check (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om11" onchange="toggleCheck(this)"><label for="om11">Confirm the smaller sector-focused dinner budget (~£3k) with Tom Shelford at next budget review (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p033')">Smaller sector-focused dinner →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om12" onchange="toggleCheck(this)"><label for="om12">Decide the thought-leadership notification flow (who is told when) as the process shifts (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p024')">Thought leadership process →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om13" onchange="toggleCheck(this)"><label for="om13">Decide whether Tone of voice governance is handed over, folded into another role, or removed (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p059')">Tone of voice governance →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om14" onchange="toggleCheck(this)"><label for="om14">Work out how to transfer the Artemis GPT and Brand Guardian skill to a successor (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om15" onchange="toggleCheck(this)"><label for="om15">Confirm the Sam Price data-audit process, then revisit the website sweep data section (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p049')">Website sweep →</a>)</label><span class="owner">Maya</span></li>
+  </ul>
+
 
   <h3 class="sub-title">2 – Verbal capture sessions (45–60 min each)</h3>
   <ul class="checklist"><li><input type="checkbox" id="ps1" onchange="toggleCheck(this)"><label for="ps1">Session 1 – Governance and approvals: senior approvals decision tree, deal team approvals, portfolio contacts, suppliers, escalation, crisis comms</label><span class="owner">Maya + Claude</span></li>
@@ -461,6 +487,7 @@
 <li><input type="checkbox" id="ns9" onchange="toggleCheck(this)"><label for="ns9">Complete monthly review of tracker and content balance</label><span class="owner">Alice</span></li></ul>
   <h3 class="sub-title">Writing up a sweep item</h3>
   <p class="sop-para">You don't need every tracker entry to be detailed. But if you are actually going to <strong>recommend</strong> something, be really clear about what it is you're recommending and why – a bare link invites a quick “no”, whereas “this looks relevant because it touches the growth strategy and it's UK-gov so likely a permanent accreditation” invites a fuller answer and helps you learn the patterns of what is and isn't relevant. Write a clear summary at sweep stage, then elaborate in the email when you send it on. For award / accreditation items, work out whether it's a one-off award or a permanent accreditation (government bodies are usually the latter) and make it clear enough that a reader immediately understands what it means – Charles will ask otherwise.</p>
+  <div class="callout"><strong>Related.</strong> rss.app account: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
   </div>
 
 <!-- P013 PORTFOLIO NEWS -->
@@ -482,7 +509,7 @@
     <li>Sign-off needed from deal team lead and Charles before proceeding</li>
     <li>Draft maximum three sentences: congratulations-style, factual, no emojis</li>
     <li>No opinions or subjective language unless it's a direct quote</li>
-    <li>Wrong: "they're doing an excellent job" — Right: "the judges highlighted they've done an excellent job"</li>
+    <li>Wrong: "they're doing an excellent job" – Right: "the judges highlighted they've done an excellent job"</li>
     <li>Stick to original phrasing where possible, especially for award wins</li>
     <li>Only rewrite if something genuinely needs rewriting</li>
     <li>Run through Artemis, but preserve original wording; don't let it adjust phrasing unless required</li>
@@ -511,7 +538,16 @@
 <li><input type="checkbox" id="pn10" onchange="toggleCheck(this)"><label for="pn10">Tag the awarding body / other company / person quoted where relevant</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="pn11" onchange="toggleCheck(this)"><label for="pn11">Click post once tagging is complete</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="pn12" onchange="toggleCheck(this)"><label for="pn12">Share the repost with all of Bowmark using the template email</label><span class="owner">Marketing</span></li></ul>
-</div>
+<h3 class="sub-title">Three tiers of portfolio news</h3>
+  <p class="sop-para">Portfolio news is handled at one of three levels depending on news value. Keep everything factual – strip any salesy language from the portfolio company's original version, but otherwise use the official wording they provided, making minimal but necessary changes.</p>
+  <table class="roles"><thead><tr><th>Tier</th><th>When</th><th>What</th><th>Approval</th></tr></thead><tbody>
+    <tr><td><strong>1 – Repost</strong></td><td>Light touch; not especially newsworthy but worth acknowledging (e.g. a minor award)</td><td>Repost the portfolio company's own LinkedIn post with a short sentence</td><td>Draft the sentence in the body of the email, send to the team, then go ahead. <strong>No portfolio company approval needed for reposts.</strong></td></tr>
+    <tr><td><strong>2 – Native LinkedIn post</strong></td><td>Higher news value, a bit more serious, but doesn't need to live on our website</td><td>Draft our own LinkedIn post in a Word doc; Xuti creates a LinkedIn card with image</td><td>Team review and sign-off, then run by the portfolio company marketing contact (see portfolio marketing contacts table)</td></tr>
+    <tr><td><strong>3 – Website + LinkedIn</strong></td><td>Genuine news warranting a website presence</td><td>Write the website piece; the LinkedIn post mirrors it with a LinkedIn-suitable opener</td><td>Team, portfolio company marketing contact, and Charles</td></tr>
+  </tbody></table>
+  <p class="sop-para"><strong>Opener difference (tier 3):</strong> the website news post uses standard news writing (e.g. “Kubrick has announced it has done XYZ”); the LinkedIn post opens more warmly (e.g. “Congratulations to the Kubrick team, who have announced…”).</p>
+  <div class="callout"><strong>Drafting help.</strong> Use Artemis or the Marketing Comms Assistant GPT for a first draft – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>. Keep it factual; strip salesy language; minimal necessary changes to official wording.</div>
+  </div>
 
 <!-- P014 BOWMARK NEWS -->
 <div id="p014" class="section">
@@ -572,6 +608,7 @@
   <ul class="sop-list">
     <li>Website post warranted when: significant fundraising (e.g. dodgeball), strong photos / video (e.g. Christmas), positive ESG initiatives (e.g. gardening)</li>
     <li>Video content: always upload to website to maximise production time</li>
+    <li>Where a piece warrants a website post, write the website piece first – the LinkedIn post then mirrors it</li>
     <li>Women's Mentor Scheme: one news post at end of year cycle, one at start of next, summarising the year and launching the new cohort</li>
   </ul>
   <div class="callout"><strong>Tempting fate.</strong> Drafting award content in advance has previously caused concern; always check with Charles first. Awards nomination: LinkedIn post only (optional). Win: always website and LinkedIn.</div>
@@ -591,7 +628,8 @@
 <li><input type="checkbox" id="bn11" onchange="toggleCheck(this)"><label for="bn11">Source image; if multiple options, send to Charles alongside final copy</label><span class="owner">Xuti</span></li>
 <li><input type="checkbox" id="bn12" onchange="toggleCheck(this)"><label for="bn12">Publish website and LinkedIn</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="bn13" onchange="toggleCheck(this)"><label for="bn13">Send internal LinkedIn notification email</label><span class="owner">Marketing</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Charity and soft news has its own guidance: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p015')">Charity / soft news →</a>.</div>
+  </div>
 
 <!-- P016 PR AND MEDIA MANAGEMENT -->
 <div id="p016" class="section">
@@ -635,7 +673,8 @@
 <li><input type="checkbox" id="pmr6" onchange="toggleCheck(this)"><label for="pmr6">Copy Charles and the relevant deal team lead</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="pmr7" onchange="toggleCheck(this)"><label for="pmr7">Do not respond directly to the journalist</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="pmr8" onchange="toggleCheck(this)"><label for="pmr8">Confirm any departure from the no-comment position is agreed between Charles and Jonathan</label><span class="owner">Marketing</span></li></ul>
-</div>
+<div class="callout-important"><span class="ci-label">Important</span>Roles and responsibilities apply across all Content and communications processes. Where a process is owned by one person (e.g. Alice on the new investment announcement), that owner is the trigger for the others’ parts – it is the owner’s job to tell Xuti when something is needed, to review it, and to get it signed off.</div>
+  </div>
 <!-- P017 DEAL-RELATED PRESS RELEASE CHECKLIST -->
 <div id="p017" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -791,7 +830,7 @@
     <li>Give the flagged section a bold heading (e.g. "Quote from X") and indent the whole block with tab so it stands out from the body of the email</li>
     <li>Wording: "I noticed some minor tweaks to [name]'s quote – we need to sign this off with her at [company]" – note the quote came from the press release, not the Schedule A</li>
   </ul>
-  <div class="callout"><strong>General principle.</strong> Anything you are ever unsure of: get written confirmation that someone more senior than you has made that decision.</div>
+  <div class="callout-important"><span class="ci-label">Important</span><strong>General principle.</strong> Anything you are ever unsure of: get written confirmation that someone more senior than you has made that decision.</div>
   <h3 class="sub-title">Inputs needed</h3>
   <ul class="sop-list">
     <li>Latest approved press release draft</li>
@@ -961,7 +1000,8 @@
       <li><input type="checkbox" id="d97" onchange="toggleCheck(this)"><label for="d97">Trigger investment case study process</label><span class="owner">Marketing</span></li>
     </ul>
   </div>
-</div>
+<div class="callout"><strong>Related.</strong> Variants and follow-through: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p019')">Exit announcement →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p046')">Website investment pages →</a>. Approval routing and timing: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p007')">Senior approval process →</a>.</div>
+  </div>
 
 <!-- P018 SOP -->
 <div id="p018" class="section">
@@ -1291,7 +1331,13 @@
 <li><input type="checkbox" id="tl15" onchange="toggleCheck(this)"><label for="tl15">Check live article and all links</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="tl16" onchange="toggleCheck(this)"><label for="tl16">Send internal LinkedIn notification</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="tl17" onchange="toggleCheck(this)"><label for="tl17">Save all materials to the relevant event content folder</label><span class="owner">Alice</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Insights commonly originate from origination dinners – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events →</a>.</div>
+  <h3 class="sub-title">How the origination-event insight is produced</h3>
+  <p class="sop-para">Our main thought leadership is the sector-themed piece generated from origination events (general thought leadership beyond this is rare). When setting up an origination / sector event, the team decides the theme (Lauren helps). Once the theme is set, they create a survey for accepted attendees that links directly into how they expect the conversation to go.</p>
+  <p class="sop-para">Someone is identified as the <strong>lead for the content piece</strong> when the event is set up, and it is up to them to navigate the process. Alice supports with brand application and proofreading, and coordinates the deadlines: supply first draft to Charles → feedback session → second draft to Charles → feedback session → create the piece.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>The first step is presenting Charles a <strong>logic-flow document</strong> that sets out the argument and how it will be reasoned through – marking where portfolio-company examples, attendee-survey evidence, or speaker quotes will support each point – before the piece is built.</div>
+  <div class="callout"><strong>Note (Maya):</strong> this process is shifting – the notification flow (who gets told when, and how it’s managed) is to be decided. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p025')">Event insight production →</a>.</div>
+  </div>
 
 <!-- P025 VALUE CREATION EVENT INSIGHTS -->
 <div id="p025" class="section">
@@ -1412,7 +1458,12 @@
 <li><input type="checkbox" id="ei14" onchange="toggleCheck(this)"><label for="ei14">Publish as Bowmark News; same wording on LinkedIn, no outbound link</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="ei15" onchange="toggleCheck(this)"><label for="ei15">Send internal LinkedIn notification</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="ei16" onchange="toggleCheck(this)"><label for="ei16">Complete attendee satisfaction survey and internal event review (regardless of external content)</label><span class="owner">Alice</span></li></ul>
-</div>
+<h3 class="sub-title">Timing and feedback loop</h3>
+  <p class="sop-para">When a value creation event is set up, the value creation team identifies a theme and the key takeaways they want as part of the initial planning. Once agreed, they share a briefing document with Alice containing everything she needs to write a LinkedIn post with the three takeaways in our usual structure (shared with photos from the day). <strong>Sign off with Charles well in advance of the event.</strong> Charles may want a sit-down with the event leads and Alice after seeing the first draft – so send the draft and book a follow-up feedback session a few days later; expect a second version and possibly another session. Start this as soon as the theme and takeaways are decided.</p>
+  <h3 class="sub-title">Bio book (web app)</h3>
+  <p class="sop-para">The bio book is now a web app, created and owned by Xuti. It is Xuti’s responsibility to request from Alice any content and copywriting the app needs. The briefing document Alice needs should include: the theme, the key takeaways, and who is attending. From that, Alice drafts the <strong>About</strong> section – a header plus three short subsections: <em>Who attends</em>, <em>What to expect</em>, <em>Why this year</em> (a short who/what/why with headings). Once the agenda is finalised, each session needs a name and a synopsis. Xuti and the value creation team make sure Alice has everything needed.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>The event web app is <strong>not signed off by Charles</strong>. The final approver is the head of the value creation team (currently Ben Hollowood), after rigorous review by several people including Meagan, Alice, Xuti and the value creation team.</div>
+  </div>
 
 <!-- P026 LINKEDIN POSTS -->
 <div id="p026" class="section">
@@ -1546,7 +1597,13 @@
 <li><input type="checkbox" id="aw8" onchange="toggleCheck(this)"><label for="aw8">Share previous submissions for the same award with Charles</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="aw9" onchange="toggleCheck(this)"><label for="aw9">Finalise entry with Charles</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="aw10" onchange="toggleCheck(this)"><label for="aw10">Submit into the portal</label><span class="owner">Marketing</span></li></ul>
-</div>
+  <h3 class="sub-title">Award sites</h3>
+  <ul class="sop-list">
+    <li>Emerging Market / British Private Equity Awards – add the current award website link (index on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a>)</li>
+    <li>Real Deals Private Equity Awards – add the current award website link</li>
+  </ul>
+  <div class="callout"><strong>To confirm.</strong> Maya to supply the two current award URLs so they can be linked here and on Useful links.</div>
+  </div>
 <!-- 039 PORTFOLIO FORUMS -->
 <div id="p034" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -1708,7 +1765,7 @@
     <tr><td><strong>Editor</strong></td><td>Create and edit entries – the day-to-day role. Left-hand menu shows Dashboard, Entries, Assets only.</td><td>Meagan, Abbey, Alice Fyffe, Hatti, Xuti</td></tr>
     <tr><td><strong>Admin</strong></td><td>Everything, including Globals and Users. Needed only to edit footer / cookie policy / address or manage users.</td><td>A dedicated admin account exists (marketing email address) – log in as that admin to make admin-level changes rather than promoting an individual. Credentials in the handover notes / Sites and password.xlsx.</td></tr>
   </tbody></table>
-  <div class="callout"><strong>Never delete a user.</strong> Deleting a user also deletes every page they created. To remove someone's access, make them <strong>inactive / deactivated</strong> in the members area – never delete. (Brandpie people appear as admins because they built the site – leave them.)</div>
+  <div class="callout-important"><span class="ci-label">Important</span><strong>Never delete a user.</strong> Deleting a user also deletes every page they created. To remove someone's access, make them <strong>inactive / deactivated</strong> in the members area – never delete. (Brandpie people appear as admins because they built the site – leave them.)</div>
   <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Note: finance@bowmark.com is the invoicing address for Brandpie, not a CMS login – do not use it to sign in.</p>
   <h3 class="sub-title">How the CMS is organised</h3>
   <p class="sop-para">Everything is an <strong>entry</strong>. The key distinction to understand:</p>
@@ -2081,6 +2138,7 @@
     <div class="vg-step"><img class="vg-img" loading="lazy" src="data:image/jpeg;base64,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vpvb8zUAZLC0Yu6px6W6GkYxhFRglGKVkl6EgAAAAAAAAAAAAAAAADOv0X3MjWv0X3MjWM66QAZaAAAAAAAAAABhXxOjPKqcpbXumlz+hjL4grVMlNyybt9jtsLF6TtxvHq7UabdmrttW6XDx8Yq7pyXru1ut/06HXZcEVKUKiSnFSSd7MXDtxPHyzVEoxeVN29Vbk0WPhveDsutmn+f27nUoRTbSV31duoshcJrl+furqjO1t91t1/RlZfEFaeSm3ke767XX6nbYWQuHblljYR6JPZP8Stv++ohjFOcUqUkm0rtr9+p02XBNh0dgAIoAAAAAAAAAAAAAAAAAAAAAAAAAABniJShRlKFsy6XV7s0AHJLFOM0nKmld3vwlu/JV4yWmnemn36Ntuy67bK/Y7FGKVkkrdgoRV7Jb9dgOJY6V7fRe/4V1t6r7r/lHRhKzr0VN2vezt0NrLgJWAAAAAAAAAAAAAAAAAHLLETjKeZwypu0rPZJbt7/AGR1EZVe9lfoByRxc27fy3LL+FP/ADN7ev8A/Cvzssy3puF/xcrbv6dfsjtyR2+lbdNuhNkvQDjoYuVStCElG0ldOPr177bI7Akl0QAAAAAAAAAAAAAAAAAzr9F9zI1r9F9zI1jOukGYJGmgMwINAZgQaAzAg0BmBBoDMCDQGYEGgMwINAZgQaAzAg0BmBBoDMCDQGYEGgMwINAZgQaAzAg0BmBBoDMCDQGYEGgMwINAZgQaAzAg0BmBBoDMCDQGYEGgMwINAZgQaAzAg0BmBBoDMCDQGYEGgMwINAZgQaAzAg0BmBBoDMCDQGFWppxTSvcy+Zl/ShErsBx/My/pQ+Zl/ShCuwHH8y/6UdCd0nyIUr9F9zIvU6L7lC4mtQSCKgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAIBIAgEgCASAMMT+GP3OGtGo6sZU77RaW+1+56VSmqisyny0f6mWo8xPFNy7Oz2Xbp79S8FXU1KbzKzTjGyXpb/AJPQ+Wj/AFMfLR5ZaRyptrdWfFzuh+CP2M/lo8s1SsrE0xWp0X3KF6nRfcoMNRZcCy4AKFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAWXAsuAAFlwLLgABZcCy4AAlIkAD//Z" alt="step screenshot"></div>
   </details>
 
+  <div class="callout"><strong>Related.</strong> All CMS and tool accounts are indexed on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>; access handover: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p082')">Passwords and access →</a>.</div>
   </div>
 
 <!-- P066 AD HOC TEAM SUPPORT -->
@@ -2166,7 +2224,8 @@
 <li><input type="checkbox" id="ah12" onchange="toggleCheck(this)"><label for="ah12">Deliver final files / publish webpage / send to print as appropriate</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="ah13" onchange="toggleCheck(this)"><label for="ah13">Check the live page or printer’s proof</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="ah14" onchange="toggleCheck(this)"><label for="ah14">Save final approved files in the corresponding marketing folder</label><span class="owner">Marketing</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Worked example of an ad hoc request: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p065')">Flyers and one-pagers →</a>.</div>
+  </div>
 
 <!-- P068 PHOTOGRAPHY AND HEADSHOTS -->
 <div id="p068" class="section">
@@ -2408,6 +2467,7 @@
     <div class="vg-step"><img class="vg-img" loading="lazy" src="data:image/jpeg;base64,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" alt="step screenshot"></div>
   </details>
 
+  <div class="callout"><strong>Related.</strong> Updating library slides and assets: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p061')">Slide library management →</a>. Management presentation quick reference: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p079')">Management presentation update →</a>.</div>
   </div>
 
 <!-- P079 MANAGEMENT PRESENTATION UPDATE -->
@@ -2491,7 +2551,8 @@
 <li><input type="checkbox" id="ex9" onchange="toggleCheck(this)"><label for="ex9">At completion: change investment status from current to realised</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="ex10" onchange="toggleCheck(this)"><label for="ex10">Verify heading has changed to "The result" and wording reads as a completed outcome</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="ex11" onchange="toggleCheck(this)"><label for="ex11">Check the live case study page after publication</label><span class="owner">Marketing</span></li></ul>
-</div>
+<div class="callout-important"><span class="ci-label">Important</span>Do not change the website investment status from current to realised until <strong>completion</strong> – at exchange, keep everything in draft.</div>
+  </div>
 
 <!-- P015 CHARITY SOFT NEWS -->
 <div id="p015" class="section">
@@ -2630,7 +2691,8 @@
 <li><input type="checkbox" id="ev13" onchange="toggleCheck(this)"><label for="ev13">Send test email with no wildcard values for review</label><span class="owner">Xuti</span></li>
 <li><input type="checkbox" id="ev14" onchange="toggleCheck(this)"><label for="ev14">Send to approver for review</label><span class="owner">Xuti</span></li>
 <li><input type="checkbox" id="ev15" onchange="toggleCheck(this)"><label for="ev15">Check settings and send out the invitation</label><span class="owner">Maya</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Used by every origination event: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events →</a>. Recipient lists and tiering: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p051')">DealCloud event campaigns →</a>. All working links: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a>.</div>
+  </div>
 
 <!-- P065 FLYERS AND ONE-PAGERS -->
 <div id="p065" class="section">
@@ -2683,6 +2745,7 @@
     <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
     <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
   </div>
+  <div class="callout"><strong>Updated process (per Charles).</strong> On a new investment the <strong>deal team</strong> creates the first draft of the website case study page. Marketing’s job is to make sure that happens – prompt the deal team to draft it, recommending they use the Schedule A document and the press release for pre-approved wording, then follow the CMS setup guide below.</div>
   <h3 class="sub-title">Trigger</h3>
   <p class="sop-para">A new investment (case study drafted in preparation for publishing at time of completion) or an update to an existing investment (bolt-on, milestone, exit).</p>
   <h3 class="sub-title">Source material</h3>
@@ -2951,7 +3014,8 @@
 <li><input type="checkbox" id="db4" onchange="toggleCheck(this)"><label for="db4">Update every location where the affected stat appears (website, LinkedIn, flyers, presentations)</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="db5" onchange="toggleCheck(this)"><label for="db5">Update Glassdoor tracking file where relevant</label><span class="owner">Xuti</span></li>
 <li><input type="checkbox" id="db6" onchange="toggleCheck(this)"><label for="db6">Confirm Chronograph sync where relevant</label><span class="owner">Sam P</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Glassdoor tracking: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p081')">Glassdoor management →</a>. Access and accounts: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p082')">Passwords and access →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
+  </div>
 
 <!-- P001 ANNUAL MARKETING PLANNING -->
 <div id="p001" class="section">
@@ -3002,7 +3066,8 @@
 <li><input type="checkbox" id="ap7" onchange="toggleCheck(this)"><label for="ap7">Build the Year Plan sheet by category and month</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="ap8" onchange="toggleCheck(this)"><label for="ap8">Populate the activity dashboard with leads, sign-offs and KPIs</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="ap9" onchange="toggleCheck(this)"><label for="ap9">Agree the plan and budget with senior stakeholders</label><span class="owner">Marketing</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Weekly rhythm: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p003')">Team planning →</a>. KPI mapping: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p004')">Marketing reporting and KPIs →</a>.</div>
+  </div>
 
 <!-- P002 MARKETING STRATEGY FRAMEWORK -->
 <div id="p002" class="section">
@@ -3057,7 +3122,8 @@
     <tr><td><strong>Internal / talent</strong></td><td>Clarity of purpose; attract talent; foster pride</td></tr>
   </tbody></table>
   <div class="callout"><strong>To be completed.</strong> Key personas (founder-CEO, PE-backed senior execs, institutional LPs, intermediaries, expert network, talent) exist in the Marketing Plan workbook and can be added; the strategy review cadence and history are scheduled for verbal capture in Session 3.</div>
-</div>
+<div class="callout"><strong>Related.</strong> KPIs report against this framework: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p004')">Marketing reporting and KPIs →</a>. Annual view: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p001')">Annual marketing planning →</a>.</div>
+  </div>
 
 <!-- P004 MARKETING REPORTING AND KPIS -->
 <div id="p004" class="section">
@@ -3094,7 +3160,8 @@
     <li><strong>Implementation timeline, expected outcomes and next steps</strong></li>
   </ul>
   <p class="sop-para">Benchmark reference points from the 2024 report: 49 posts produced 466,035 impressions; followers passed 10,000 (11,415, +32% – ahead of ECI and Livingbridge, slightly trailing Inflexion and Hg); 7% average engagement rate; high-value posts perform best on Tuesdays and Thursdays in mid-morning and early afternoon windows.</p>
-</div>
+<div class="callout"><strong>Related.</strong> Weekly reporting rhythm: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p003')">Team planning and workstream management →</a>.</div>
+  </div>
 
 <!-- P067 ASSET LIBRARY MANAGEMENT -->
 <div id="p067" class="section">
@@ -3119,7 +3186,8 @@
     <tr><td><strong><a href="https://canva.link/aekpmec9ih19co1" target="_blank">Table plan</a></strong></td><td>A2 size for the origination event when a physical table plan is required on the day</td><td>Capital market drink</td><td>Export as a print-ready PDF with bleed settings and send to <strong>Kall Kwik</strong> for printing</td></tr>
   </tbody></table>
   <div class="callout"><strong>To be completed.</strong> The wider asset library structure (logos, photography, portfolio company assets, UpSlide asset library relationship) is scheduled for verbal capture in Session 5 (Brand and AI). Owner: Xuti.</div>
-</div>
+<div class="callout"><strong>Related.</strong> Every template link on this page is also indexed on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a>; the Canva account is on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
+  </div>
 
 <!-- P043 AGM SUPPORT -->
 <div id="p043" class="section">
@@ -3252,7 +3320,7 @@
   </ul>
 
   <h3 class="sub-title">Presentation deliverables</h3>
-  <div class="callout"><strong>Do not create different versions until the entire presentation has been signed off, in the week of the event.</strong></div>
+  <div class="callout-important"><span class="ci-label">Important</span><strong>Do not create different versions of the AGM presentation until the entire presentation has been signed off, in the week of the event.</strong></div>
   <table class="roles"><thead><tr><th>Version</th><th>Why / what / how</th></tr></thead><tbody>
     <tr><td><strong>Screen version</strong></td><td>For the event itself. All slides. PowerPoint, no size limit. Provide to the production company in the week of the event; ensure they have ALL document fonts installed.</td></tr>
     <tr><td><strong>IntraLinks version</strong></td><td>To upload to IntraLinks once the AGM is over. All slides except those marked 'screen only' by Charles. PDF, under 10 MB. Emailed for upload as soon as the event ends; IntraLinks should not notify contacts of the new file – the post-event attendee email covers this.</td></tr>
@@ -3318,7 +3386,8 @@
 <li><input type="checkbox" id="agm19" onchange="toggleCheck(this)"><label for="agm19">Edit notes to production company; review and sign off final film with CI</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="agm20" onchange="toggleCheck(this)"><label for="agm20">Upload final film to Vimeo unlisted; embed on member page; create user access</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="agm21" onchange="toggleCheck(this)"><label for="agm21">Send investor access email</label><span class="owner">Marketing</span></li></ul>
-</div>
+<div class="callout"><strong>Related.</strong> Vimeo, WeTransfer and IntraLinks accounts: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
+  </div>
 
 <!-- P073 GITHUB EVENT PAGES -->
 <div id="p073" class="section">
@@ -3519,6 +3588,7 @@
     <div class="vg-step"><img class="vg-img" loading="lazy" src="data:image/jpeg;base64,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" alt="step screenshot"></div>
   </details>
 
+  <div class="callout"><strong>Related.</strong> Repo link on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a>; access on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
   </div>
 
 <!-- P030 ORIGINATION EVENTS -->
@@ -3535,6 +3605,16 @@
   <div class="callout"><strong>Source.</strong> Built from the live Event Checklist – Dinners or Drinks.xlsx (Marketing &gt; 04 – Events &gt; General). The working spreadsheet auto-calculates deadlines from the event date – use it per event; this page is the reference version. 47 tasks across 11 phases.</div>
   <h3 class="sub-title">Event set-up</h3>
   <p class="sop-para">Every origination event starts by completing the checklist header: date of event, marketing lead, event sponsor, origination lead and admin lead. Weekly email updates go to all attending. Deadlines are calculated automatically from the event date – months out for the early phases, days out from two weeks before.</p>
+  <h3 class="sub-title">The three core origination event types</h3>
+  <p class="sop-para">There are three core origination events, all following this same process; a fourth (the smaller sector-focused dinner) follows a different, lighter process.</p>
+  <h4 class="sub-sub">Flagship dinner</h4>
+  <p class="sop-para">A large, serious event – e.g. the software dinner, about 40–60 people across several round tables, with a lot of Bowmark attendees; typically a whole business model with each table split by vertical. Usually has one after-dinner speaker, sometimes paid – e.g. Bronwen Maddox on politics, sourced through JLA Speakers (contact: Brogan, introduced to Lauren and Meagan). Prefer one to two speakers with a Q&amp;A compered by a Bowmarker rather than a panel – panels have worked (software dinner) but get unwieldy with a large room.</p>
+  <h4 class="sub-sub">Round table dinner</h4>
+  <p class="sop-para">A smaller sector or vertical, usually about 24 people including four Bowmarkers and two to four portfolio contacts, two of whom speak. Chaired by a Bowmarker, with a theme proposed as two opposing arguments: one person presents each side, then a chaired round-table discussion. A for/against structure isn’t mandatory but works very well.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>It is a primary objective that every <strong>guest’s</strong> voice is heard – not every Bowmarker’s. When Bowmarkers have felt they must each speak, it has caused guests to be spoken over. Bowmarkers should have something pocketed in case conversation stalls, but the room is there to showcase our network and the guests, not Bowmark itself. Do not push Bowmarkers to make sure they’ve said something.</div>
+  <h4 class="sub-sub">Drinks reception</h4>
+  <p class="sop-para">Much more flexible – no structure, no seating plan; usually summer drinks. For sectors with cyclical events we alternate year to year between a round-table dinner and a drinks reception. Drinks let you invite many more people (and ask portfolio companies to bring contacts) – great for new contacts – but drop-out is higher, there’s less of the high-end Bowmark touch, and content is harder to get, relying more on an attendee survey.</p>
+  <div class="callout"><strong>Related.</strong> The smaller sector-focused dinner follows its own lighter process: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p033')">Smaller sector-focused dinner →</a>.</div>
   <h3 class="sub-title">Task categories and owners</h3>
   <p class="sop-para">Tasks are categorised as Admin, Format, Venue or Comms, with responsibility split across Marketing, Admin, Origination, Event Sponsor and Investment. The event brief and budget must be created and approved before venue booking – use the Event Brief template as the starting document.</p>
   <h3 class="sub-title">Full process checklist</h3>
@@ -3648,7 +3728,10 @@
   <h2 class="section-title">Smaller sector-focused dinner</h2>
   <p class="body-text">Smaller sector-focused dinners follow the standard origination events process – 47 tasks across 11 phases from initial meeting to post-event reporting.</p>
   <div class="callout"><strong>Full process.</strong> See the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events – dinners and drinks SOP →</a> for the complete checklist, roles and timings.</div>
-</div>
+  <h3 class="sub-title">A lighter, different process</h3>
+  <p class="sop-para">Unlike the three core origination events, this is something we are introducing / considering: a team member wants a small dinner with a few people – up to about 15 max, e.g. a private room with two Bowmarkers and around ten guests. No theme, no speaker – just a dinner.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>Budget: believed to be a maximum of around £3,000 (to be confirmed). This was an unofficial process this year (Monty’s combined joint event with another firm) and needs to be carved out or flagged with Tom when next year’s budget is reviewed.</div>
+  </div>
 
 <!-- P051 DEALCLOUD EVENT CAMPAIGNS -->
 <div id="p051" class="section">
@@ -3800,7 +3883,14 @@
 <li><input type="checkbox" id="bu10" onchange="toggleCheck(this)"><label for="bu10">Implement approved changes on the CMS team member entries</label><span class="owner">Xuti</span></li>
 <li><input type="checkbox" id="bu11" onchange="toggleCheck(this)"><label for="bu11">Check the live pages after publishing</label><span class="owner">Marketing</span></li>
 <li><input type="checkbox" id="bu12" onchange="toggleCheck(this)"><label for="bu12">Save the document to Content > [year] > Website copy with the standard naming</label><span class="owner">Marketing</span></li></ul>
-</div>
+<h3 class="sub-title">Approval and sensitivity</h3>
+  <p class="sop-para">Do a periodic review of website team profiles so they stay current. Each department head approves their department’s profiles – but because profiles are personally sensitive, <strong>the individual is always the final sign-off on their own profile</strong>. (Example: someone on origination may want a change the department head wouldn’t; letting the individual sign off last avoids that conflict.)</p>
+  <p class="sop-para">Process: send one Word document with the whole team and your suggested changes – or, where you can’t easily tell, just ask “are these still up to date, any changes?” They return tracked changes; you send to Charles for approval; once he approves, send each person their own entry for final sign-off. Update individually as each is signed off.</p>
+  <h3 class="sub-title">Photography</h3>
+  <p class="sop-para">The photographer (Nick) comes in twice a year to capture new joiners’ professional photos; make the most of the day by offering existing team members a re-shoot. Xuti owns this and updates the profiles. If someone asks mid-year to change their photo or profile, note it for the next sweep – unless it’s an urgent text change, which follows the normal process. Also capture reportage / set-up shots of two to three Bowmarkers on these days, mixing genders and races where possible (see photography guidance in the brand guidelines).</p>
+  <div class="callout-important"><span class="ci-label">Important</span>A leaver should trigger checking the website for any photos of them – propose a replacement to Charles.</div>
+  <div class="callout"><strong>Related.</strong> Photography process: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p068')">Photography and headshots →</a>. Bio investment-mention framework is above.</div>
+  </div>
 
 <!-- P061 SLIDE LIBRARY MANAGEMENT -->
 <div id="p061" class="section">
@@ -3978,7 +4068,8 @@
 <li><input type="checkbox" id="sc813" onchange="toggleCheck(this)"><label for="sc813">Reflect any headcount / entity changes flowing from the deal <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
 <li><input type="checkbox" id="sc814" onchange="toggleCheck(this)"><label for="sc814">Record the update in the data bible <a style="cursor:pointer;color:var(--bm-coral);font-weight:600" onclick="event.stopPropagation();showSection('p080')">→ open SOP</a></label></li>
   </ul>
-</div>
+<div class="callout"><strong>How it works.</strong> A spreadsheet with built-in macros – just run the macro. Xuti is trained; Meagan also knows how. <span style="display:block;margin-top:8px"><strong>To do (Maya):</strong> To do (Maya): record a guide for running the Glassdoor macro (Scribe → Word export → embed).</span></div>
+  </div>
 
 <!-- P082 QUICK REF -->
 <div id="p082" class="section">
@@ -4051,11 +4142,12 @@
   <h3 class="sub-title">Timing</h3>
   <ul class="sop-list">
     <li>Reviews are usually turned around quickly, so send things when they are genuinely ready for attention.</li>
-    <li>For anything with a <strong>planned publication date</strong>, aim to have it signed off <strong>at least a week ahead</strong> of publication – this should always be prioritised where a date is known. Reactive newsflow obviously can’t follow this, but planned pieces (events, campaigns, scheduled announcements) should.</li>
+
     <li>Aim to send by <strong>Thursday morning</strong> where possible – sending late on a Friday can read as a request to work over the weekend.</li>
     <li>Where several items are due together, it can help to <strong>bundle them into one review</strong> rather than sending a stream of separate requests – easier to look at as a set. Use judgement where one item has a different timeline (e.g. a video still in production).</li>
     <li>Keeping one or two approved pieces ready to publish gives useful flexibility on timing.</li>
   </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>For anything with a <strong>planned publication date</strong>, aim to have it signed off <strong>at least a week ahead</strong> of publication – always prioritise this where a date is known. Reactive newsflow obviously can’t follow this; planned pieces (events, campaigns, scheduled announcements) should.</div>
 
   <h3 class="sub-title">After sign-off</h3>
   <ul class="sop-list">
@@ -4065,6 +4157,451 @@
   </ul>
 
   <div class="callout"><strong>Related.</strong> Quote integrity and the tracked-changes flagging method sit in the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p017')">Deal-related press releases SOP →</a>. Escalation for sensitive or time-critical items is covered under <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p011')">Approval escalation for sensitive comms →</a>.</div>
+</div>
+
+<!-- P083 GOOGLE BUSINESS PROFILE -->
+<div id="p083" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Google Business Profile</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Accurate Google Search and Maps listing</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc / periodic check</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+  <h3 class="sub-title">Purpose and access</h3>
+  <p class="sop-para">Bowmark's Google Business Profile controls the firm information that appears in Google Search and Google Maps, including the Bowmark Capital business listing.</p>
+  <p class="sop-para">The profile is currently owned by Charles through the Google account associated with his Bowmark email address. Day-to-day management has historically been through Maya's personal Gmail account.</p>
+  <p class="sop-para">As part of the marketing handover, management access should move to the generic marketing Google account: <strong>bowmarkmarketing@gmail.com</strong>. The intended access structure is:</p>
+  <ul class="sop-list">
+    <li>Charles – owner</li>
+    <li>bowmarkmarketing@gmail.com – manager</li>
+    <li>Maya – access to be removed once the generic account has been added successfully</li>
+  </ul>
+  <p class="sop-para">Charles does not need a Gmail address to remain the owner. His Bowmark email address is associated with a Google account and can therefore retain ownership of the Business Profile.</p>
+  <h3 class="sub-title">Changing management access</h3>
+  <p class="sop-para">Only an existing owner can manage user access, so Charles will need to add the generic marketing account. Instructions for Charles:</p>
+  <ol class="sop-list">
+    <li>Open Google Chrome and make sure you are signed into Google using your Bowmark email address.</li>
+    <li>Search Google for Bowmark Capital.</li>
+    <li>You should see a section called 'Your business on Google' at the top of the search results.</li>
+    <li>Click the three-dot menu within this section.</li>
+    <li>Select 'Business Profile settings'.</li>
+    <li>Select 'People and access'.</li>
+    <li>Click 'Add', enter bowmarkmarketing@gmail.com and select 'Manager'.</li>
+    <li>Once the account has been added successfully, remove Maya from the list of people with access.</li>
+  </ol>
+  <div class="callout"><strong>Note.</strong> Google occasionally changes the wording or location of these settings, so the options may look slightly different.</div>
+  <h3 class="sub-title">Ongoing management</h3>
+  <p class="sop-para">The generic marketing account should be used for day-to-day management of the profile rather than an individual team member's personal account. This avoids access needing to be transferred each time responsibilities within the marketing team change.</p>
+  <p class="sop-para">Charles can remain the owner – there is no need to transfer ownership to the marketing account for normal management purposes.</p>
+  <p class="sop-para">Anyone taking responsibility for the profile should periodically check that Bowmark's core information remains accurate, particularly the website link, office details and other information displayed publicly by Google.</p>
+  <h3 class="sub-title">Process checklist</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p083')">Reset checklist</button></div>
+<ul class="checklist"><li><input type="checkbox" id="gbp1" onchange="toggleCheck(this)"><label for="gbp1">Ask Charles to add bowmarkmarketing@gmail.com as Manager (owner-only action)</label><span class="owner">Charles</span></li>
+<li><input type="checkbox" id="gbp2" onchange="toggleCheck(this)"><label for="gbp2">Confirm the generic account has manager access</label><span class="owner">Marketing</span></li>
+<li><input type="checkbox" id="gbp3" onchange="toggleCheck(this)"><label for="gbp3">Ask Charles to remove Maya’s personal access once confirmed</label><span class="owner">Charles</span></li>
+<li><input type="checkbox" id="gbp4" onchange="toggleCheck(this)"><label for="gbp4">Verify Charles remains owner via his Bowmark email account</label><span class="owner">Marketing</span></li>
+<li><input type="checkbox" id="gbp5" onchange="toggleCheck(this)"><label for="gbp5">Periodic check: website link is correct</label><span class="owner">Marketing</span></li>
+<li><input type="checkbox" id="gbp6" onchange="toggleCheck(this)"><label for="gbp6">Periodic check: office details and address are current</label><span class="owner">Marketing</span></li>
+<li><input type="checkbox" id="gbp7" onchange="toggleCheck(this)"><label for="gbp7">Periodic check: other publicly displayed information is accurate</label><span class="owner">Marketing</span></li></ul>
+<div class="callout"><strong>Related.</strong> Account index: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
+  </div>
+
+<!-- USEFUL LOGINS -->
+<div id="useful-logins" class="section">
+  <a class="back-link" onclick="showSection('home')">← Back to action plan</a>
+  <p class="eyebrow">Shared reference</p>
+  <h2 class="section-title">Useful logins</h2>
+  <p class="sop-para">Every account referenced anywhere in the handbook, in one place. Usernames and account addresses live here; <strong>passwords never do</strong> – they live in Sites and password.xlsx on SharePoint. When a new account is mentioned in any process, add a row here and link the process page to this one.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>Never delete a CMS user – deleting a user deletes every page they created. Deactivate instead. And never sign in with finance@bowmark.com – it is Brandpie's invoicing address, not a login.</div>
+  <table class="roles"><thead><tr><th>System</th><th>Account / username</th><th>Password</th><th>Notes</th></tr></thead><tbody>
+    <tr><td><strong>Craft CMS – admin</strong></td><td>Dedicated admin account (marketing email address)</td><td>Sites and password.xlsx</td><td>Log in as this for admin-level changes (Globals, Users) rather than promoting an individual. See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p045')">Website CMS management →</a></td></tr>
+    <tr><td><strong>Craft CMS – editors</strong></td><td>Individual logins (Meagan, Abbey, Alice F, Hatti, Xuti)</td><td>Personal / reset link</td><td>Request a password-reset link rather than sharing credentials</td></tr>
+    <tr><td><strong>Google Business Profile</strong></td><td>bowmarkmarketing@gmail.com (manager); Charles's Bowmark email (owner)</td><td>Sites and password.xlsx</td><td>See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p083')">Google Business Profile →</a></td></tr>
+    <tr><td><strong>Canva – master account</strong></td><td>Team admin account</td><td>Sites and password.xlsx</td><td>See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library management →</a></td></tr>
+    <tr><td><strong>Vimeo</strong></td><td>Marketing account</td><td>Sites and password.xlsx</td><td>AGM films uploaded unlisted – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p043')">AGM support →</a></td></tr>
+    <tr><td><strong>WeTransfer</strong></td><td>Marketing account</td><td>Sites and password.xlsx</td><td>Used for AGM digital download links</td></tr>
+    <tr><td><strong>rss.app</strong></td><td>marketing@bowmark.com</td><td>Sites and password.xlsx</td><td>News sweep feeds – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p012')">News sweep →</a></td></tr>
+    <tr><td><strong>IntraLinks</strong></td><td>Upload access for AGM presentation</td><td>Sites and password.xlsx</td><td>Post-AGM PDF upload, no notification – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p043')">AGM support →</a></td></tr>
+    <tr><td><strong>DealCloud</strong></td><td>Marketing team logins</td><td>Sites and password.xlsx</td><td>Campaigns, pages, lists – Lauren owns. See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p051')">DealCloud event campaigns →</a></td></tr>
+    <tr><td><strong>Dispatch</strong></td><td>Marketing account</td><td>Sites and password.xlsx</td><td>Email campaigns – Lauren owns</td></tr>
+    <tr><td><strong>Google Analytics</strong></td><td>Marketing access</td><td>Sites and password.xlsx</td><td>Website reporting</td></tr>
+    <tr><td><strong>LinkedIn company page</strong></td><td>Admin access via personal profiles</td><td>Personal accounts</td><td>Admins manage the Bowmark page – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p026')">LinkedIn posts →</a></td></tr>
+    <tr><td><strong>Chronograph</strong></td><td>Synced data source</td><td>Sites and password.xlsx</td><td>Quality-controlled figures for the data bible – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a></td></tr>
+    <tr><td><strong>GitHub</strong></td><td>Access to bowmarkcapital/bowmark-events</td><td>Personal accounts</td><td>See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p073')">GitHub / technical workflows →</a></td></tr>
+  </tbody></table>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Master register: Sites and password.xlsx (SharePoint). This page is the index; the register is the vault.</p>
+</div>
+
+<!-- USEFUL LINKS -->
+<div id="useful-links" class="section">
+  <a class="back-link" onclick="showSection('home')">← Back to action plan</a>
+  <p class="eyebrow">Shared reference</p>
+  <h2 class="section-title">Useful links</h2>
+  <p class="sop-para">Every working link referenced anywhere in the handbook, in one place. When a new link is mentioned in any process, add a row here and cross-link both ways.</p>
+  <table class="roles"><thead><tr><th>Link</th><th>What it is</th><th>Used in</th></tr></thead><tbody>
+    <tr><td><a href="https://bowmark.dealcloud.eu/marketing/pages" target="_blank">DealCloud – Pages</a></td><td>RSVP page builder</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p064')">Event invitation templates →</a></td></tr>
+    <tr><td><a href="https://bowmark.dealcloud.eu/marketing/campaigns" target="_blank">DealCloud – Campaigns</a></td><td>Invitation email campaigns</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p064')">Event invitation templates →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p051')">DealCloud event campaigns →</a></td></tr>
+    <tr><td><a href="https://canva.link/qr3goh3jxgm0fwc" target="_blank">Canva – LinkedIn graphic</a></td><td>1080x1080 template</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://canva.link/ow5ctim39md0bgb" target="_blank">Canva – Event booklet (digital)</a></td><td>A5 booklet template</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://canva.link/qn5vm5mxtif37xv" target="_blank">Canva – Event booklet (print)</a></td><td>Print-ready, to Identity Print</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://canva.link/jz2i6id6lv5svuk" target="_blank">Canva – Event flyers</a></td><td>A4 agenda one-pager</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://canva.link/aekpmec9ih19co1" target="_blank">Canva – Table plan</a></td><td>A2, to Kall Kwik</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://canva.link/gw9d2ncn5wklbxv" target="_blank">Canva – Brand folder</a></td><td>Design project files</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://www.canva.com/brand/kAFnBUHJtKc" target="_blank">Canva – Brand assets</a></td><td>Logo and colour palette</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p067')">Asset library →</a></td></tr>
+    <tr><td><a href="https://github.com/bowmarkcapital/bowmark-events" target="_blank">GitHub – bowmark-events</a></td><td>Event holding pages repo</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p073')">GitHub workflows →</a></td></tr>
+    <tr><td><a href="https://bowmarkcapital.sharepoint.com/:w:/s/Marketing/IQCEo_KVcDTLRoLGajipv0VxAWxQ1sk9rdWRhmjhgDdp4gc?e=x7DJaN" target="_blank">Outlook diary hold template</a></td><td>Calendar invite template</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p063')">Email and calendar hold templates →</a></td></tr>
+    <tr><td><a href="https://bowmarkcapital.sharepoint.com/:b:/s/Intranet/IQAEVODebkG3R7lrMfmprAAiARRQW_hfdDhFpuU6dOW_GLU?e=o9XyQ3" target="_blank">A5 flyer – approved version</a></td><td>Shareable PDF</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p065')">Flyers and one-pagers →</a></td></tr>
+    <tr><td><a href="https://bowmarkcapital.sharepoint.com/:p:/s/Intranet/IQBRVl0F1nDOTJSaK_TrASz7AWyryIM6hO4_B8HMtEJA-iI?e=lhnPv6" target="_blank">A5 flyer – editable file</a></td><td>For updates</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p065')">Flyers and one-pagers →</a></td></tr>
+    <tr><td><a href="https://rssviewer.app/https%3A%2F%2Frss.app%2Ffeeds%2F_yDed8nFy8W2ARVqG.xml?utm=rssapp" target="_blank">News sweep RSS feed viewer</a></td><td>Daily sweep feed</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p012')">News sweep →</a></td></tr>
+    <tr><td><a href="https://www.linkedin.com/company/1453982/admin/feed/following/" target="_blank">LinkedIn – company feed admin</a></td><td>Feed following management</td><td><a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p026')">LinkedIn posts →</a></td></tr>
+    <tr><td><a href="https://www.bowmark.com" target="_blank">bowmark.com</a></td><td>The website</td><td>–</td></tr>
+  </tbody></table>
+</div>
+
+<!-- P022 INVESTMENT UPDATE -->
+<div id="p022" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Content and communications</p>
+  <h2 class="section-title">Investment update</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">News piece + updated case study</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+  <h3 class="sub-title">Trigger</h3>
+  <p class="sop-para">An update related to the growth strategy or value creation of a portfolio company – for example a news piece flagging an acquisition or a new product release. This should trigger updating the investment case study.</p>
+  <h3 class="sub-title">Process – keep it in one document</h3>
+  <p class="sop-para">Take the case study “story so far” section into a Word document, make suggested edits with track changes, and send it for review <strong>together with the news piece</strong>. You can put everything in a single document – e.g. for an acquisition, the website news, LinkedIn post and investment case study update all in one document, reviewed at once. This also needs sign-off by the portfolio company itself.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>When we make an initial investment, the “story so far” section is usually just one sentence. Update it as soon as there is something to add – otherwise it dates quickly and makes it look like little is happening on an investment we made a year ago.</div>
+  <p class="sop-para">This keeps the website current between full website reviews. Alice makes sure Xuti knows an update is coming so she can upload it into the CMS and provide the review link once text is approved by all parties.</p>
+  <div class="callout"><strong>Related.</strong> Case study structure and CMS steps: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p046')">Website investment pages →</a>. Approval routing: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p007')">Senior approval process →</a>.</div>
+</div>
+
+<!-- P048 WEBSITE PAGE EDITS -->
+<div id="p048" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Content and communications</p>
+  <h2 class="section-title">Website page edits</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Updated website page</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+  <p class="sop-para">General page edits follow the same process as the other website pages. The CMS is fairly simple, but <strong>every change must be approved by Charles</strong>.</p>
+  <h3 class="sub-title">Purpose page – known update needed</h3>
+  <p class="sop-para">The purpose page needs updating to reflect what we actually do today. This is being worked on with Ann Sheedy and John Williams. Note the sign-off order: because it is ESG-related, <strong>David Torbett (head of ESG) signs off before Charles</strong>. Flag to the team: “Ann has recommended the purpose page is updated as it’s no longer current; we’re working on it together – expect a draft shared with David first and Charles last.”</p>
+  <div class="callout"><strong>Related.</strong> CMS mechanics: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p045')">Website CMS management →</a>. Approval routing: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p007')">Senior approval process →</a>.</div>
+</div>
+
+<!-- P023 -->
+<div id="p023" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Content and communications</p>
+  <h2 class="section-title">Crisis / sensitive communications</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+<div class="callout-important"><span class="ci-label">Important</span>Anything troubling always goes to Charles. If it is portfolio-company specific, escalate first to the responsible deal team lead, then Charles. If it is Bowmark-specific, escalate directly to Charles.</div>
+  <p class="sop-para">Examples: something concerning on LinkedIn, a worrying item via the media inbox, bad reviews on a portfolio company, or a nasty comment on a LinkedIn post. Escalate immediately – don’t sit on it or try to handle it alone; Charles will take it from there.</p>
+  <div class="callout"><strong>Owner:</strong> Meagan. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p016')">PR and media management →</a>.</div>
+</div>
+
+<!-- P044 -->
+<div id="p044" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Events</p>
+  <h2 class="section-title">Event follow-up</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+<p class="sop-para">The list of things that need to happen after any event:</p>
+  <ul class="sop-list">
+    <li>Create the feedback form (Lauren responsible; make sure it gets done)</li>
+    <li>Send the thank-you email with the feedback form</li>
+    <li>Share any materials from value creation events</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>The feedback form is key – it is the only way we can measure event KPIs.</div>
+  <div class="callout"><strong>To do (Maya):</strong> upload the document of event email templates into this section. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p004')">Marketing reporting and KPIs →</a>.</div>
+</div>
+
+<!-- P040 -->
+<div id="p040" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Events</p>
+  <h2 class="section-title">Internal events</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">Owned by Mollie. On occasion Mollie will request event collateral or marketing support that Xuti helps with – presentations or anything else. Flag these on the calendar so Xuti’s resource time is scheduled well in advance.</p>
+  <div class="callout"><strong>Owner:</strong> Mollie (marketing support: Xuti).</div>
+</div>
+
+<!-- P041 -->
+<div id="p041" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Events</p>
+  <h2 class="section-title">Hospitality</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">Owned by Mollie; seems less frequent now. Make sure Xuti’s time is scheduled well in advance. Where something like a cycling trip needs a detailed booklet or guide, Alice and Meagan should be involved in the copywriting. Triggered by Mollie, but keep foresight across the team on what’s coming.</p>
+  <div class="callout"><strong>Owner:</strong> Mollie.</div>
+</div>
+
+<!-- P053 -->
+<div id="p053" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Google Analytics reporting</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">We don’t use Google Analytics much. Access anything you need via the bowmarkmarketing@gmail.com account (see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>). John Williams also has access, as does the Brandpie team.</p>
+  <div class="callout"><strong>Interim owner:</strong> John Williams (marketing consultant).</div>
+</div>
+
+<!-- P054 -->
+<div id="p054" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">LinkedIn admin and analytics</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">All LinkedIn post information is tracked on a spreadsheet called <strong>LinkedIn Report</strong>. LinkedIn only lets you export up to 365 days of data.</p>
+  <div class="callout-important"><span class="ci-label">Important</span>Set a reminder at the start / end of each year to export the year’s data and update the LinkedIn Report spreadsheet before older data drops off.</div>
+  <div class="callout"><strong>To do (Maya):</strong> clean up the LinkedIn Report spreadsheet to simplify the process for whoever takes it over. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p026')">LinkedIn posts →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a>.</div>
+</div>
+
+<!-- P056 -->
+<div id="p056" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">WeTransfer use</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">Use WeTransfer to send large files or many files at once.</p>
+  <div class="callout"><strong>To do (Maya):</strong> move the WeTransfer account to the marketing email address and confirm the login on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>; then a generic “how to use WeTransfer” guide can be added here.</div>
+</div>
+
+<!-- P055 -->
+<div id="p055" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Vimeo management</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">Meagan and Xuti each have a Vimeo account. Used for hosting video, including AGM films (uploaded unlisted).</p>
+  <div class="callout"><strong>To do (Maya):</strong> move Maya’s Vimeo account to the generic marketing email address; confirm on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>; generic Vimeo management instructions to be added here. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p043')">AGM support →</a>.</div>
+</div>
+
+<!-- P050 -->
+<div id="p050" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Hosting and dev support</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+<p class="sop-para">Hosting and dev support is run by Brandpie (our brand and web agency since the 2019 refresh). Hosting moved from Fortrabbit to Servd (May 2025).</p>
+  <h3 class="sub-title">Who handles website issues</h3>
+  <ul class="sop-list">
+    <li><strong>Xuti</strong> owns website issues – first point of contact to Brandpie</li>
+    <li><strong>Meagan</strong> cc’d on everything (and may ultimately own this)</li>
+    <li><strong>John Williams</strong> included for now – he is doing dev-side work with Brandpie</li>
+  </ul>
+  <div class="callout"><strong>To do (Maya):</strong> add the Brandpie contact details, and create a diagram of the website infrastructure (hosting, image hosting, who owns what). Flag if source info can’t be found. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p045')">Website CMS management →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
+</div>
+
+<!-- P074 RSS -->
+<div id="p074" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">RSS feed and monitoring</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Daily</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div></div>
+  <p class="sop-para">rss.app feeds power the daily news monitoring that underpins the news sweep. The feed viewer and account are indexed on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a> and <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</p>
+  <div class="callout"><strong>Related.</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p012')">News sweep →</a>.</div>
+</div>
+
+<!-- P058 BRAND GUIDELINES -->
+<div id="p058" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Brand, collateral and templates</p>
+  <h2 class="section-title">Brand guidelines management</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div><div class="sop-meta-item"><span class="sop-meta-label">Owner</span><span class="sop-meta-value">Xuti</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div></div>
+  <p class="sop-para">Owned by Xuti. Xuti has created an HTML brand guidelines document, to be uploaded to GitHub so it is accessible by the team.</p>
+  <div class="callout"><strong>Related.</strong> Photography guidance lives within the brand guidelines – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p068')">Photography and headshots →</a>.</div>
+</div>
+
+<!-- P069 MERCHANDISE -->
+<div id="p069" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Brand, collateral and templates</p>
+  <h2 class="section-title">Branded merchandise</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div><div class="sop-meta-item"><span class="sop-meta-label">Point of contact</span><span class="sop-meta-value">Xuti</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P3</span></div></div>
+  <p class="sop-para">Xuti is the point of contact. We recently swapped pen suppliers to <strong>James Biggin, Steel City</strong> (S-T-E-E-L City), who now does our Bowmark branded pens. Any other branded merchandise requested should be handled by Xuti liaising with James.</p>
+</div>
+
+<!-- P049 WEBSITE SWEEP -->
+<div id="p049" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Website sweep / audit</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Annually (ideally biannually)</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div></div>
+  <h3 class="sub-title">Process</h3>
+  <ul class="sop-list">
+    <li>Put every current investment case study into one document; review and send to the deal team asking for updates; run the normal review process</li>
+    <li>Put every team profile into one document, split by team; ask each head of team to check their members; final approval by Charles</li>
+  </ul>
+  <p class="sop-para">Team profile sign-off note: Tom Shelford has recently signed off team profiles, though Charles would still want to know. <strong>Tom Shelford is responsible for all BCP team profiles; David Torbett for all BGP team profiles</strong> – split the investment team into BGP and BCP unless told otherwise.</p>
+  <h3 class="sub-title">Data points to check</h3>
+  <p class="sop-para">Get the value creation / portfolio team to verify data points on the website:</p>
+  <ul class="sop-list">
+    <li>Home page hero banner (e.g. “growth companies valued up to £300 million”)</li>
+    <li>The Bowmark-in-numbers box (first box under the hero banner)</li>
+    <li>The Portfolio snapshot in-numbers box on the purpose page</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>The Portfolio snapshot box is directly linked to the management presentation – those figures are also in the deck. Whenever they update, mirror in both. Also check the Bowmark LinkedIn page, which carries the same information.</div>
+  <p class="sop-para">No fixed trigger – schedule for a quiet period, or split across quarters (e.g. Q1 main figures, Q2 investments). We used to compile a large book for Charles to review; he finds it arduous but does ask through the year whether things are kept current. Best approach: keep things updated ad hoc as triggers occur (acquisition, new investment, team change) so the sweep stays small.</p>
+  <div class="callout"><strong>To review (Maya):</strong> agree with Sam Price and the portfolio team whether the data check ties to their quarterly marketing data bible review. Flag pending the data-audit process decision. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p047')">Website team pages →</a>.</div>
+</div>
+
+<!-- P028 -->
+<div id="p028" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Content and communications</p>
+  <h2 class="section-title">Annual highlights</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div><div class="sop-meta-item"><span class="sop-meta-label">Owner</span><span class="sop-meta-value">Xuti (Alice & Meagan coordinate)</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Annual</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div></div>
+<h3 class="sub-title">What it is and timing</h3>
+  <p class="sop-para">An annual highlights <strong>video</strong>. Start it sometime after the AGM is completed. Xuti owns the process and knows it well, but it should be coordinated and supported by Meagan and Alice. Aim to complete before the Christmas break so it is ready to go out just before Christmas or in the new year.</p>
+  <h3 class="sub-title">Storyboard document (to Charles, early November)</h3>
+  <p class="sop-para">Suggest to Charles around early November a Word document with all the bullets of how the video will be storyboarded, written as you want the text to appear on the video. Refer back to the previous video to see how it was drafted. Typical structure:</p>
+  <ul class="sop-list">
+    <li>Headline figures – e.g. “Bowmark raised X”, “Bowmark sold this”, “Bowmark did this”</li>
+    <li>Investments exited, new investments (sometimes including all acquisitions/bolt-ons made by portfolio companies)</li>
+    <li>Nice footage where we have it; items like the women’s mentor scheme and charity events sometimes thrown in (unlikely to include internal team items like the off-site)</li>
+    <li>At the end, denote any awards won that year</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>Because new investments sometimes include portfolio company bolt-ons, make sure the bolt-on data has been updated first – ask the team to review it before drafting. See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a>.</div>
+  <h3 class="sub-title">Ownership and review</h3>
+  <p class="sop-para">Alice works on this with Meagan before it is handed to Xuti, who then builds the video (a lot of work with animation). Someone must manage Xuti and own the review between rounds back to Charles, booking feedback sessions. <div class="callout-important"><span class="ci-label">Important</span>Record Charles’s feedback with Granola during these sessions – it gets very detailed.</div></p>
+  <div class="callout"><strong>Owners:</strong> Alice and Meagan own the process and reviews; Xuti builds the video. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p027')">Awards submissions →</a>.</div>
+</div>
+
+<!-- P029 -->
+<div id="p029" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Content and communications</p>
+  <h2 class="section-title">Alumni newsletter</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div><div class="sop-meta-item"><span class="sop-meta-label">Owner</span><span class="sop-meta-value">Abbey Hoyle (marketing supports)</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ad hoc</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P3</span></div></div>
+<p class="sop-para">Owned by <strong>Abbey Hoyle</strong>. When she returns from maternity leave, Meagan and Alice may need to help, and Xuti will help build it out on DealCloud / Dispatch. Refer back to a previous alumni newsletter for the types of content included.</p>
+  <div class="callout"><strong>Trigger.</strong> No direct trigger and not owned by marketing – marketing supports. Triggered by a request from Abbey.</div>
+</div>
+
+<!-- P059 -->
+<div id="p059" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Brand, collateral and templates</p>
+  <h2 class="section-title">Tone of voice governance</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ongoing</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div></div>
+<p class="sop-para">Governs Bowmark’s written tone of voice across all content.</p>
+  <div class="callout"><strong>Handover owner TBC.</strong> The owner and trained-in for this process are not yet decided – Maya to confirm whether it is handed over or folded into another role. Until then, tone-of-voice enforcement runs through Artemis.</div>
+  <div class="callout"><strong>Related.</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a> applies tone of voice in practice.</div>
+</div>
+
+<!-- P071 -->
+<div id="p071" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Admin, data and tools</p>
+  <h2 class="section-title">Brand guardian GPT / skill</h2>
+  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Admin, data and tools</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ongoing</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div></div>
+<p class="sop-para">A custom Claude skill that checks output against Bowmark’s visual brand rules.</p>
+  <div class="callout"><strong>To do (Maya):</strong> figure out how to pass the Brand Guardian Claude skill over to somebody else (same open question applies to Artemis – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>).</div>
+</div>
+
+<!-- STRATEGY AND JUDGEMENT -->
+<div id="strategy" class="section">
+  <a class="back-link" onclick="showSection('home')">← Back to action plan</a>
+  <p class="eyebrow">Reference layer</p>
+  <h2 class="section-title">Strategy and judgement</h2>
+  <p class="sop-para">The processes in this handbook cover <em>how</em> to do the work. This page covers the <em>judgement</em> behind it – the brand character, decision rules and heuristics that should shape every piece of marketing, independent of any single process. Read this first if you are new to the function.</p>
+
+  <h3 class="sub-title">Brand character</h3>
+  <p class="sop-para">The desired positioning is best captured by the internal shorthand <strong>“quiet luxury” / understated excellence</strong>: calm, evidence-based, professional and discreet in a noisy market. This should guide behaviour and treatment – not become promotional copy unless approved. Bowmark should feel: selective, credible, thoughtful, serious, high quality, controlled, exact, and commercially relevant.</p>
+
+  <h3 class="sub-title">Premium-signal rules – challenge anything that:</h3>
+  <ul class="sop-list">
+    <li>cheapens or over-exposes the firm</li>
+    <li>makes Bowmark sound generic or interchangeable</li>
+    <li>substitutes rhetoric for evidence</li>
+    <li>over-explains a simple point</li>
+    <li>makes a minor update feel artificially important</li>
+    <li>uses trend language without business value</li>
+    <li>flattens specialist thinking into a superficial summary</li>
+    <li>adds decorative design or formats that do not improve comprehension</li>
+  </ul>
+  <p class="sop-para"><strong>Proof before prose.</strong> Use specifics, examples and evidence rather than abstract claims. Show Bowmark’s role in value creation clearly but without boastfulness. Reinforce what is already true rather than inventing differentiation through wording.</p>
+
+  <h3 class="sub-title">The final-review test</h3>
+  <div class="callout-important"><span class="ci-label">Important</span>Before anything is sent, published, circulated or used with senior stakeholders, ask: <strong>would this likely pass senior approval without material concern, given the type of material being reviewed?</strong></div>
+  <p class="sop-para">Default preferences, when in doubt: shorter over longer · proof over description · substance over format · restraint over visibility · precision over flourish · practicality over theatre · not publishing over weak publishing · not escalating over half-resolved work · quality over activity.</p>
+
+  <h3 class="sub-title">Core decision rules</h3>
+  <h4 class="sub-sub">1. Decide whether to communicate at all</h4>
+  <p class="sop-para">Assess strategic relevance, audience relevance, materiality, differentiation, sensitivity, evidence quality, channel fit, and whether the audience will learn something meaningful. Then choose one route: <strong>Share · Monitor · No action · Escalate</strong>. Record every reviewed news item, including a no-action recommendation, to preserve the decision trail.</p>
+  <h4 class="sub-sub">2. Choose the lightest viable format</h4>
+  <p class="sop-para">Not every item needs a website page, LinkedIn post, email, article, video and collateral. Prefer the minimum number of formats that does the job well: high-value/durable → website plus proportionate LinkedIn; lower-tier but relevant → LinkedIn only; light-touch portfolio acknowledgement → repost; weak, duplicative or sensitive → monitor, escalate or do not publish.</p>
+  <h4 class="sub-sub">3. Source before drafting</h4>
+  <p class="sop-para">Open all source information; find an approved example of the same type; include source links and previous versions in the review pack; use exact external wording for awards, legal terms and other constrained facts; check names, titles, company names, dates, fund references and naming conventions; never invent, overstate or silently alter factual wording.</p>
+  <h4 class="sub-sub">4. Make approvals decision-ready</h4>
+  <p class="sop-para">Lead with the decision required; include only essential context; state what has already been checked or approved; resolve basic factual, format and sign-off issues before escalation; present a recommended route rather than an open menu; reduce the burden on senior recipients.</p>
+  <h4 class="sub-sub">5. Publish and verify</h4>
+  <p class="sop-para">Use the final approved copy, not an earlier draft; confirm copy, image, tags, links, timing and sensitivities; review the CMS/platform preview; check spacing, cropping, metadata and identity; inspect the live item immediately after publication; correct promptly if a material error appears; retain a decision trail.</p>
+
+  <h3 class="sub-title">Key heuristics</h3>
+  <ol class="sop-list">
+    <li><strong>Narrative before format.</strong> A logic-flow document often precedes polished output.</li>
+    <li><strong>Every output needs an owner and a route.</strong> Unowned content becomes stale or unapproved.</li>
+    <li><strong>Make the senior review easy.</strong> Present a resolved recommendation and evidence pack.</li>
+    <li><strong>Presentation quality affects approval, but premature final design wastes time.</strong> Use a credible working format; defer full production until the argument is approved.</li>
+    <li><strong>Events are relationship systems, not hospitality exercises.</strong> Invitation, seating, speakers, content capture and follow-up all matter.</li>
+    <li><strong>Data credibility is brand credibility.</strong> A small numerical inconsistency can undermine the premium signal.</li>
+    <li><strong>The lightest suitable channel is usually best.</strong> Visibility is not automatically value.</li>
+    <li><strong>A previous approved example is evidence, not permission</strong> to repeat generic language.</li>
+    <li><strong>Marketing must know what the rest of the firm is building.</strong> This protects consistency and reveals reuse opportunities.</li>
+    <li><strong>The most valuable work is judgement and integration.</strong> Execution should increasingly move into systems, templates and clearly owned roles.</li>
+  </ol>
+
+  <h3 class="sub-title">Known failure modes to guard against</h3>
+  <p class="sop-para"><strong>Strategic:</strong> reactive activity crowding out planned content; events becoming the content strategy rather than one input; marketing entering the deal process too late; differentiation staying implicit and person-dependent; content created without a reuse or discovery plan.</p>
+  <p class="sop-para"><strong>Operational:</strong> duplicated work from approval sequencing; unclear version control; final copy replaced by an older draft; manual data drift across decks, website and case studies; ambiguous ownership; insufficient handover; parallel AI or design systems built without marketing visibility.</p>
+  <p class="sop-para"><strong>Reputational:</strong> generic or inflated claims; publishing weak material for activity’s sake; unapproved external mentions or quotes; incorrect transaction status or timing; over-simplified specialist material; over-designed treatment that weakens the premium signal.</p>
+  <p class="sop-para"><strong>Security and privacy:</strong> credentials held in plain text; personal information carried into trackers or AI unnecessarily; platform ownership tied to personal accounts; unclear recovery and offboarding routes.</p>
 </div>
 
 <!-- GENERIC PLACEHOLDER -->
@@ -4084,7 +4621,7 @@
 const processes = [
   {id:'P016',cat:'Content and communications',name:'PR and media management',notes:'H/Advisors and media inbox',output:'Approved media response or PR output',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP + escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Admin and PR',sid:'p016'},
   {id:'P012',cat:'Content and communications',name:'News sweep',notes:'Portfolio and Bowmark news selection',output:'Shortlist of items for website or LinkedIn',freq:'Weekly / ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p012'},
-  {id:'P013',cat:'Content and communications',name:'Portfolio news',notes:'',output:'Website news item and LinkedIn post',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p013'},
+  {id:'P013',cat:'Content and communications',name:'Portfolio news',notes:'Three-tier process (repost / LinkedIn / website)',output:'Website news item and LinkedIn post',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p013'},
   {id:'P014',cat:'Content and communications',name:'Bowmark news',notes:'',output:'Website / LinkedIn / internal post',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p014'},
   {id:'P015',cat:'Content and communications',name:'Charity / soft news',notes:'',output:'LinkedIn / website post',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p015'},
   {id:'P017',cat:'Content and communications',name:'Deal-related press release checklist',notes:'General process',output:'Approved press release',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p017'},
@@ -4092,34 +4629,34 @@ const processes = [
   {id:'P019',cat:'Content and communications',name:'Exit announcement',notes:'',output:'Press release, website and LinkedIn update',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p019'},
   {id:'P020',cat:'Content and communications',name:'New joiner announcement',notes:'',output:'Website bio, LinkedIn post, internal comms',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'Press releases',sid:'p020'},
   {id:'P021',cat:'Content and communications',name:'Promotion announcement',notes:'',output:'Website / LinkedIn / internal copy',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'Press releases',sid:'p021'},
-  {id:'P022',cat:'Content and communications',name:'Investment update',notes:'',output:'Website / LinkedIn / press item',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p022'},
+  {id:'P022',cat:'Content and communications',name:'Investment update',notes:'',output:'Website / LinkedIn / press item',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep; Portfolio Rep',sub:'Press releases',sid:'p022'},
   {id:'P046',cat:'Content and communications',name:'Website investment pages',notes:'Case study structure + CMS add-investment Scribe',output:'Updated investment page',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles; Deal Team Rep',sub:'Website content',sid:'p046'},
-  {id:'P047',cat:'Content and communications',name:'Website team pages',notes:'Bio framework + bulk update process from handover session',output:'Updated bio, photo and role information',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sub:'Website content',sid:'p047'},
-  {id:'P048',cat:'Content and communications',name:'Website page edits',notes:'General pages',output:'Updated web page',freq:'Ad hoc',pri:'P2',status:'partial',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sub:'Website content',sid:'p048'},
+  {id:'P047',cat:'Content and communications',name:'Website team pages',notes:'Bio framework, dept-head + individual sign-off, photo cadence',output:'Updated bio, photo and role information',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sub:'Website content',sid:'p047'},
+  {id:'P048',cat:'Content and communications',name:'Website page edits',notes:'General pages',output:'Updated web page',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice, Molly',signoff:'Charles',sub:'Website content',sid:'p048'},
   {id:'P045',cat:'Content and communications',name:'Website CMS management',notes:'Scribe guides: press release publishing + CMS orientation',output:'Published website update',freq:'Ongoing',pri:'P1',status:'live',fmt:'Digital playbook SOP',owner:'Meagan',trained:'Xuti, Meagan, Alice, Molly',signoff:'Marketing internal',sub:'Website content',sid:'p045'},
-  {id:'P025',cat:'Content and communications',name:'Event insight production',notes:'Post-event refinement, survey results and quotes',output:'Published insight and social assets',freq:'Several per year',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sub:'Insights',sid:'p025'},
-  {id:'P024',cat:'Content and communications',name:'Thought leadership process',notes:'Sector and event-led insights',output:'Website insight and LinkedIn PDF / post',freq:'Several per year',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sub:'Insights',sid:'p024'},
+  {id:'P025',cat:'Content and communications',name:'Event insight production',notes:'Timing, feedback loop and bio book web app',output:'Published insight and social assets',freq:'Several per year',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sub:'Insights',sid:'p025'},
+  {id:'P024',cat:'Content and communications',name:'Thought leadership process',notes:'Logic-flow doc, event-led, feedback sessions',output:'Website insight and LinkedIn PDF / post',freq:'Several per year',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Event Sponsor',sub:'Insights',sid:'p024'},
   {id:'P026',cat:'Content and communications',name:'LinkedIn posts',notes:'Company posts, reposts and optimal timing',output:'LinkedIn post copy and asset',freq:'Weekly / ad hoc',pri:'P1',status:'live',fmt:'Checklist + copy principles',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'LinkedIn',sid:'p026'},
   {id:'P027',cat:'Content and communications',name:'Awards submissions',notes:'Mergermarket, Real Deals and others',output:'Submission and supporting material',freq:'Annual / ad hoc',pri:'P2',status:'live',fmt:'SOP + awards calendar',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p027'},
-  {id:'P028',cat:'Content and communications',name:'Annual highlights',notes:'',output:'Annual highlights content / campaign',freq:'Annual',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p028'},
-  {id:'P029',cat:'Content and communications',name:'Alumni newsletter',notes:'',output:'Email campaign',freq:'Periodic',pri:'P3',status:'partial',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p029'},
-  {id:'P023',cat:'Content and communications',name:'Crisis / sensitive communications',notes:'',output:'Agreed response or holding line',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Standalone SOP / escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Crisis',sid:'p023'},
-  {id:'P030',cat:'Events',name:'Flagship dinner',notes:'Full origination events SOP – 47 tasks, 11 phases',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p030'},
+  {id:'P028',cat:'Content and communications',name:'Annual highlights',notes:'Video; storyboard doc to Charles Nov; Granola his feedback',output:'Annual highlights content / campaign',freq:'Annual',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p028'},
+  {id:'P029',cat:'Content and communications',name:'Alumni newsletter',notes:'Marketing supports; triggered by Abbey',output:'Email campaign',freq:'Periodic',pri:'P3',status:'live',fmt:'Checklist',owner:'Abbey Hoyle',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p029'},
+  {id:'P023',cat:'Content and communications',name:'Crisis / sensitive communications',notes:'',output:'Agreed response or holding line',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP / escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Crisis',sid:'p023'},
+  {id:'P030',cat:'Events',name:'Flagship dinner',notes:'47-task SOP + three core event types',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p030'},
   {id:'P031',cat:'Events',name:'Roundtable dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p031'},
   {id:'P032',cat:'Events',name:'Drinks reception',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p032'},
   {id:'P033',cat:'Events',name:'Smaller sector-focused dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna, Meagan',signoff:'Event Sponsor',sub:'Origination events',sid:'p033'},
   {id:'P034',cat:'Events',name:'Portfolio and value creation forums',notes:'12-phase forum playbook',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p034'},
-  {id:'P044',cat:'Events',name:'Event follow-up',notes:'Survey, materials, WhatsApp / community links',output:'Follow-up email, survey responses and shared materials',freq:'After each event',pri:'P1',status:'partial',fmt:'Checklist + templates',owner:'Lauren',trained:'Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p044'},
+  {id:'P044',cat:'Events',name:'Event follow-up',notes:'Survey, materials, WhatsApp / community links',output:'Follow-up email, survey responses and shared materials',freq:'After each event',pri:'P1',status:'live',fmt:'Checklist + templates',owner:'Lauren',trained:'Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p044'},
   {id:'P043',cat:'Events',name:'AGM support',notes:'Presentation, video and event collateral',output:'AGM presentation, video and materials',freq:'Annual',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Charles',sub:'AGM',sid:'p043'},
-  {id:'P040',cat:'Events',name:'Internal events',notes:'',output:'Internal event communications and assets',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Lauren, Anna, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p040'},
-  {id:'P041',cat:'Events',name:'Hospitality',notes:'',output:'Invitations, guest management and logistics',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p041'},
-  {id:'P042',cat:'Events',name:'Third-party / sponsored events',notes:'Megabuyte and ad hoc',output:'Sponsorship, guest management and comms',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'SOP section',owner:'Lauren',trained:'Lauren, Meagan, Alice',signoff:'Charles',sub:'Other events',sid:'p042'},
+  {id:'P040',cat:'Events',name:'Internal events',notes:'',output:'Internal event communications and assets',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Lauren, Anna, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p040'},
+  {id:'P041',cat:'Events',name:'Hospitality',notes:'',output:'Invitations, guest management and logistics',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p041'},
+  {id:'P042',cat:'Events',name:'Third-party / sponsored events',notes:'Megabyte Awards sponsorship',output:'Sponsorship, guest management and comms',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Alice',signoff:'Tom Shelford',sub:'Other events',sid:'p042'},
   {id:'P064',cat:'Events',name:'Event invitation templates',notes:'DealCloud RSVP page + email campaign',output:'Invitation copy and design',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Checklist + templates',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Event tools and templates',sid:'p064'},
   {id:'P051',cat:'Events',name:'DealCloud event campaigns',notes:'Contact tiers live; campaign build Scribes to follow',output:'Target lists and campaign records',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'Standalone SOP',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sub:'Event tools and templates',sid:'p051'},
   {id:'P066',cat:'Brand, collateral and templates',name:'Ad hoc team support and design requests',notes:'',output:'Slide, document, design or copy support',freq:'Ongoing',pri:'P1',status:'live',fmt:'Decision tree + intake checklist',owner:'Xuti',trained:'Xuti',signoff:'Requesting stakeholder',sub:'Design and requests',sid:'p066'},
-  {id:'P058',cat:'Brand, collateral and templates',name:'Brand guidelines management',notes:'',output:'Updated brand guidelines',freq:'Annual / ad hoc',pri:'P1',status:'partial',fmt:'Brand playbook section',owner:'Xuti',trained:'Xuti',signoff:'Charles',sub:'Brand system',sid:'p058'},
-  {id:'P069',cat:'Brand, collateral and templates',name:'Branded merchandise',notes:'Tote bags, umbrellas and similar',output:'Ordered branded items',freq:'Ad hoc',pri:'P3',status:'partial',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Brand system',sid:'p069'},
-  {id:'P059',cat:'Brand, collateral and templates',name:'Tone of voice governance',notes:'',output:'Copy aligned to Bowmark tone',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Principles + examples',owner:'Xuti',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Brand system',sid:'p059'},
+  {id:'P058',cat:'Brand, collateral and templates',name:'Brand guidelines management',notes:'',output:'Updated brand guidelines',freq:'Annual / ad hoc',pri:'P1',status:'live',fmt:'Brand playbook section',owner:'Xuti',trained:'Xuti',signoff:'Charles',sub:'Brand system',sid:'p058'},
+  {id:'P069',cat:'Brand, collateral and templates',name:'Branded merchandise',notes:'Tote bags, umbrellas and similar',output:'Ordered branded items',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Brand system',sid:'p069'},
+  {id:'P059',cat:'Brand, collateral and templates',name:'Tone of voice governance',notes:'Handover owner TBC',output:'Copy aligned to Bowmark tone',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Principles + examples',owner:'',trained:'',signoff:'Marketing internal',sub:'Brand system',sid:'p059'},
   {id:'P060',cat:'Brand, collateral and templates',name:'PowerPoint template and UpSlide system',notes:'Includes Scribe guide',output:'Working PowerPoint / UpSlide system',freq:'Ongoing',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Presentations',sid:'p060'},
   {id:'P061',cat:'Brand, collateral and templates',name:'Slide library management',notes:'Library update process with embedded visual guide',output:'Current slide library',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP section',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Presentations',sid:'p061'},
   {id:'P079',cat:'Brand, collateral and templates',name:'Management presentation update',notes:'',output:'Updated management presentation slides',freq:'Ad hoc / periodic',pri:'P1',status:'live',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Charles; Tom Shelford',sub:'Presentations',sid:'p079'},
@@ -4128,22 +4665,19 @@ const processes = [
   {id:'P063',cat:'Brand, collateral and templates',name:'Email and calendar hold templates',notes:'',output:'Reusable invite and diary-hold copy',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Template register',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Templates',sid:'p063'},
   {id:'P065',cat:'Brand, collateral and templates',name:'Flyers and one-pagers',notes:'Bowmark A5 flyers',output:'Designed flyer / one-pager',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Templates',sid:'p065'},
   {id:'P062',cat:'Brand, collateral and templates',name:'Word and Excel templates',notes:'',output:'Current Word / Excel templates',freq:'Ad hoc',pri:'P2',status:'needed',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Templates',sid:'p062'},
-  {id:'P080',cat:'Brand, collateral and templates',name:'Data bible update',notes:'Team, investment and Chronograph sync',output:'Current data bible and synced systems',freq:'Ad hoc / periodic',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Sam P',trained:'Sam P',signoff:'Marketing internal',sub:'Data upkeep',sid:'p080'},
-  {id:'P081',cat:'Admin, data and tools',name:'Glassdoor management',notes:'Pointer checklist to relevant SOPs',output:'Updated employer profile / response route',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Short note',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Data',sid:'p081'},
-  {id:'P053',cat:'Admin, data and tools',name:'Google Analytics reporting',notes:'',output:'Traffic and content performance readout',freq:'Monthly / quarterly',pri:'P2',status:'needed',fmt:'Checklist',owner:'',trained:'',signoff:'',sub:'Data',sid:'p053'},
-  {id:'P054',cat:'Admin, data and tools',name:'LinkedIn admin and analytics',notes:'',output:'Published posts and analytics',freq:'Weekly / monthly',pri:'P2',status:'needed',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice, Molly',signoff:'Marketing internal',sub:'Data',sid:'p054'},
-  {id:'P056',cat:'Admin, data and tools',name:'WeTransfer use',notes:'',output:'Shared files',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Short note',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p056'},
-  {id:'P055',cat:'Admin, data and tools',name:'Vimeo management',notes:'',output:'Hosted video and embed link',freq:'Ad hoc',pri:'P3',status:'needed',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p055'},
-  {id:'P074',cat:'Admin, data and tools',name:'RSS feed and monitoring',notes:'',output:'Current news sweep / alerts',freq:'Ongoing',pri:'P2',status:'needed',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p074'},
-  {id:'P052',cat:'Admin, data and tools',name:'Dispatch email campaigns',notes:'Campaigns, pages and sequences',output:'Built and sent email campaign',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'SOP section',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p052'},
+  {id:'P080',cat:'Brand, collateral and templates',name:'Data bible update',notes:'Owned by Sam Price; process TBC',output:'Current data bible and synced systems',freq:'Ad hoc / periodic',pri:'P1',status:'needed',fmt:'Standalone SOP',owner:'Sam Price',trained:'Sam P',signoff:'Marketing internal',sub:'Data upkeep',sid:'p080'},
+  {id:'P081',cat:'Admin, data and tools',name:'Glassdoor management',notes:'Macro-driven; guide to be recorded',output:'Updated employer profile / response route',freq:'Ad hoc',pri:'P3',status:'partial',fmt:'Short note',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Data',sid:'p081'},
+  {id:'P053',cat:'Admin, data and tools',name:'Google Analytics reporting',notes:'Interim owner John Williams; low usage',output:'Traffic and content performance readout',freq:'Monthly / quarterly',pri:'P2',status:'live',fmt:'Checklist',owner:'John Williams',trained:'',signoff:'',sub:'Data',sid:'p053'},
+  {id:'P054',cat:'Admin, data and tools',name:'LinkedIn admin and analytics',notes:'',output:'Published posts and analytics',freq:'Weekly / monthly',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice, Molly',signoff:'Marketing internal',sub:'Data',sid:'p054'},
+  {id:'P056',cat:'Admin, data and tools',name:'WeTransfer use',notes:'',output:'Shared files',freq:'Ad hoc',pri:'P3',status:'partial',fmt:'Short note',owner:'Meagan',trained:'Xuti, Meagan, Molly',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p056'},
+  {id:'P055',cat:'Admin, data and tools',name:'Vimeo management',notes:'',output:'Hosted video and embed link',freq:'Ad hoc',pri:'P3',status:'partial',fmt:'Checklist',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p055'},
+  {id:'P074',cat:'Admin, data and tools',name:'RSS feed and monitoring',notes:'',output:'Current news sweep / alerts',freq:'Ongoing',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Web apps and tools',sid:'p074'},
+  {id:'P083',cat:'Admin, data and tools',name:'Google Business Profile',notes:'Search / Maps listing; access handover to generic account',output:'Accurate Google Search and Maps listing',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP + checklist',owner:'Meagan',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Web apps and tools',sid:'p083'},
   {id:'P070',cat:'Admin, data and tools',name:'Artemis GPT / copyediting workflow',notes:'',output:'Edited Bowmark-style copy',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Prompt guide + examples',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p070'},
-  {id:'P071',cat:'Admin, data and tools',name:'Brand guardian GPT / skill',notes:'',output:'Brand-aligned review / edits',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Prompt guide',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p071'},
-  {id:'P072',cat:'Admin, data and tools',name:'Claude / ChatGPT usage protocol',notes:'',output:'Drafts, summaries or process support',freq:'Ongoing',pri:'P2',status:'needed',fmt:'Usage principles',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p072'},
+  {id:'P071',cat:'Admin, data and tools',name:'Brand guardian GPT / skill',notes:'Handover / transfer TBC',output:'Brand-aligned review / edits',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Prompt guide',owner:'',trained:'',signoff:'',sub:'AI tools',sid:'p071'},
   {id:'P073',cat:'Admin, data and tools',name:'GitHub / technical workflows',notes:'Event pages on GitHub Pages, with Scribe guide',output:'Maintained repository / workflow',freq:'Ad hoc',pri:'P2',status:'live',fmt:'System note',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Automation',sid:'p073'},
-  {id:'P075',cat:'Admin, data and tools',name:'Zapier / automation workflows',notes:'Newsletters, monitoring and other flows',output:'Automated trigger-action workflow',freq:'Ongoing',pri:'P2',status:'partial',fmt:'Automation register',owner:'',trained:'',signoff:'',sub:'Automation',sid:'p075'},
-  {id:'P050',cat:'Admin, data and tools',name:'Hosting and dev support',notes:'Hosting moved from Fortrabbit to Servd (May 2025); Brandpie supports',output:'Resolved issue or supported development',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Supplier SOP',owner:'',trained:'',signoff:'',sub:'Website systems',sid:'p050'},
-  {id:'P049',cat:'Admin, data and tools',name:'Website sweep',notes:'',output:'List of fixes and updates',freq:'Quarterly',pri:'P2',status:'partial',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Website systems',sid:'p049'},
-  {id:'P057',cat:'Admin, data and tools',name:'SEO audit and improvement',notes:'',output:'SEO recommendations and implementation plan',freq:'Annual / ad hoc',pri:'P2',status:'partial',fmt:'SOP section',owner:'',trained:'',signoff:'Marketing internal',sub:'Website systems',sid:'p057'},
+  {id:'P050',cat:'Admin, data and tools',name:'Hosting and dev support',notes:'Brandpie-run; Servd hosting since May 2025',output:'Resolved issue or supported development',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Supplier SOP',owner:'Xuti',trained:'Xuti, Meagan',signoff:'',sub:'Website systems',sid:'p050'},
+  {id:'P049',cat:'Admin, data and tools',name:'Website sweep',notes:'',output:'List of fixes and updates',freq:'Quarterly',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Website systems',sid:'p049'},
   {id:'P082',cat:'Admin, data and tools',name:'Passwords and access handover',notes:'Pointer checklist to relevant SOPs',output:'Access checklist with owners',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Access register – no passwords',owner:'Meagan',trained:'Xuti, Meagan',signoff:'Marketing internal',sub:'Access',sid:'p082'},
   {id:'P001',cat:'Operations',name:'Annual marketing planning',notes:'',output:'Prioritised marketing plan and calendar',freq:'Annual',pri:'P1',status:'partial',fmt:'Category playbook section',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p001'},
   {id:'P002',cat:'Operations',name:'Marketing strategy framework',notes:'',output:'Objectives, pillars, KPIs and activity principles',freq:'Annual / ad hoc',pri:'P1',status:'partial',fmt:'Category playbook section',owner:'',trained:'',signoff:'Charles; Tom Shelford',sub:'Planning',sid:'p002'},
@@ -4162,7 +4696,7 @@ const processes = [
 ];
 
 // IDs with fully built dedicated sections
-const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','process-placeholder']);
+const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','strategy','useful-logins','useful-links','process-placeholder']);
 
 let activeFilters = {p1:false, live:false, partial:false};
 
