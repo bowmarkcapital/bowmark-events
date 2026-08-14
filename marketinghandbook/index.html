@@ -178,6 +178,7 @@
     <a onclick="navCat('Brand, collateral and templates')">Brand</a>
     <a onclick="navCat('Admin, data and tools')">Admin & tools</a>
     <a onclick="navCat('Operations')">Operations</a>
+    <a onclick="navCat('Competitor intelligence')">Competitors</a>
     <a onclick="navCat('Quick reference scenarios')">Quick ref</a>
   </nav>
 </header>
@@ -228,9 +229,7 @@
   <a class="nav-item" onclick="showSection('p023')">Crisis / sensitive communications</a>
   <div class="nav-section-label">Events</div>
   <div class="nav-subcat">Origination events</div>
-  <a class="nav-item" onclick="showSection('p030')">Flagship dinner</a>
-  <a class="nav-item" onclick="showSection('p031')">Roundtable dinner</a>
-  <a class="nav-item" onclick="showSection('p032')">Drinks reception</a>
+  <a class="nav-item" onclick="showSection('p030')">Origination events – dinners and drinks</a>
   <a class="nav-item" onclick="showSection('p033')">Smaller sector-focused dinner</a>
   <div class="nav-subcat">Portfolio and value creation</div>
   <a class="nav-item" onclick="showSection('p034')">Portfolio and value creation forums</a>
@@ -243,6 +242,7 @@
   <a class="nav-item" onclick="showSection('p042')">Third-party / sponsored events</a>
   <div class="nav-subcat">Event tools and templates</div>
   <a class="nav-item" onclick="showSection('p064')">Event invitation templates</a>
+  <a class="nav-item" onclick="showSection('p085')">Event email templates</a>
   <a class="nav-item" onclick="showSection('p051')">DealCloud event campaigns</a>
   <div class="nav-section-label">Brand, collateral and templates</div>
   <div class="nav-subcat">Design and requests</div>
@@ -250,7 +250,7 @@
   <div class="nav-subcat">Brand system</div>
   <a class="nav-item" onclick="showSection('p058')">Brand guidelines management</a>
   <a class="nav-item" onclick="showSection('p069')">Branded merchandise</a>
-  <a class="nav-item" onclick="showSection('p059')">Tone of voice governance</a>
+  <a class="nav-item" onclick="showSection('p059')">Tone of voice and writing rules</a>
   <div class="nav-subcat">Presentations</div>
   <a class="nav-item" onclick="showSection('p060')">PowerPoint template and UpSlide system</a>
   <a class="nav-item" onclick="showSection('p061')">Slide library management</a>
@@ -298,6 +298,11 @@
   <a class="nav-item" onclick="showSection('p009')">Portfolio marketing contact management</a>
   <a class="nav-item" onclick="showSection('p010')">Supplier and agency management</a>
   <a class="nav-item" onclick="showSection('p011')">Approval escalation for sensitive comms</a>
+  <div class="nav-section-label">Competitor intelligence</div>
+  <a class="nav-item" onclick="showSection('p086')">Competitor reference table</a>
+  <a class="nav-item" onclick="showSection('p087')">Competitor benchmarking and positioning</a>
+  <a class="nav-item" onclick="showSection('p088')">Competitor analysis workshop</a>
+
   <div class="nav-section-label">Quick reference scenarios</div>
   <a class="nav-item" onclick="showSection('p076')">Portfolio company acquisition</a>
   <a class="nav-item" onclick="showSection('p077')">Bowmarker speaks on a panel</a>
@@ -310,10 +315,10 @@
   <h1 class="page-title">Handbook action plan</h1>
   <p class="body-text">Working overview for completing the handbook. Progress is calculated live from the process registry; checklist ticks are saved in this browser. For the finished reference view, use the process registry and category pages in the sidebar.</p>
   <div class="version-bar">
-    <span><strong>Version</strong> <span id="vb-version">3.8</span></span>
+    <span><strong>Version</strong> <span id="vb-version">4.1</span></span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> <span id="vb-count">82</span></span>
-    <span><strong>Last updated</strong> <span id="vb-updated">14 August 2026 – build 3.8</span></span>
+    <span><strong>Last updated</strong> <span id="vb-updated">14 August 2026 – build 4.1</span></span>
   </div>
 
   <h3 class="sub-title">Progress</h3>
@@ -345,7 +350,7 @@
 <li><input type="checkbox" id="om6" onchange="toggleCheck(this)"><label for="om6">Add generic Vimeo management instructions (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="om7" onchange="toggleCheck(this)"><label for="om7">Add Brandpie contact details and a website-infrastructure diagram (hosting / image hosting / ownership) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p050')">Hosting and dev support →</a>)</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="om8" onchange="toggleCheck(this)"><label for="om8">Clean up the LinkedIn Report spreadsheet and set the year-end 365-day export reminder (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p054')">LinkedIn admin and analytics →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om9" onchange="toggleCheck(this)"><label for="om9">Upload the event email-templates document into the handbook (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p044')">Event follow-up →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om9" onchange="toggleCheck(this)"><label for="om9">Event email templates – now built in as a page (Event email templates) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p044')">Event follow-up →</a>)</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="om10" onchange="toggleCheck(this)"><label for="om10">Agree the marketing data bible update process with Sam Price; decide how it ties to the website data check (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a>)</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="om11" onchange="toggleCheck(this)"><label for="om11">Confirm the smaller sector-focused dinner budget (~£3k) with Tom Shelford at next budget review (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p033')">Smaller sector-focused dinner →</a>)</label><span class="owner">Maya</span></li>
 <li><input type="checkbox" id="om12" onchange="toggleCheck(this)"><label for="om12">Decide the thought-leadership notification flow (who is told when) as the process shifts (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p024')">Thought leadership process →</a>)</label><span class="owner">Maya</span></li>
@@ -416,6 +421,7 @@
     <button class="cat-btn" data-cat="Brand, collateral and templates" onclick="setCat(this)">Brand and templates</button>
     <button class="cat-btn" data-cat="Admin, data and tools" onclick="setCat(this)">Admin, data and tools</button>
     <button class="cat-btn" data-cat="Operations" onclick="setCat(this)">Operations</button>
+    <button class="cat-btn" data-cat="Competitor intelligence" onclick="setCat(this)">Competitor intelligence</button>
     <button class="cat-btn" data-cat="Quick reference scenarios" onclick="setCat(this)">Quick reference</button>
   </div>
   <div class="filter-bar">
@@ -511,7 +517,7 @@
 <li><input type="checkbox" id="ns8" onchange="toggleCheck(this)"><label for="ns8">Complete weekly recommendation digest</label><span class="owner">Alice</span></li>
 <li><input type="checkbox" id="ns9" onchange="toggleCheck(this)"><label for="ns9">Complete monthly review of tracker and content balance</label><span class="owner">Alice</span></li></ul>
   <h3 class="sub-title">Writing up a sweep item</h3>
-  <p class="sop-para">You don't need every tracker entry to be detailed. But if you are actually going to <strong>recommend</strong> something, be really clear about what it is you're recommending and why – a bare link invites a quick “no”, whereas “this looks relevant because it touches the growth strategy and it's UK-gov so likely a permanent accreditation” invites a fuller answer and helps you learn the patterns of what is and isn't relevant. Write a clear summary at sweep stage, then elaborate in the email when you send it on. For award / accreditation items, work out whether it's a one-off award or a permanent accreditation (government bodies are usually the latter) and make it clear enough that a reader immediately understands what it means – Charles will ask otherwise.</p>
+  <p class="sop-para">You don't need every tracker entry to be detailed. But if you are actually going to <strong>recommend</strong> something, be really clear about what it is you're recommending and why – a bare link invites a quick “no”, whereas “this looks relevant because it touches the growth strategy and it's UK-gov so likely a permanent accreditation” invites a fuller answer and helps you learn the patterns of what is and isn't relevant. Write a clear summary at sweep stage, then elaborate in the email when you send it on. For award / accreditation items, work out whether it's a one-off award or a permanent accreditation (government bodies are usually the latter) and make it clear enough that a reader immediately understands what it means without needing to ask.</p>
   <div class="callout"><strong>Related.</strong> rss.app account: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</div>
   </div>
 
@@ -1362,6 +1368,22 @@
   <p class="sop-para">Someone is identified as the <strong>lead for the content piece</strong> when the event is set up, and it is up to them to navigate the process. Alice supports with brand application and proofreading, and coordinates the deadlines: supply first draft to Charles → feedback session → second draft to Charles → feedback session → create the piece.</p>
   <div class="callout-important"><span class="ci-label">Important</span>The first step is presenting Charles a <strong>logic-flow document</strong> that sets out the argument and how it will be reasoned through – marking where portfolio-company examples, attendee-survey evidence, or speaker quotes will support each point – before the piece is built.</div>
   <div class="callout"><strong>Note (Maya):</strong> this process is shifting – the notification flow (who gets told when, and how it’s managed) is to be decided. <strong>Related:</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events →</a> · <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p025')">Event insight production →</a>.</div>
+  <h3 class="sub-title">Worked example: the logic-flow document</h3>
+  <p class="sop-para">A real example – the “New world order: the intersection of tech, politics and capital markets” roundtable insight. The logic-flow document sets out the argument before any drafting, so Charles can approve the reasoning first. Its shape:</p>
+  <ul class="sop-list">
+    <li><strong>Key message</strong> (one paragraph): the single controlling idea. Here: capital-markets tech firms face converging pressures – geopolitical fragmentation and accelerating AI adoption – within a tightening, locally driven regulatory environment, and are responding by focusing on product innovation in core markets.</li>
+    <li><strong>Supporting arguments</strong>, each a heading with its own sub-points and where the evidence comes from:
+      <ul class="sop-list">
+        <li>Geopolitical and regulatory fragmentation is forcing firms to localise and adapt</li>
+        <li>AI is a non-negotiable, but adoption is slow and subject to regulation</li>
+        <li>Long-term advantage lies in talent, IP and embedded client value</li>
+      </ul>
+    </li>
+    <li><strong>Conclusion</strong>: pulls the threads into a unified strategy (invest in talent, apply AI to client problems, keep operational agility, build regulatory foresight, focus innovation on core markets).</li>
+    <li><strong>Supporting notes</strong>: raw observations from the evening, grouped by theme, that feed the evidence.</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>The logic-flow is marked out to show where portfolio-company examples, attendee-survey evidence and speaker quotes will support each point – so the argument is agreed before time is spent drafting the finished piece.</div>
+  <p class="sop-para">From the approved logic-flow, the messaging is distilled into a few sharp lines and a set of key questions for the evening (used both to steer the discussion and to shape the final insight). Only then is the polished piece written.</p>
   </div>
 
 <!-- P025 VALUE CREATION EVENT INSIGHTS -->
@@ -1488,6 +1510,18 @@
   <h3 class="sub-title">Bio book (web app)</h3>
   <p class="sop-para">The bio book is now a web app, created and owned by Xuti. It is Xuti’s responsibility to request from Alice any content and copywriting the app needs. The briefing document Alice needs should include: the theme, the key takeaways, and who is attending. From that, Alice drafts the <strong>About</strong> section – a header plus three short subsections: <em>Who attends</em>, <em>What to expect</em>, <em>Why this year</em> (a short who/what/why with headings). Once the agenda is finalised, each session needs a name and a synopsis. Xuti and the value creation team make sure Alice has everything needed.</p>
   <div class="callout-important"><span class="ci-label">Important</span>The event web app is <strong>not signed off by Charles</strong>. The final approver is the head of the value creation team (currently Ben Hollowood), after rigorous review by several people including Meagan, Alice, Xuti and the value creation team.</div>
+  <h3 class="sub-title">Worked example: the roundtable programme</h3>
+  <p class="sop-para">The “New world order” roundtable programme and information booklet is a good reference for a finished bio book. Its structure, in order:</p>
+  <ul class="sop-list">
+    <li>Cover – event title, “Programme and information”, date, events@bowmark.com</li>
+    <li>Venue – getting there, nearest station, dress code, address (with a photo)</li>
+    <li>Discussion and speakers – the theme framing, then speaker profiles (headshot, role, company, a short bio and what they’ll cover)</li>
+    <li>Attendees – name, role and company, each with headshot and company logo (clickable to LinkedIn)</li>
+    <li>About Bowmark – the Bowmark team attending, with contact details</li>
+    <li>Selected investments – relevant portfolio companies with investment period and business model</li>
+    <li>Back cover – logo and firm details</li>
+  </ul>
+  <div class="callout"><strong>Note.</strong> Attendee and speaker headshots link to LinkedIn; the bio book is built as a web app by Xuti – see the bio-book detail above.</div>
   </div>
 
 <!-- P026 LINKEDIN POSTS -->
@@ -3726,27 +3760,27 @@
 </div>
 
   <div class="callout"><strong>Related processes.</strong> Insight production follows the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p024')">Thought leadership SOP →</a>. Invitations are built in DealCloud – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p064')">Event invitation templates →</a> and <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p051')">DealCloud event campaigns →</a>.</div>
-</div>
+<h3 class="sub-title">On-the-night team briefing</h3>
+  <p class="sop-para">Bowmarkers attending get a short briefing so the room works. The essentials:</p>
+  <h4 class="sub-sub">Logistics and arrival</h4>
+  <ul class="sop-list">
+    <li>Lauren confirms arrival times and logistics</li>
+    <li>When guests arrive, don’t crowd the entrance or passageways – head to the back of the room</li>
+    <li>Don’t stand chatting only to Bowmark colleagues</li>
+    <li>Keep an eye out for anyone standing alone and bring them into conversation</li>
+    <li>Move around – short, energetic chats keep the atmosphere lively</li>
+    <li>Use the QR-code seating system so you don’t get stuck talking only to your seat mate</li>
+  </ul>
+  <h4 class="sub-sub">Engagement and roles</h4>
+  <ul class="sop-list">
+    <li>Facilitate connections – introduce guests to each other and circulate</li>
+    <li>Take notes during the discussion (informal is fine)</li>
+    <li>Drive the conversation – ask questions and encourage dialogue between guests</li>
+    <li>Assign a “last person standing” so insights after the formal end aren’t missed</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>The room exists to showcase the guests and our network, not Bowmark. The primary objective is that every guest’s voice is heard – facilitate, don’t dominate.</div>
+  </div>
 
-<!-- P031 ROUNDTABLE STUB -->
-<div id="p031" class="section">
-  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Events</p>
-  <h2 class="section-title">Roundtable dinner</h2>
-  <p class="body-text">Roundtable dinners follow the standard origination events process – 47 tasks across 11 phases from initial meeting to post-event reporting.</p>
-  <div class="callout"><strong>Full process.</strong> See the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events – dinners and drinks SOP →</a> for the complete checklist, roles and timings.</div>
-</div>
-
-<!-- P032 DRINKS STUB -->
-<div id="p032" class="section">
-  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
-  <p class="eyebrow">Events</p>
-  <h2 class="section-title">Drinks reception</h2>
-  <p class="body-text">Drinks receptions follow the standard origination events process – 47 tasks across 11 phases from initial meeting to post-event reporting.</p>
-  <div class="callout"><strong>Full process.</strong> See the <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events – dinners and drinks SOP →</a> for the complete checklist, roles and timings.</div>
-</div>
-
-<!-- P033 SECTOR DINNER STUB -->
 <div id="p033" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
   <p class="eyebrow">Events</p>
@@ -4552,14 +4586,62 @@
 <div id="p059" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
   <p class="eyebrow">Brand, collateral and templates</p>
-  <h2 class="section-title">Tone of voice governance</h2>
-  <div class="sop-meta"><div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div><div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Ongoing</span></div><div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div></div>
-<p class="sop-para">Governs Bowmark’s written tone of voice across all content.</p>
-  <div class="callout"><strong>Handover owner TBC.</strong> The owner and trained-in for this process are not yet decided – Maya to confirm whether it is handed over or folded into another role. Until then, tone-of-voice enforcement runs through Artemis.</div>
-  <div class="callout"><strong>Related.</strong> <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a> applies tone of voice in practice.</div>
-</div>
+  <h2 class="section-title">Tone of voice and writing rules</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Brand, collateral and templates</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Consistent Bowmark writing</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Every piece of copy</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+  <p class="sop-para">The house writing standard for all Bowmark copy – news, insights, presentations, emails and reports. Artemis applies these rules in practice; this page is the reference behind it.</p>
 
-<!-- P071 -->
+  <h3 class="sub-title">Core principles</h3>
+  <h4 class="sub-sub">Be clear and precise</h4>
+  <p class="sop-para">Always ask: what am I trying to say? What words express it most effectively? Could this be clearer, shorter or more natural?</p>
+  <h4 class="sub-sub">Keep it concise</h4>
+  <p class="sop-para">If a word is not necessary, remove it; don’t overcomplicate sentences. But conciseness must not cost the tone – keep it calm, professional and approachable, never abrupt or oversimplified.</p>
+  <h4 class="sub-sub">Prefer active voice</h4>
+  <p class="sop-para">More engaging and direct than the passive. “The team completed the report”, not “the report was completed by the team”.</p>
+  <h4 class="sub-sub">Maintain a professional but approachable tone</h4>
+  <p class="sop-para">Confidence without arrogance, warmth without unnecessary informality. Balance authority with approachability – write with expertise but without unnecessary complexity.</p>
+  <h4 class="sub-sub">Avoid clichés and jargon</h4>
+  <p class="sop-para">Use direct, natural language rather than overused or corporate-speak phrases. Industry terms (growth capital, portfolio management) are fine in PE contexts, but always ensure clarity for the audience; if a clearer alternative exists, use it.</p>
+  <h4 class="sub-sub">Be structured and easy to read</h4>
+  <p class="sop-para">Use subheadings and bullets where they help. Keep paragraphs short (no more than three to four lines). Break any of these rules where doing so keeps a sentence clearer or more natural – readability and effectiveness always win.</p>
+
+  <h3 class="sub-title">Style and consistency</h3>
+  <h4 class="sub-sub">Spelling and grammar</h4>
+  <ul class="sop-list">
+    <li>UK English throughout</li>
+    <li>No Oxford comma unless needed for clarity</li>
+    <li>Write out acronyms in full on first use, with the abbreviation in parentheses</li>
+  </ul>
+  <h4 class="sub-sub">Headings and case</h4>
+  <ul class="sop-list">
+    <li>Sentence case for all titles and headings – capitalise only the first word and proper nouns – across news, insights, presentations, emails and reports</li>
+  </ul>
+  <h4 class="sub-sub">Numbers and dates</h4>
+  <ul class="sop-list">
+    <li>Money in body text: £1 million, not £1m</li>
+    <li>Dates: 14 March 2025, not March 14th</li>
+    <li>Numbers under 10 as words, unless in data or a list</li>
+    <li>Commas for thousands</li>
+    <li>£ for GBP, € for EUR, $ for USD</li>
+    <li>Use the % symbol in numerical text (reports, charts); “per cent” in general body text <em>(marked TBC in the source rules)</em></li>
+  </ul>
+  <h4 class="sub-sub">Quotation marks</h4>
+  <ul class="sop-list">
+    <li>Double quotes for direct speech or verbatim quotes – the CEO stated: “We are focused on long-term growth.”</li>
+    <li>Single quotes for emphasis or defining a term – the report defines ‘value creation’ as a multi-stage process</li>
+  </ul>
+  <h4 class="sub-sub">Lists</h4>
+  <ul class="sop-list">
+    <li>Bullets for lists rather than numbering, unless indicating a clear sequence</li>
+  </ul>
+
+  <div class="callout"><strong>In practice.</strong> Run copy through Artemis to apply these automatically – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>. Brand character and the premium-signal rules sit in <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('strategy')">Strategy and judgement →</a>.</div>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Source: General writing rules (house style). Owner to be confirmed at handover.</p>
+</div>
 <div id="p071" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
   <p class="eyebrow">Admin, data and tools</p>
@@ -4579,6 +4661,16 @@
   <h3 class="sub-title">Brand character</h3>
   <p class="sop-para">The desired positioning is best captured by the internal shorthand <strong>“quiet luxury” / understated excellence</strong>: calm, evidence-based, professional and discreet in a noisy market. This should guide behaviour and treatment – not become promotional copy unless approved. Bowmark should feel: selective, credible, thoughtful, serious, high quality, controlled, exact, and commercially relevant.</p>
 
+  <h3 class="sub-title">The six Bowmark values</h3>
+  <p class="sop-para">The finalised firm values (post-consultation), each with the behaviours that express it:</p>
+  <table class="roles"><thead><tr><th>Value</th><th>What it means</th></tr></thead><tbody>
+    <tr><td><strong>Strive for excellence</strong></td><td>Passionate and ambitious; highest professional standards; work of outstanding quality. Target challenging objectives, top-quality work with precision, invest in learning, deliver results, meet or beat deadlines, go above and beyond.</td></tr>
+    <tr><td><strong>Take ownership</strong></td><td>Pride and accountability; trust and empower each other. Be proactive, take responsibility, see things through, focus on solutions, get deliverables right first time.</td></tr>
+    <tr><td><strong>Do the right thing</strong></td><td>Straight-talking, honest and open; integrity and purpose. Act fairly, communicate transparently, make the right decision early for the best long-term outcome, have difficult conversations directly, don’t take the easy way out.</td></tr>
+    <tr><td><strong>Nurture connections</strong></td><td>Approachable and friendly; win, lose and learn together; build supportive relationships. Mentor and coach, share skills widely, be an active member of the whole team, celebrate success big and small, arrive prepared.</td></tr>
+    <tr><td><strong>Embrace difference</strong></td><td>Diversity of thought and experience as an asset; every voice valued. Listen and seek to understand, debate for the greater good, be open-minded, assume good intent, create forums where all voices are heard.</td></tr>
+    <tr><td><strong>Look ahead</strong></td><td>Thoughtful and proactive about the future. Reflect on legacy, contribute positively to society and community, share improvements, think long-term and ask ‘why’, anticipate developments, use data and technology to improve.</td></tr>
+  </tbody></table>
   <h3 class="sub-title">Premium-signal rules – challenge anything that:</h3>
   <ul class="sop-list">
     <li>cheapens or over-exposes the firm</li>
@@ -4707,6 +4799,291 @@
 <li><input type="checkbox" id="dd9" onchange="toggleCheck(this)"><label for="dd9">Send to Maya/Meagan, then Charles</label></li></ul>
 </div>
 
+<!-- P085 EVENT EMAIL TEMPLATES -->
+<div id="p085" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Events</p>
+  <h2 class="section-title">Event email templates</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Events</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Consistent event communications</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Per event</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+  <p class="sop-para">Proven email templates across the event lifecycle, in two sets: forums and dinners <strong>with a bio book</strong>, and lighter events (drinks) <strong>without</strong>. Adapt names, dates and venue; keep the tone. Expand each to view.</p>
+
+  <h3 class="sub-title">With bio book (forums, structured dinners)</h3>
+  <details class="visual-guide"><summary>Month before – info to accepted attendees</summary>
+    
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear Leon,
+
+I am delighted to share with you the agenda and details for the Bowmark 2023 CFO Forum on Wednesday, 26 April, in London. We look forward to a lively afternoon of discussion, networking and sharing of best practices during workshops dedicated to our portfolio company finance leaders, followed by dinner at Berry Bros. &amp; Rudd.
+
+Please click the button below to access the event details and to confirm your information by Friday 14 April.
+
+Best wishes,
+Ben Hollowood</div>
+  </details>
+  <details class="visual-guide"><summary>Month before – info to speakers</summary>
+    
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear Anush and Christian,
+
+Thank you very much for agreeing to present at the Bowmark 2023 CFO Forum on Wednesday, 26 April.
+
+Please view the full event details here, where you can submit your personal information (dietary requirements, a short biography of 80–100 words and a headshot for the participant booklet). You are also welcome to share these by email, if preferred.
+
+Content for the day: I understand you have been working with Sam on your session. Please share your final slides with me by Wednesday 19 April.
+
+Pre-event survey: we will share a short survey with guests ahead of the event to support discussion. We would appreciate 1–2 questions fitting your topic by Friday 14 April; we will then share the results with you before the event.
+
+Timings: your session is scheduled for 12.30–13.15. You are welcome from the 12.00 start; do let me know if another time suits. We would also like to invite you to stay for lunch afterwards – please let me know so we can confirm numbers. We have one space reserved for your team for dinner at Berry Bros. &amp; Rudd at 18.30; please let me know who will attend and whether you need a workspace beforehand.
+
+I will now share a diary hold for your session with these details.
+
+Best,
+Maya</div>
+  </details>
+  <details class="visual-guide"><summary>Week before – survey and bio book</summary>
+    
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear John,
+
+We look forward to seeing you next Wednesday at 12.00pm at the Sofitel, St James for our 2023 CFO Forum.
+
+We are delighted to share a digital copy of the programme and information booklet; we will also provide a printed copy on the day.
+
+To support discussions and help our presenters gather a sense of the room, please complete a short survey by midday on Tuesday, 25 April. It should take no longer than five minutes, and responses are completely anonymous.
+
+Best wishes,
+Ben</div>
+  </details>
+  <details class="visual-guide"><summary>Week of – survey reminder</summary>
+    
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Hi Alf,
+
+I hope you had a lovely weekend. With the CFO Forum just two days away, please feel free to reach out if you have any questions. Also, if you have not already, please kindly fill out our pre-event survey to aid the presenters with their workshops.
+
+We look forward to seeing you on Wednesday.
+
+Best,
+Maya</div>
+  </details>
+  <details class="visual-guide"><summary>Post-event – thank you to attendees</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> Thank you</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear Andrew,
+
+Thank you for attending our inaugural CFO Forum. We were thrilled to have you, and hope you found it as informative and engaging as we did.
+
+As promised, I am attaching the slides from yesterday’s sessions and a link to a post-event Insight published on LinkedIn today.
+
+We’d love your thoughts – please take a few minutes to complete our event satisfaction survey. Your feedback helps us deliver content that helps you navigate the lifecycle of a private equity investment.
+
+Finally, we’d love to connect you with your fellow CFOs across our portfolio – let me know if you’re happy for me to share your contact details with the group.
+
+Warm regards,
+Ben</div>
+  </details>
+  <details class="visual-guide"><summary>Post-event – feedback chase</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> Thank you</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Hi Andrew,
+
+I hope you had a lovely long weekend. I just wanted to follow up on Ben’s email as a reminder to complete our event satisfaction survey, if you haven’t already.
+
+Also, do let me know if you are happy to share your contact details with the group so you can stay in touch until our next event. Once we have everyone’s confirmation, we will share an email with the group.
+
+Many thanks,
+Maya</div>
+  </details>
+
+  <h3 class="sub-title">Without bio book (drinks, lighter events)</h3>
+  <details class="visual-guide"><summary>Save the date – home team</summary>
+    
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Please save the date for our Data and Insight Network Summer Drinks event.
+
+This event will provide an opportunity for senior executives and NEDs in the data and information industry to gather, connect, and enjoy refreshments on a rooftop bar. Further details will be provided soon.
+
+If you have any comments or questions, please do not hesitate to let us know.</div>
+  </details>
+  <details class="visual-guide"><summary>Invitation</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> Bowmark’s Data and Insight Summer Drinks (28 June, London)</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Join us along with other senior executives and NEDs from across the Data and Insight sector for networking and drinks in a relaxed summer setting.
+
+Please RSVP using the form via the link below by Friday 26 May, and we hope to see you there.
+
+Please view more details and RSVP here.
+
+If you have any questions, please contact my colleague Maya (cc’d).
+
+Kind regards,
+Julian Masters</div>
+  </details>
+  <details class="visual-guide"><summary>Accepted – confirmation + query response</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> Bowmark’s Data and Insight Summer Drinks (28 June, London)</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Hello Dario,
+
+Thank you for confirming your attendance to our summer drinks event. I have just sent you a calendar invite.
+
+Guests are welcome to arrive any time from 5.30pm, so no need to worry about arriving after 6pm.
+
+If you have any questions or concerns, please do not hesitate to contact me. We look forward to seeing you there!
+
+Best regards,
+Maya</div>
+  </details>
+  <details class="visual-guide"><summary>Chase – no response (resend with new subject)</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> Reminder / Final reminder for Personal Invitation to Bowmark’s Data and Insight Summer Drinks (28 June, London)</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Resend the invitation with a new subject line one week later (“Reminder for Personal Invitation…”) and again two weeks later (“Final reminder for Personal Invitation…”).</div>
+  </details>
+  <details class="visual-guide"><summary>One week before</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> A week to go until Bowmark’s Data and Insight Summer Drinks</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear [Name],
+
+We look forward to seeing you for drinks and canapés next Wednesday at our Data and Insight Summer Drinks.
+
+As a reminder, the event will be held at Radio Rooftop, on the 10th floor of ME London in Covent Garden. It is easily accessed from Covent Garden or Temple tube stations (both a 5-minute walk) or Waterloo national rail (12-minute walk).
+
+Feel free to arrive anytime from 5.30pm. The dress code is smart casual.
+
+Best wishes,
+[Name]</div>
+  </details>
+  <details class="visual-guide"><summary>Day of event</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> See you soon at Bowmark’s Data and Insight Summer Drinks</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear [Name],
+
+We look forward to seeing you [tomorrow / this evening] at our Data and Insight Summer Drinks.
+
+As a reminder, Radio Rooftop is on the 10th floor of ME London in Covent Garden. The easiest access is via the main hotel entrance, a 5-minute walk from Covent Garden or Temple tube, and 12 minutes from Waterloo.
+
+Feel free to arrive anytime from 5.30pm.
+
+Best wishes,
+[Name]</div>
+  </details>
+  <details class="visual-guide"><summary>Post-event – thank you</summary>
+    <p class="sop-para" style="margin-bottom:2px"><strong>Subject:</strong> Thank you for attending last night’s drinks</p>
+    <div style="white-space:pre-wrap;font-size:13px;padding:8px 4px;color:var(--bm-blue)">Dear [Name],
+
+Thank you for joining us at the Data and Insight Summer Drinks. It was a pleasure to have you there and we hope you enjoyed networking with others in the industry.
+
+We appreciate your continued support of our events and hope to see you at future gatherings. Please let us know if you have any feedback or suggestions – we value your input and are always looking to improve.
+
+Thank you again, and we look forward to connecting soon.
+
+Best regards,
+[Your Name]</div>
+  </details>
+  <div class="callout"><strong>Related.</strong> Invitation build and RSVP pages: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p064')">Event invitation templates →</a>. Post-event follow-up: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p044')">Event follow-up →</a>. The events these serve: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p030')">Origination events →</a>.</div>
+</div>
+
+<!-- P086 COMPETITOR REFERENCE TABLE -->
+<div id="p086" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Competitor intelligence</p>
+  <h2 class="section-title">Competitor reference table</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Competitor intelligence</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Live competitor tracker</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Reviewed annually</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+  <p class="sop-para">Our 16 core UK mid-market PE competitors, with Bowmark shown for comparison. AUM and fundraise figures are approximate and move over time; LinkedIn figures are point-in-time (2025). The live source is the Marketing Tracker – Competitor key details spreadsheet.</p>
+  <div style="overflow-x:auto">
+  <table class="roles"><thead><tr><th>Firm</th><th>AUM (approx.)</th><th>Recent fundraise</th><th>LinkedIn followers</th><th>Avg. post interactions</th><th>Website</th></tr></thead><tbody>
+  <tr><td>ECI Partners</td><td>over £2bn</td><td>£1bn (ECI 12)</td><td>17,202</td><td>30–50</td><td><a href="https://ecipartners.com" target="_blank">ecipartners.com</a></td></tr><tr><td>Hg</td><td>over $75bn</td><td>$11bn</td><td>56,219</td><td>100–200</td><td><a href="https://hgcapital.com" target="_blank">hgcapital.com</a></td></tr><tr><td>Inflexion</td><td>£11bn</td><td>£1.75bn</td><td>38,220</td><td>50–100</td><td><a href="https://inflexion.com" target="_blank">inflexion.com</a></td></tr><tr><td>Livingbridge</td><td>£3.8bn</td><td>£1.25bn</td><td>22,658</td><td>50–100</td><td><a href="https://livingbridge.com" target="_blank">livingbridge.com</a></td></tr><tr><td>Synova</td><td>£1.7bn</td><td>£875m (Fund V)</td><td>7,086</td><td>20–40</td><td><a href="https://synova.pe" target="_blank">synova.pe</a></td></tr><tr><td>Phoenix Equity Partners</td><td>£900m</td><td>£600m</td><td>6,603</td><td>20–50</td><td><a href="https://phoenix-equity.com" target="_blank">phoenix-equity.com</a></td></tr><tr><td>Sovereign Capital</td><td>–</td><td>–</td><td>10,073</td><td>30–60</td><td><a href="https://sovereigncapital.co.uk" target="_blank">sovereigncapital.co.uk</a></td></tr><tr><td>Tenzing</td><td>£1.7bn</td><td>£900m</td><td>11,148</td><td>100–150</td><td><a href="https://tenzing.pe" target="_blank">tenzing.pe</a></td></tr><tr><td>Mayfair Equity Partners</td><td>£2bn</td><td>£500m</td><td>9,001</td><td>10–30</td><td><a href="https://mayfairequity.com" target="_blank">mayfairequity.com</a></td></tr><tr><td>Graphite Capital</td><td>–</td><td>–</td><td>–</td><td>–</td><td><a href="https://graphitecapital.com" target="_blank">graphitecapital.com</a></td></tr><tr><td>August Equity</td><td>–</td><td>–</td><td>–</td><td>–</td><td><a href="https://augustequity.com" target="_blank">augustequity.com</a></td></tr><tr><td>CBPE</td><td>–</td><td>£561m</td><td>3,884</td><td>10–20</td><td><a href="https://cbpecapital.com" target="_blank">cbpecapital.com</a></td></tr><tr><td>Epiris</td><td>£2.3bn</td><td>£1.044bn</td><td>4,827</td><td>10–20</td><td><a href="https://epiris.co.uk" target="_blank">epiris.co.uk</a></td></tr><tr><td>Exponent</td><td>£2.9bn</td><td>£2.9bn</td><td>5,547</td><td>20–40</td><td><a href="https://exponentpe.com" target="_blank">exponentpe.com</a></td></tr><tr><td>Oakley Capital</td><td>€11bn</td><td>–</td><td>22,057</td><td>80–120</td><td><a href="https://oakleycapital.com" target="_blank">oakleycapital.com</a></td></tr><tr><td>Pollen Street Capital</td><td>£4.2bn</td><td>£1bn (Fund V)</td><td>10,913</td><td>30–60</td><td><a href="https://pollenstreetgroup.com" target="_blank">pollenstreetgroup.com</a></td></tr><tr style="background:#faf9fb;font-weight:600"><td>Bowmark Capital</td><td>–</td><td>–</td><td>12,700</td><td>50–100</td><td><a href="https://bowmark.com" target="_blank">bowmark.com</a></td></tr>
+  </tbody></table>
+  </div>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Competitors in priority order: Inflexion, ECI Partners, Hg, Livingbridge, Synova, then Phoenix, Sovereign, Tenzing, Mayfair, Graphite, August, CBPE, Epiris, Exponent, Oakley, Pollen Street.</p>
+  <div class="callout"><strong>Related.</strong> Positioning and Bowmark SWOT: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p087')">Competitor benchmarking →</a>. How the analysis is produced: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p088')">Competitor analysis workshop →</a>.</div>
+</div>
+
+<!-- P087 COMPETITOR BENCHMARKING -->
+<div id="p087" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Competitor intelligence</p>
+  <h2 class="section-title">Competitor benchmarking and positioning</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Competitor intelligence</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Brand positioning benchmark</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Source</span><span class="sop-meta-value">Brand Positioning &amp; SWOT Benchmarking Report (2025)</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P2</span></div>
+  </div>
+  <h3 class="sub-title">How each firm positions itself</h3>
+  <p class="sop-para">All firms position as supportive partners to ambitious businesses; the differentiator is tone and emphasis.</p>
+  <table class="roles"><thead><tr><th>Firm</th><th>Tagline / emphasis</th></tr></thead><tbody>
+    <tr><td><strong>Bowmark</strong></td><td>“Investing with intent.” Considered, collaborative, long-term; deliberate about where it invests; tech-enabled services up to £300m.</td></tr>
+    <tr><td>Inflexion</td><td>“Backing ambition.” Proactive, energetic; flexible funding, majority or minority.</td></tr>
+    <tr><td>ECI Partners</td><td>“Collaborative support. Exceptional results.” Humble, aligned with management; B Corp.</td></tr>
+    <tr><td>Hg</td><td>Build enduring software and services leaders. Expert, visionary, tech-niche; scale with humility.</td></tr>
+    <tr><td>Livingbridge</td><td>“Investment done the right way.” Ethical, principled, human; decency as differentiator.</td></tr>
+    <tr><td>Synova</td><td>“Partners for growth.” Concise, entrepreneur-centric, personal.</td></tr>
+  </tbody></table>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Full firm-by-firm positioning for all 16 is in the benchmarking report.</p>
+
+  <h3 class="sub-title">Bowmark SWOT (2025)</h3>
+  <h4 class="sub-sub">Strengths</h4>
+  <ul class="sop-list">
+    <li>Clear, consistent brand message – “Investing with intent” and tech-enabled services focus; professional, trustworthy, collaborative</li>
+    <li>Engaged and growing LinkedIn presence (12.7k followers, high engagement rate)</li>
+    <li>Quality content and thought leadership (insight-driven articles)</li>
+    <li>Demonstrated value-add and support programmes</li>
+    <li>Strong reputation and relationships – long tenure in the mid-market</li>
+  </ul>
+  <h4 class="sub-sub">Weaknesses</h4>
+  <ul class="sop-list">
+    <li>Middle-of-pack brand visibility versus larger-scale players</li>
+    <li>Less aggressive marketing of the value-add Bowmark actually delivers</li>
+    <li>Limited sector-specialisation perception (tech-enabled services is still broad)</li>
+    <li>Fewer high-profile public case studies than some peers</li>
+    <li>Social-media frequency less consistent (a trade-off of the careful approach)</li>
+    <li>UK-focused geographic-reach perception</li>
+  </ul>
+  <h4 class="sub-sub">Opportunities</h4>
+  <ul class="sop-list">
+    <li>Use testimonials and case studies more prominently</li>
+    <li>Double down on niche-theme thought leadership</li>
+    <li>Expand and promote ESG / impact (building on the Responsible Investor award)</li>
+    <li>Elevate the talent-network offering</li>
+    <li>Promote awards and accolades more actively</li>
+  </ul>
+  <h4 class="sub-sub">Threats</h4>
+  <ul class="sop-list">
+    <li>Competition from niche-branding rivals with very sharp positioning</li>
+    <li>Market noise from mega-funds and growth-equity entrants</li>
+    <li>Economic downturn or portfolio setbacks</li>
+    <li>Marketing talent attraction and retention</li>
+    <li>Shifting LP expectations</li>
+  </ul>
+  <div class="callout"><strong>Related.</strong> The data table: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p086')">Competitor reference table →</a>. Brand positioning: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('strategy')">Strategy and judgement →</a>.</div>
+</div>
+
+<!-- P088 COMPETITOR ANALYSIS WORKSHOP -->
+<div id="p088" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Competitor intelligence</p>
+  <h2 class="section-title">Competitor analysis workshop</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Competitor intelligence</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Partner-led competitor review</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Periodic (workshop)</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P3</span></div>
+  </div>
+  <h3 class="sub-title">How the analysis is produced</h3>
+  <p class="sop-para">Competitor intelligence comes together through a partner workshop: each partner is assigned a competitor to research and present, using a common framework so the outputs are comparable. Marketing compiles the results into the benchmarking report and the tracker.</p>
+  <h3 class="sub-title">The framework each competitor is assessed against</h3>
+  <ul class="sop-list">
+    <li>Mission (what they do)</li>
+    <li>Purpose (why they do it)</li>
+    <li>Vision (business goals)</li>
+    <li>Thought leadership</li>
+    <li>Does PR articulate their purpose?</li>
+    <li>Strengths and weaknesses</li>
+    <li>Distinctive brand?</li>
+    <li>Other thoughts</li>
+  </ul>
+  <p class="sop-para">Presenters are paired to competitors (e.g. a partner takes Livingbridge, another takes Inflexion) so the firm-wide knowledge is captured, not just marketing's view. Marketing’s role is to set the framework, chase the inputs, and synthesise them into the report and tracker.</p>
+  <div class="callout"><strong>Related.</strong> The resulting data: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p086')">Competitor reference table →</a>. The resulting analysis: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p087')">Competitor benchmarking →</a>.</div>
+</div>
+
 <!-- GENERIC PLACEHOLDER -->
 <div id="process-placeholder" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -4745,9 +5122,7 @@ const processes = [
   {id:'P028',cat:'Content and communications',name:'Annual highlights',notes:'Video; storyboard doc to Charles Nov; Granola his feedback',output:'Annual highlights content / campaign',freq:'Annual',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p028'},
   {id:'P029',cat:'Content and communications',name:'Alumni newsletter',notes:'Marketing supports; triggered by Abbey',output:'Email campaign',freq:'Periodic',pri:'P3',status:'live',fmt:'Checklist',owner:'Abbey Hoyle',trained:'Xuti, Meagan, Alice',signoff:'Charles',sub:'Campaigns and reporting',sid:'p029'},
   {id:'P023',cat:'Content and communications',name:'Crisis / sensitive communications',notes:'',output:'Agreed response or holding line',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Standalone SOP / escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Crisis',sid:'p023'},
-  {id:'P030',cat:'Events',name:'Flagship dinner',notes:'47-task SOP + three core event types',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p030'},
-  {id:'P031',cat:'Events',name:'Roundtable dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p031'},
-  {id:'P032',cat:'Events',name:'Drinks reception',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p032'},
+  {id:'P030',cat:'Events',name:'Origination events – dinners and drinks',notes:'47-task SOP + flagship / roundtable / drinks types',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Origination events',sid:'p030'},
   {id:'P033',cat:'Events',name:'Smaller sector-focused dinner',notes:'Origination event format',output:'Delivered event, attendee list, follow-up and insight where relevant',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna, Meagan',signoff:'Event Sponsor',sub:'Origination events',sid:'p033'},
   {id:'P034',cat:'Events',name:'Portfolio and value creation forums',notes:'12-phase forum playbook',output:'Delivered forum, content and follow-up post',freq:'Annual / periodic',pri:'P1',status:'live',fmt:'Events playbook SOP',owner:'Lauren',trained:'Xuti, Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p034'},
   {id:'P044',cat:'Events',name:'Event follow-up',notes:'Survey, materials, WhatsApp / community links',output:'Follow-up email, survey responses and shared materials',freq:'After each event',pri:'P1',status:'live',fmt:'Checklist + templates',owner:'Lauren',trained:'Lauren, Anna',signoff:'Event Sponsor',sub:'Portfolio and value creation',sid:'p044'},
@@ -4756,11 +5131,12 @@ const processes = [
   {id:'P041',cat:'Events',name:'Hospitality',notes:'',output:'Invitations, guest management and logistics',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Mollie',trained:'Xuti, Mollie',signoff:'Marketing internal',sub:'Other events',sid:'p041'},
   {id:'P042',cat:'Events',name:'Third-party / sponsored events',notes:'Megabyte Awards sponsorship',output:'Sponsorship, guest management and comms',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Alice',signoff:'Tom Shelford',sub:'Other events',sid:'p042'},
   {id:'P064',cat:'Events',name:'Event invitation templates',notes:'DealCloud RSVP page + email campaign',output:'Invitation copy and design',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Checklist + templates',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Event tools and templates',sid:'p064'},
+  {id:'P085',cat:'Events',name:'Event email templates',notes:'Lifecycle email set: with and without bio book',output:'Consistent event comms',freq:'Per event',pri:'P2',status:'live',fmt:'Template library',owner:'Marketing',trained:'Meagan, Alice, Lauren',signoff:'n/a',sub:'Event tools and templates',sid:'p085'},
   {id:'P051',cat:'Events',name:'DealCloud event campaigns',notes:'Contact tiers live; campaign build Scribes to follow',output:'Target lists and campaign records',freq:'Ad hoc',pri:'P1',status:'partial',fmt:'Standalone SOP',owner:'Lauren',trained:'Lauren',signoff:'Marketing internal',sub:'Event tools and templates',sid:'p051'},
   {id:'P066',cat:'Brand, collateral and templates',name:'Ad hoc team support and design requests',notes:'',output:'Slide, document, design or copy support',freq:'Ongoing',pri:'P1',status:'live',fmt:'Decision tree + intake checklist',owner:'Xuti',trained:'Xuti',signoff:'Requesting stakeholder',sub:'Design and requests',sid:'p066'},
   {id:'P058',cat:'Brand, collateral and templates',name:'Brand guidelines management',notes:'',output:'Updated brand guidelines',freq:'Annual / ad hoc',pri:'P1',status:'live',fmt:'Brand playbook section',owner:'Xuti',trained:'Xuti',signoff:'Charles',sub:'Brand system',sid:'p058'},
   {id:'P069',cat:'Brand, collateral and templates',name:'Branded merchandise',notes:'Tote bags, umbrellas and similar',output:'Ordered branded items',freq:'Ad hoc',pri:'P3',status:'live',fmt:'Checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Brand system',sid:'p069'},
-  {id:'P059',cat:'Brand, collateral and templates',name:'Tone of voice governance',notes:'Handover owner TBC',output:'Copy aligned to Bowmark tone',freq:'Ongoing',pri:'P1',status:'partial',fmt:'Principles + examples',owner:'',trained:'',signoff:'Marketing internal',sub:'Brand system',sid:'p059'},
+  {id:'P059',cat:'Brand, collateral and templates',name:'Tone of voice and writing rules',notes:'House style guide; applied via Artemis',output:'Copy aligned to Bowmark tone',freq:'Ongoing',pri:'P1',status:'live',fmt:'Principles + examples',owner:'',trained:'',signoff:'Marketing internal',sub:'Brand system',sid:'p059'},
   {id:'P060',cat:'Brand, collateral and templates',name:'PowerPoint template and UpSlide system',notes:'Includes Scribe guide',output:'Working PowerPoint / UpSlide system',freq:'Ongoing',pri:'P1',status:'live',fmt:'Standalone SOP',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Presentations',sid:'p060'},
   {id:'P061',cat:'Brand, collateral and templates',name:'Slide library management',notes:'Library update process with embedded visual guide',output:'Current slide library',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP section',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'Presentations',sid:'p061'},
   {id:'P079',cat:'Brand, collateral and templates',name:'Management presentation update',notes:'',output:'Updated management presentation slides',freq:'Ad hoc / periodic',pri:'P1',status:'live',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Charles; Tom Shelford',sub:'Presentations',sid:'p079'},
@@ -4794,13 +5170,16 @@ const processes = [
   {id:'P009',cat:'Operations',name:'Portfolio marketing contact management',notes:'',output:'Updated contact map and communication route',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Stakeholder guide section',owner:'Alice',trained:'Xuti, Meagan, Alice',signoff:'Marketing internal',sub:'Approvals and governance',sid:'p009'},
   {id:'P010',cat:'Operations',name:'Supplier and agency management',notes:'',output:'Supplier brief, delivery and feedback loop',freq:'Ongoing',pri:'P1',status:'needed',fmt:'Supplier register + SOP',owner:'Xuti',trained:'Xuti, Meagan, Mollie',signoff:'Marketing internal',sub:'Approvals and governance',sid:'p010'},
   {id:'P011',cat:'Operations',name:'Approval escalation for sensitive comms',notes:'',output:'Controlled escalation and approved response',freq:'Ad hoc',pri:'P1',status:'needed',fmt:'Decision tree',owner:'',trained:'',signoff:'Charles',sub:'Approvals and governance',sid:'p011'},
+  {id:'P086',cat:'Competitor intelligence',name:'Competitor reference table',notes:'16 core competitors: AUM, fundraise, LinkedIn',output:'Live competitor tracker',freq:'Annual',pri:'P2',status:'live',fmt:'Reference table',owner:'Marketing',trained:'Meagan, Alice',signoff:'n/a',sub:'',sid:'p086'},
+  {id:'P087',cat:'Competitor intelligence',name:'Competitor benchmarking and positioning',notes:'Positioning + Bowmark SWOT',output:'Brand positioning benchmark',freq:'Annual',pri:'P2',status:'live',fmt:'Analysis',owner:'Marketing',trained:'Meagan, Alice',signoff:'n/a',sub:'',sid:'p087'},
+  {id:'P088',cat:'Competitor intelligence',name:'Competitor analysis workshop',notes:'Partner-led framework producing the analysis',output:'Partner competitor review',freq:'Periodic',pri:'P3',status:'live',fmt:'Process',owner:'Marketing',trained:'Partners',signoff:'n/a',sub:'',sid:'p088'},
   {id:'P076',cat:'Quick reference scenarios',name:'Portfolio company acquisition',notes:'Pointer checklist to relevant SOPs',output:'News item, LinkedIn post and/or press support',freq:'Ad hoc',pri:'P1',status:'live',fmt:'Scenario checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles; Deal Team Rep',sub:'',sid:'p076'},
   {id:'P077',cat:'Quick reference scenarios',name:'Bowmarker speaks on a panel',notes:'Pointer checklist to relevant SOPs',output:'Bio, headshot, social post or event support',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Scenario checklist',owner:'',trained:'',signoff:'Charles',sub:'',sid:'p077'},
   {id:'P078',cat:'Quick reference scenarios',name:'Someone asks for a logo, headshot or boilerplate',notes:'Pointer checklist to relevant SOPs',output:'Correct approved asset supplied',freq:'Ad hoc',pri:'P2',status:'live',fmt:'Scenario checklist',owner:'Xuti',trained:'Xuti',signoff:'Marketing internal',sub:'',sid:'p078'}
 ];
 
 // IDs with fully built dedicated sections
-const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','p084','strategy','useful-logins','useful-links','process-placeholder']);
+const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','p084','p085','p086','p087','p088','strategy','useful-logins','useful-links','process-placeholder']);
 
 let activeFilters = {p1:false, live:false, partial:false};
 
@@ -4926,7 +5305,7 @@ function resetAllChecks(sectionId){
 
 buildRegistry(processes);
 // Build stamp - single source of truth. Update BUILD and UPDATED together on every revision.
-const BUILD='3.9';
+const BUILD='4.1';
 const UPDATED='14 August 2026';
 (function(){
   var v=document.getElementById('vb-version'); if(v)v.textContent=BUILD;
