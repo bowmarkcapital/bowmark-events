@@ -197,6 +197,7 @@
   <div class="nav-section-label">Content and communications</div>
   <div class="nav-subcat">Admin and PR</div>
   <a class="nav-item" onclick="showSection('p016')">PR and media management</a>
+  <a class="nav-item" onclick="showSection('p084')">Drafting document for review</a>
   <div class="nav-subcat">News</div>
   <a class="nav-item" onclick="showSection('p012')">News sweep</a>
   <a class="nav-item" onclick="showSection('p013')">Portfolio news</a>
@@ -309,10 +310,10 @@
   <h1 class="page-title">Handbook action plan</h1>
   <p class="body-text">Working overview for completing the handbook. Progress is calculated live from the process registry; checklist ticks are saved in this browser. For the finished reference view, use the process registry and category pages in the sidebar.</p>
   <div class="version-bar">
-    <span><strong>Version</strong> 3.7</span>
+    <span><strong>Version</strong> <span id="vb-version">3.8</span></span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> <span id="vb-count">82</span></span>
-    <span><strong>Last updated</strong> 12 August 2026 – build 3.7</span>
+    <span><strong>Last updated</strong> <span id="vb-updated">14 August 2026 – build 3.8</span></span>
   </div>
 
   <h3 class="sub-title">Progress</h3>
@@ -4628,6 +4629,84 @@
   <p class="sop-para"><strong>Security and privacy:</strong> credentials held in plain text; personal information carried into trackers or AI unnecessarily; platform ownership tied to personal accounts; unclear recovery and offboarding routes.</p>
 </div>
 
+<!-- P084 CONTENT DRAFTING DOCUMENT -->
+<div id="p084" class="section">
+  <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
+  <p class="eyebrow">Content and communications</p>
+  <h2 class="section-title">Drafting document for review</h2>
+  <div class="sop-meta">
+    <div class="sop-meta-item"><span class="sop-meta-label">Category</span><span class="sop-meta-value">Content and communications</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Output</span><span class="sop-meta-value">Review-ready Word document</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Frequency</span><span class="sop-meta-value">Per content piece</span></div>
+    <div class="sop-meta-item"><span class="sop-meta-label">Priority</span><span class="sop-meta-value">P1</span></div>
+  </div>
+  <p class="sop-para">How to build the single Word document that a content piece is drafted in and sent to Charles for review. One document holds the website copy, the LinkedIn version and any related website edits, so it can all be reviewed at once. The guiding principle throughout: <strong>preempt what Charles will ask for</strong> and show you have thought it through.</p>
+
+  <h3 class="sub-title">Start the document</h3>
+  <ul class="sop-list">
+    <li>In Word, open the <strong>UpSlide</strong> tab &gt; <strong>Templates</strong> &gt; <strong>Bowmark template</strong> (this guarantees the correct header, footer and formatting). Simple letterhead is for printed letters; Press release has its own formatting, though Charles tends to re-edit press releases to his own preferences anyway.</li>
+    <li>Save immediately (it auto-saves) to Marketing &gt; Content &gt; [year] Content &gt; <strong>News and LinkedIn posts</strong>. (Website copy – the non-news folder – is for team profiles, investment profiles and similar.)</li>
+    <li>Name it by month-first so it sorts chronologically: e.g. <strong>08 14 [description]</strong>.</li>
+  </ul>
+
+  <h3 class="sub-title">Structure with heading styles</h3>
+  <p class="sop-para">Use Word heading styles (Home or UpSlide tab) as a hierarchy so the document is navigable and cleanly formatted:</p>
+  <ul class="sop-list">
+    <li><strong>Heading 1</strong> – the piece title (e.g. “PiP anniversary news”)</li>
+    <li><strong>Heading 2</strong> – each section: Website, LinkedIn, and each website page that needs updating</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>Always draft the website version <strong>and</strong> the LinkedIn version in the same document. It would seem to make more sense to get the website signed off first and then create the LinkedIn post – but Charles will immediately ask “what about the LinkedIn post?”, so do both up front. He then makes any edits twice; that is his decision.</div>
+
+  <h3 class="sub-title">Website section conventions</h3>
+  <ul class="sop-list">
+    <li>Don’t label a “title” field – put the headline in <strong>bold and centred</strong> (Charles likes a centred headline), optionally underlined.</li>
+    <li>The first line of a news article is the <strong>stand first</strong> (not “snippet” – snippet is the tiles term on Investments). Put it in bold; don’t label it.</li>
+    <li>Remove the blank spaces between paragraphs.</li>
+    <li>For the website copy, write the first two paragraphs, then any quotes, then a <strong>read more</strong>.</li>
+    <li>Mark where the uploaded copy ends with <strong>ENDS</strong> on its own line before the source material – a press-release habit worth using on everything.</li>
+    <li>Where a video is involved, add a highlighted <strong>[insert link to video]</strong> in square brackets (remove any stray hyperlink first), or paste the view link.</li>
+  </ul>
+
+  <h3 class="sub-title">LinkedIn section conventions</h3>
+  <ul class="sop-list">
+    <li>Copy the website piece, then delete the title (LinkedIn has no titles) and trim to suit – typically unbold the first paragraph and rework the opener (e.g. “This year, Bowmark…”).</li>
+    <li>Good use of Artemis: paste the news piece in and ask it to amend the first paragraph to suit LinkedIn; take what you prefer. See <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>.</li>
+    <li><strong>Underline</strong> (don’t link) anywhere you plan to tag someone on LinkedIn – LinkedIn only, not the website version.</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>Tag or explain the <strong>first instance</strong> of a person or company only – like introducing someone in an essay, you don’t repeat it thereafter.</div>
+
+  <h3 class="sub-title">Related website edits (track changes)</h3>
+  <ul class="sop-list">
+    <li>For each website section that needs updating, add a Heading 2 (e.g. “Purpose page”), a short bracketed explanation, then the existing text with your suggested change in <strong>track changes</strong>.</li>
+    <li>Keep explanations minimal – if three words work, use three words (“Suggested update to [name]’s quote”). The track changes make the change self-evident.</li>
+    <li>Prefer changes that don’t need constant future updating – e.g. “in the last decade” rather than a fixed year that dates.</li>
+    <li>Before sending, switch <strong>All Markup</strong> to <strong>No Markup</strong> to check spacing and catch formatting errors, then switch back. Turn track changes off when done.</li>
+  </ul>
+
+  <h3 class="sub-title">Top-of-document markers and quotes</h3>
+  <ul class="sop-list">
+    <li>At the very top add: <strong>Draft 1</strong>, your initials, and any approval note – e.g. “To be approved with [portfolio company] before publishing” if a quote is still outstanding.</li>
+    <li>Add a <strong>Source material</strong> / references section (Heading 2) at the end with links to anything used – previous similar pieces, the source article – so Charles can see why particular wording was chosen.</li>
+    <li>For quotes, insert <strong>[insert quote from X]</strong> placeholders. Draft the quotes for people (including the portfolio company) and offer them as a courtesy – “here’s something we drafted, absolutely no obligation to use it.” Give Artemis the context (who the person is, their title, previous quotes) to draft them.</li>
+  </ul>
+  <div class="callout-important"><span class="ci-label">Important</span>Check facts before drafting quotes or attributions – e.g. confirm who currently chairs a committee before naming them. When unsure, verify with the relevant person (e.g. Lauren) rather than assume.</div>
+
+  <h3 class="sub-title">Then</h3>
+  <p class="sop-para">Send to Maya/Meagan to review, then on to Charles. This document can be reused as a starting template for future pieces. You have a whole folder of past examples (back to 2015) – when unsure, look at a comparable one.</p>
+  <div class="callout"><strong>Related.</strong> Which tier a piece is: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p013')">Portfolio news →</a>. Case study updates: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p022')">Investment update →</a>. Publishing the approved copy: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p045')">Website CMS management →</a>. Sign-off routing: <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p007')">Senior approval process →</a>.</div>
+  <h3 class="sub-title">Checklist</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('p084')">Reset checklist</button></div>
+<ul class="checklist"><li><input type="checkbox" id="dd1" onchange="toggleCheck(this)"><label for="dd1">Open UpSlide &gt; Templates &gt; Bowmark template; save to News and LinkedIn posts, named month-first</label></li>
+<li><input type="checkbox" id="dd2" onchange="toggleCheck(this)"><label for="dd2">Heading 1 title; Heading 2 for Website, LinkedIn and each page edit</label></li>
+<li><input type="checkbox" id="dd3" onchange="toggleCheck(this)"><label for="dd3">Website: bold centred headline, bold stand first, tight paragraphs, ENDS line, video link if any</label></li>
+<li><input type="checkbox" id="dd4" onchange="toggleCheck(this)"><label for="dd4">LinkedIn: title removed, opener reworked (Artemis optional), underline planned tags, first-instance tagging only</label></li>
+<li><input type="checkbox" id="dd5" onchange="toggleCheck(this)"><label for="dd5">Page edits: existing text with track changes, minimal explanation, timeless wording</label></li>
+<li><input type="checkbox" id="dd6" onchange="toggleCheck(this)"><label for="dd6">Check in No Markup, then turn track changes off</label></li>
+<li><input type="checkbox" id="dd7" onchange="toggleCheck(this)"><label for="dd7">Top: Draft 1 + initials + approval note; end: Source material links</label></li>
+<li><input type="checkbox" id="dd8" onchange="toggleCheck(this)"><label for="dd8">Quote placeholders drafted and offered; facts/attributions verified</label></li>
+<li><input type="checkbox" id="dd9" onchange="toggleCheck(this)"><label for="dd9">Send to Maya/Meagan, then Charles</label></li></ul>
+</div>
+
 <!-- GENERIC PLACEHOLDER -->
 <div id="process-placeholder" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -4644,6 +4723,7 @@
 <script>
 const processes = [
   {id:'P016',cat:'Content and communications',name:'PR and media management',notes:'H/Advisors and media inbox',output:'Approved media response or PR output',freq:'Ongoing',pri:'P1',status:'live',fmt:'SOP + escalation tree',owner:'Meagan',trained:'Meagan, Alice',signoff:'Charles',sub:'Admin and PR',sid:'p016'},
+  {id:'P084',cat:'Content and communications',name:'Drafting document for review',notes:'Word drafting doc: website + LinkedIn + edits in one',output:'Review-ready Word document',freq:'Per piece',pri:'P1',status:'live',fmt:'SOP + checklist',owner:'Alice',trained:'Alice, Meagan',signoff:'Charles',sub:'Admin and PR',sid:'p084'},
   {id:'P012',cat:'Content and communications',name:'News sweep',notes:'Portfolio and Bowmark news selection',output:'Shortlist of items for website or LinkedIn',freq:'Weekly / ad hoc',pri:'P2',status:'live',fmt:'Checklist',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p012'},
   {id:'P013',cat:'Content and communications',name:'Portfolio news',notes:'Three-tier process (repost / LinkedIn / website)',output:'Website news item and LinkedIn post',freq:'Ad hoc',pri:'P1',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p013'},
   {id:'P014',cat:'Content and communications',name:'Bowmark news',notes:'',output:'Website / LinkedIn / internal post',freq:'Ad hoc',pri:'P2',status:'live',fmt:'SOP section',owner:'Alice',trained:'Meagan, Alice',signoff:'Charles',sub:'News',sid:'p014'},
@@ -4720,7 +4800,7 @@ const processes = [
 ];
 
 // IDs with fully built dedicated sections
-const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','strategy','useful-logins','useful-links','process-placeholder']);
+const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p031','p032','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','p084','strategy','useful-logins','useful-links','process-placeholder']);
 
 let activeFilters = {p1:false, live:false, partial:false};
 
@@ -4845,6 +4925,13 @@ function resetAllChecks(sectionId){
 }
 
 buildRegistry(processes);
+// Build stamp - single source of truth. Update BUILD and UPDATED together on every revision.
+const BUILD='3.8';
+const UPDATED='14 August 2026';
+(function(){
+  var v=document.getElementById('vb-version'); if(v)v.textContent=BUILD;
+  var u=document.getElementById('vb-updated'); if(u)u.textContent=UPDATED+' \u2013 build '+BUILD;
+})();
 // Dynamic process counts
 (function(){
   var n=processes.length;
