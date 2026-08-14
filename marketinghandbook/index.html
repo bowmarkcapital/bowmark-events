@@ -168,6 +168,13 @@
   .callout-important::before{content:"\2605";position:absolute;left:14px;top:12px;color:var(--bm-coral);font-size:17px;}
   .callout-important .ci-label{display:block;font-family:var(--font-heading);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--bm-coral);margin-bottom:4px;}
   @media print{.sidebar,.site-header,.top-nav,.toolbar,.filter-bar,.back-link{display:none!important;}.main{padding:0;}.section{display:block!important;}}
+
+  .home-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:6px 0 8px;}
+  .home-card{border:1px solid var(--bm-line,#e2e0e6);border-radius:10px;padding:15px 16px;cursor:pointer;transition:.15s;background:#fff;}
+  .home-card:hover{border-color:var(--bm-coral);box-shadow:0 2px 10px rgba(11,12,68,.06);transform:translateY(-1px);}
+  .hc-title{font-family:var(--font-heading);font-weight:700;color:var(--bm-blue,#0B0C44);font-size:15px;margin-bottom:5px;}
+  .hc-desc{font-size:12.5px;color:var(--bm-lilacgrey,#6b6c86);line-height:1.4;}
+  @media (max-width:820px){.home-cards{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -231,8 +238,10 @@
   <a class="nav-item" onclick="showSection('registry')">Process registry</a>
   <a class="nav-item" onclick="showSection('strategy')">Strategy and judgement</a>
   <a class="nav-item" onclick="showSection('creating-with-claude')">Creating with Claude</a>
+  <a class="nav-item" onclick="showSection('handover-progress')">Handover progress</a>
 
   <div class="nav-section-label">Shared reference</div>
+  <a class="nav-item" onclick="showSection('contact-book')">Contact book</a>
   <a class="nav-item" onclick="showSection('useful-logins')">Useful logins</a>
   <a class="nav-item" onclick="showSection('useful-links')">Useful links</a>
 
@@ -353,16 +362,38 @@
 <!-- HOME -->
 <div id="home" class="section active">
   <p class="eyebrow">Marketing handbook</p>
-  <h1 class="page-title">Handbook action plan</h1>
-  <p class="body-text">Working overview for completing the handbook. Progress is calculated live from the process registry; checklist ticks are saved in this browser. For the finished reference view, use the process registry and category pages in the sidebar.</p>
+  <h2 class="section-title">Bowmark marketing handbook</h2>
+  <p class="sop-para">The complete reference for how Bowmark’s marketing function works – every process, template, contact and standard, in one place. Use the sidebar to browse by category, the process registry to see everything at a glance, or the search on each page to find what you need.</p>
   <div class="version-bar">
-    <span><strong>Version</strong> <span id="vb-version">4.7</span></span>
+    <span><strong>Version</strong> <span id="vb-version">5.1</span></span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> <span id="vb-count">82</span></span>
-    <span><strong>Last updated</strong> <span id="vb-updated">14 August 2026 – build 4.7</span></span>
+    <span><strong>Last updated</strong> <span id="vb-updated">14 August 2026 – build 5.1</span></span>
   </div>
 
-  <h3 class="sub-title">Progress</h3>
+  <h3 class="sub-title">New here? Start with these</h3>
+  <div class="home-cards">
+    <div class="home-card" onclick="showSection('registry')"><div class="hc-title">Process registry</div><div class="hc-desc">Every process in one searchable, filterable table. The fastest way to find a specific SOP.</div></div>
+    <div class="home-card" onclick="showSection('strategy')"><div class="hc-title">Strategy and judgement</div><div class="hc-desc">The thinking behind the work – brand character, decision rules and the final-review test. Read this first.</div></div>
+    <div class="home-card" onclick="showSection('creating-with-claude')"><div class="hc-title">Creating with Claude</div><div class="hc-desc">How this handbook was built, and how to work with Claude on your own projects.</div></div>
+    <div class="home-card" onclick="showSection('contact-book')"><div class="hc-title">Contact book</div><div class="hc-desc">The team, agencies, suppliers and portfolio marketing contacts – searchable.</div></div>
+  </div>
+
+  <h3 class="sub-title">Common tasks</h3>
+  <div class="home-cards">
+    <div class="home-card" onclick="showSection('p013')"><div class="hc-title">Share portfolio news</div><div class="hc-desc">The three-tier model – repost, LinkedIn, or website.</div></div>
+    <div class="home-card" onclick="showSection('p084')"><div class="hc-title">Draft a piece for review</div><div class="hc-desc">Build the Word document that goes to sign-off.</div></div>
+    <div class="home-card" onclick="showSection('p030')"><div class="hc-title">Run an origination event</div><div class="hc-desc">The full 47-task dinner and drinks SOP.</div></div>
+    <div class="home-card" onclick="showSection('p045')"><div class="hc-title">Update the website</div><div class="hc-desc">CMS management and publishing.</div></div>
+    <div class="home-card" onclick="showSection('p007')"><div class="hc-title">Get something signed off</div><div class="hc-desc">The senior approval process and sign-off matrix.</div></div>
+    <div class="home-card" onclick="showSection('p059')"><div class="hc-title">Check house style</div><div class="hc-desc">Tone of voice and writing rules.</div></div>
+  </div>
+
+  <h3 class="sub-title">Shared reference</h3>
+  <p class="sop-para"><a onclick="showSection('contact-book')" style="cursor:pointer;color:var(--bm-coral)">Contact book →</a> · <a onclick="showSection('useful-logins')" style="cursor:pointer;color:var(--bm-coral)">Useful logins →</a> · <a onclick="showSection('useful-links')" style="cursor:pointer;color:var(--bm-coral)">Useful links →</a> · <a onclick="showSection('handover-progress')" style="cursor:pointer;color:var(--bm-coral)">Handover progress and build plan →</a></p>
+
+  <h3 class="sub-title">At a glance</h3>
+  
   <div class="progress-outer"><div class="prog-live" id="prog-live"></div><div class="prog-partial" id="prog-partial"></div></div>
   <div class="stats-row">
     <div class="stat"><div class="stat-number" id="stat-live">0</div><div class="stat-label">Completed</div></div>
@@ -371,86 +402,10 @@
     <div class="stat"><div class="stat-number" id="stat-total">82</div><div class="stat-label">Total processes</div></div>
   </div>
 
-  <h3 class="sub-title">1 – Finish the file scour (this week)</h3>
-  <div class="toolbar"><button class="btn" onclick="resetAllChecks('home')">Reset all plan ticks</button></div>
-  <ul class="checklist"><li><input type="checkbox" id="pl1" onchange="toggleCheck(this)"><label for="pl1">Read the DealCloud contact tiers guide (Marketing > 04 – Events > General > DealCloud) and draft DealCloud SOP content</label><span class="owner">Claude + Maya</span></li>
-<li><input type="checkbox" id="pl2" onchange="toggleCheck(this)"><label for="pl2">Read Event Checklist – Dinners or Drinks.xlsx and build the origination events section</label><span class="owner">Claude + Maya</span></li>
-<li><input type="checkbox" id="pl3" onchange="toggleCheck(this)"><label for="pl3">Read the 2024 LinkedIn Performance Review for reporting / KPI content</label><span class="owner">Claude + Maya</span></li>
-<li><input type="checkbox" id="pl4" onchange="toggleCheck(this)"><label for="pl4">Probe Outlook: approval threads, crisis / no comment examples, alumni newsletter sends</label><span class="owner">Claude + Maya</span></li>
-<li><input type="checkbox" id="pl5" onchange="toggleCheck(this)"><label for="pl5">Probe Teams: Xuti design threads, Brandpie dev support threads</label><span class="owner">Claude + Maya</span></li>
-<li><input type="checkbox" id="pl6" onchange="toggleCheck(this)"><label for="pl6">Verify recovered AGM SOP against current arrangements (2023 source)</label><span class="owner">Maya</span></li></ul>
-  <h3 class="sub-title">Outstanding for Maya</h3>
-  <p class="sop-para">Specific to-dos surfaced during the handover reviews – things only Maya can complete (account moves, decisions, source material, guides to record). Each links to the page it affects.</p>
-  <div class="toolbar"><button class="btn" onclick="resetAllChecks('home')">Reset (affects all plan ticks)</button></div>
-  <ul class="checklist">
-<li><input type="checkbox" id="om1" onchange="toggleCheck(this)"><label for="om1">Supply the two award URLs (Emerging Markets / British PE Awards; Real Deals PE Awards) to link on the page and Useful links (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p027')">Awards submissions →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om2" onchange="toggleCheck(this)"><label for="om2">Move the WeTransfer account to the marketing email address and confirm the login (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p056')">WeTransfer →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om3" onchange="toggleCheck(this)"><label for="om3">Move the Vimeo account to the generic marketing email address and confirm the login (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om4" onchange="toggleCheck(this)"><label for="om4">Record a guide for the Glassdoor macro (Scribe → Word export → embed) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p081')">Glassdoor →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om5" onchange="toggleCheck(this)"><label for="om5">Add a generic WeTransfer how-to guide (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p056')">WeTransfer →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om6" onchange="toggleCheck(this)"><label for="om6">Add generic Vimeo management instructions (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om7" onchange="toggleCheck(this)"><label for="om7">Add Brandpie contact details and a website-infrastructure diagram (hosting / image hosting / ownership) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p050')">Hosting and dev support →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om8" onchange="toggleCheck(this)"><label for="om8">Clean up the LinkedIn Report spreadsheet and set the year-end 365-day export reminder (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p054')">LinkedIn admin and analytics →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om9" onchange="toggleCheck(this)"><label for="om9">Event email templates – now built in as a page (Event email templates) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p044')">Event follow-up →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om10" onchange="toggleCheck(this)"><label for="om10">Agree the marketing data bible update process with Sam Price; decide how it ties to the website data check (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om11" onchange="toggleCheck(this)"><label for="om11">Confirm the smaller sector-focused dinner budget (~£3k) with Tom Shelford at next budget review (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p033')">Smaller sector-focused dinner →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om12" onchange="toggleCheck(this)"><label for="om12">Decide the thought-leadership notification flow (who is told when) as the process shifts (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p024')">Thought leadership process →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om13" onchange="toggleCheck(this)"><label for="om13">Decide whether Tone of voice governance is handed over, folded into another role, or removed (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p059')">Tone of voice governance →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om14" onchange="toggleCheck(this)"><label for="om14">Work out how to transfer the Artemis GPT and Brand Guardian skill to a successor (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="om15" onchange="toggleCheck(this)"><label for="om15">Confirm the Sam Price data-audit process, then revisit the website sweep data section (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p049')">Website sweep →</a>)</label><span class="owner">Maya</span></li>
-  </ul>
-
-
-  <h3 class="sub-title">2 – Verbal capture sessions (45–60 min each)</h3>
-  <ul class="checklist"><li><input type="checkbox" id="ps1" onchange="toggleCheck(this)"><label for="ps1">Session 1 – Governance and approvals: senior approvals decision tree, deal team approvals, portfolio contacts, suppliers, escalation, crisis comms</label><span class="owner">Maya + Claude</span></li>
-<li><input type="checkbox" id="ps2" onchange="toggleCheck(this)"><label for="ps2">Session 2 – Origination and other events: flagship / roundtable / drinks / sector dinners, internal, hospitality, third-party, follow-up, AGM verify</label><span class="owner">Maya + Claude</span></li>
-<li><input type="checkbox" id="ps3" onchange="toggleCheck(this)"><label for="ps3">Session 3 – Planning, budget and reporting: annual planning top-up, strategy history, team rhythm, reporting cadence, budget year, info audit</label><span class="owner">Maya + Claude</span></li>
-<li><input type="checkbox" id="ps4" onchange="toggleCheck(this)"><label for="ps4">Session 4 – Digital, data and access: website sweep, Brandpie escalation, SEO, data bible top-up, Glassdoor, passwords handover</label><span class="owner">Maya + Claude</span></li>
-<li><input type="checkbox" id="ps5" onchange="toggleCheck(this)"><label for="ps5">Session 5 – Brand and AI: brand guidelines, tone of voice, slide library, asset library, merchandise, Artemis, Brand Guardian, AI protocol, Zapier</label><span class="owner">Maya + Claude</span></li>
-<li><input type="checkbox" id="ps6" onchange="toggleCheck(this)"><label for="ps6">Session 6 – Quick reference scenarios: portco acquisition, panel appearances, logo / headshot / boilerplate requests, Word and Excel templates</label><span class="owner">Maya + Claude</span></li></ul>
-
-  <h3 class="sub-title">3 – Scribe captures still to record</h3>
-  <ul class="checklist"><li><input type="checkbox" id="pc1" onchange="toggleCheck(this)"><label for="pc1">rss.app – feed management</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc2" onchange="toggleCheck(this)"><label for="pc2">rss.app – daily digest email</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc3" onchange="toggleCheck(this)"><label for="pc3">DealCloud – email campaigns</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc4" onchange="toggleCheck(this)"><label for="pc4">DealCloud – pages</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc5" onchange="toggleCheck(this)"><label for="pc5">DealCloud – event campaign</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc6" onchange="toggleCheck(this)"><label for="pc6">DealCloud – mailing / master lists</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc7" onchange="toggleCheck(this)"><label for="pc7">DealCloud – sequences</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc8" onchange="toggleCheck(this)"><label for="pc8">DealCloud – templates</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc9" onchange="toggleCheck(this)"><label for="pc9">DealCloud – views</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc10" onchange="toggleCheck(this)"><label for="pc10">DealCloud – unsubscribes / hard bounces</label><span class="owner">Lauren</span></li>
-<li><input type="checkbox" id="pc11" onchange="toggleCheck(this)"><label for="pc11">LinkedIn – LinkedIn management</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc12" onchange="toggleCheck(this)"><label for="pc12">LinkedIn – feed management</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc13" onchange="toggleCheck(this)"><label for="pc13">LinkedIn – posts</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc14" onchange="toggleCheck(this)"><label for="pc14">Craft CMS – member area user setup (detailed)</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc15" onchange="toggleCheck(this)"><label for="pc15">Craft CMS – creating / editing team members</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pc16" onchange="toggleCheck(this)"><label for="pc16">Excel macro – updating Glassdoor</label><span class="owner">Xuti</span></li>
-<li><input type="checkbox" id="pc17" onchange="toggleCheck(this)"><label for="pc17">Canva – using templates</label><span class="owner">Xuti</span></li>
-<li><input type="checkbox" id="pc18" onchange="toggleCheck(this)"><label for="pc18">UpSlide – updating existing templates</label><span class="owner">Xuti</span></li></ul>
-
-  <h3 class="sub-title">4 – Close out</h3>
-  <ul class="checklist"><li><input type="checkbox" id="pf1" onchange="toggleCheck(this)"><label for="pf1">Full review pass of all 82 pages (links, owners, sign-offs, wording)</label><span class="owner">Maya + Claude</span></li>
-<li><input type="checkbox" id="pf2" onchange="toggleCheck(this)"><label for="pf2">Walk-through with Alice</label><span class="owner">Maya</span></li>
-<li><input type="checkbox" id="pf3" onchange="toggleCheck(this)"><label for="pf3">Final review with Charles Ind</label><span class="owner">Maya</span></li><li><input type="checkbox" id="pf4" onchange="toggleCheck(this)"><label for="pf4">Export every remaining Scribe guide as a Word document (embeds images) and share for embedding into the handbook</label><span class="owner">Maya</span></li><li><input type="checkbox" id="pf5" onchange="toggleCheck(this)"><label for="pf5">Delete Scribe account – only once all guides are embedded</label><span class="owner">Maya</span></li></ul>
-
-  <h3 class="sub-title">In-progress pages needing completion</h3>
-  <ul class="sop-list plan-links" id="partial-links"></ul>
-
-  <h3 class="sub-title">Scribe guide directory</h3>
-  <div class="callout"><strong>All recorded guides are embedded.</strong> Every guide below lives permanently inside this handbook with screenshots – no dependency on Scribe or hotlinked images. For any new capture: record in Scribe, export as a Word document (this embeds the images), and add it to the handbook before deleting the account.</div>
-  <p class="sop-para">Recorded guides live in Marketing – Documents &gt; 00 – Marketing Playbook &gt; Scribe.</p>
-  <table class="roles"><thead><tr><th>Guide</th><th>In handbook</th><th>Links</th></tr></thead><tbody>
-    <tr><td>How to Publish a Press Release Article</td><td>Website CMS management</td><td><strong>Embedded in handbook ✓</strong></td></tr>
-    <tr><td>Managing Content And User Entries In Bowmark Capital CMS</td><td>Website CMS management</td><td><strong>Embedded in handbook ✓</strong></td></tr>
-    <tr><td>How To Add A New Investment Entry In The Dashboard</td><td>Website investment pages</td><td><strong>Embedded in handbook ✓</strong></td></tr>
-    <tr><td>Starting a new management presentation using UpSlide</td><td>PowerPoint template and UpSlide system</td><td><strong>Embedded in handbook ✓</strong></td></tr>
-    <tr><td>Update Event Pages in GitHub Repository</td><td>GitHub / technical workflows</td><td><strong>Embedded in handbook ✓</strong></td></tr>
-    <tr><td>Updating and Managing PowerPoint Presentation Elements via UpSlide</td><td>Slide library management</td><td><strong>Embedded in handbook ✓</strong></td></tr>
-  </tbody></table>
+  
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Completion reflects how many processes are fully documented. The detailed build plan and outstanding items are on the <a onclick="showSection('handover-progress')" style="cursor:pointer;color:var(--bm-coral)">Handover progress →</a> page.</p>
 </div>
 
-<!-- REGISTRY -->
 <div id="registry" class="section">
   <p class="eyebrow">Process registry</p>
   <h2 class="section-title">All processes</h2>
@@ -5244,6 +5199,168 @@ Every update is judged by one question: could someone who never met the author e
   <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Related: how this handbook is kept up to date is covered in the action plan. For Bowmark’s own custom Claude tools, see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a> and <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p071')">Brand guardian →</a>.</p>
 </div>
 
+<!-- CONTACT BOOK -->
+<div id="contact-book" class="section">
+  <a class="back-link" onclick="showSection('home')">← Back to action plan</a>
+  <p class="eyebrow">Shared reference</p>
+  <h2 class="section-title">Contact book</h2>
+  <p class="sop-para">Marketing contacts in one place – the internal team, external agencies and suppliers, and portfolio-company marketing contacts. Use the search box to filter across every table at once. Account logins and passwords are not held here – see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>.</p>
+
+  <div class="toolbar" style="margin-bottom:16px">
+    <input id="cb-search" type="text" placeholder="Search contacts (name, company, role…)" oninput="filterContacts()"
+      style="width:100%;max-width:420px;box-sizing:border-box;padding:10px 13px;border:1px solid var(--bm-line,#d9d7de);border-radius:8px;font-family:var(--font-body);font-size:14px;">
+    <div id="cb-noresults" style="display:none;color:var(--bm-lilacgrey);margin-top:10px;font-size:13px;">No contacts match that search.</div>
+  </div>
+
+  <h3 class="sub-title cb-head">External – media, PR and comms</h3>
+  <table class="roles cb-table"><thead><tr><th>Supplier</th><th>Service</th><th>Main contact</th><th>Details</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="h-advisors pr agency  pr"><td><strong>H-Advisors</strong></td><td>PR agency</td><td>–</td><td>media inbox</td></tr><tr class="cb-row" style="opacity:0.55" data-search="caroline cecil pr (previous) caroline cecil pr inactive"><td><strong>Caroline Cecil</strong> <span style="font-size:11px;color:var(--bm-lilacgrey)">(retired)</span></td><td>PR – our previous PR person, now retired. Kept for reference only: if you see her mentioned in old material, this is who she was.</td><td>Caroline Cecil</td><td>ccecil@carolinececil.co.uk · +44 20 7610 4110</td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title cb-head">External – merchandise and printers</h3>
+  <table class="roles cb-table"><thead><tr><th>Supplier</th><th>Service</th><th>Main contact</th><th>Details</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="identityprint printers – agm books, event booklets, binding covers sean ellis print agm booklet"><td><strong>Identityprint</strong></td><td>Printers – AGM books, event booklets, binding covers</td><td>Sean Ellis</td><td>sean@identityprint.co.uk · 01892 837989</td></tr><tr class="cb-row" data-search="kallkwik quick printing – business cards, greetings cards, name badges, table-plan foam boards kay lynch print quick business cards badges"><td><strong>KallKwik</strong></td><td>Quick printing – business cards, greetings cards, name badges, table-plan foam boards</td><td>Kay Lynch</td><td>kay@kkstjames.london · 020 7930 1976</td></tr><tr class="cb-row" data-search="steel city branded pens / merchandise james biggin pens merchandise"><td><strong>Steel City</strong></td><td>Branded pens / merchandise</td><td>James Biggin</td><td>james@steel-city.co.uk</td></tr><tr class="cb-row" data-search="veritas gifts bags (previous) holly james bags inactive"><td><strong>Veritas Gifts</strong></td><td>Bags (tote bags – see note)</td><td>Holly James</td><td>holly@veritasgifts.co.uk · 01483 281 417</td></tr><tr class="cb-row cb-hist" data-search="veritas gifts bags (previous) holly james bags inactive"><td colspan="4" style="padding-top:0"><details class="visual-guide" style="margin:0"><summary>Note on using Veritas</summary><div style="font-size:13px;padding:8px 4px;color:var(--bm-blue)">Used for the tote bags. <strong>Not recommended for a new project</strong> – the process was too complicated, with a lot of back and forth to get it right. However, if we simply want to <strong>restock the existing bags</strong>, use them (they already have the artwork and specification).</div></details></td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title cb-head">External – subscriptions</h3>
+  <table class="roles cb-table"><thead><tr><th>Supplier</th><th>Service</th><th>Main contact</th><th>Details</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="megabuyte data / subscription lauren robinson-stanley subscription data"><td><strong>Megabuyte</strong></td><td>Data / subscription</td><td>Lauren Robinson-Stanley</td><td>lauren.robinson-stanley@megabuyte.com</td></tr><tr class="cb-row" data-search="pei subscription louise f subscription"><td><strong>PEI</strong></td><td>Subscription</td><td>Louise F</td><td>louise.f@pei.group</td></tr><tr class="cb-row" data-search="real deals subscription / awards ram kumar subscription awards"><td><strong>Real Deals</strong></td><td>Subscription / awards</td><td>Ram Kumar</td><td>ram.kumar@realdealsmedia.com</td></tr><tr class="cb-row" data-search="unquote digital subscription  subscription"><td><strong>Unquote</strong></td><td>Digital subscription</td><td>–</td><td>–</td></tr><tr class="cb-row" data-search="mergermarket digital subscription  subscription"><td><strong>Mergermarket</strong></td><td>Digital subscription</td><td>–</td><td>–</td></tr><tr class="cb-row" data-search="private equity news digital & print subscription  subscription"><td><strong>Private Equity News</strong></td><td>Digital &amp; print subscription</td><td>–</td><td>–</td></tr><tr class="cb-row" data-search="financial times digital subscription  subscription"><td><strong>Financial Times</strong></td><td>Digital subscription</td><td>–</td><td>–</td></tr><tr class="cb-row" data-search="capital economics digital subscription  subscription"><td><strong>Capital Economics</strong></td><td>Digital subscription</td><td>–</td><td>–</td></tr><tr class="cb-row" data-search="bvca digital subscription  subscription"><td><strong>BVCA</strong></td><td>Digital subscription</td><td>–</td><td>achester@bowmark.com</td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title cb-head">External – website and digital</h3>
+  <table class="roles cb-table"><thead><tr><th>Supplier</th><th>Service</th><th>Main contact</th><th>Details</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="brandpie branding & web agency nicky campbell website hosting brand refresh"><td><strong>Brandpie</strong></td><td>Branding &amp; web agency</td><td>Nicky Campbell</td><td>nicky.campbell@brandpie.com · 020 7831 4834</td></tr><tr class="cb-row cb-hist" data-search="brandpie branding & web agency nicky campbell website hosting brand refresh"><td colspan="4" style="padding-top:0"><details class="visual-guide" style="margin:0"><summary>What they’ve done for us</summary><div style="font-size:13px;padding:8px 4px;color:var(--bm-blue)">Delivered the 2019 brand refresh, built the Bowmark website, and continues to provide website maintenance and development support. Hosting is via Servd (since May 2025).</div></details></td></tr><tr class="cb-row" data-search="dealcloud crm / campaigns / dispatch email jordan lee crm campaigns email"><td><strong>DealCloud</strong></td><td>CRM / campaigns / Dispatch email</td><td>Jordan Lee</td><td>jlee@dealcloud.com</td></tr><tr class="cb-row" data-search="hootsuite social scheduling  social digital"><td><strong>Hootsuite</strong></td><td>Social scheduling</td><td>–</td><td>–</td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title cb-head">External – event production</h3>
+  <table class="roles cb-table"><thead><tr><th>Supplier</th><th>Service</th><th>Main contact</th><th>Details</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="psp event production martin court event production av"><td><strong>PSP</strong></td><td>Event production</td><td>Martin Court</td><td>mpc@pspav.com · 0121 486 3288</td></tr><tr class="cb-row" data-search="jla speakers agency rory wilson (also brogan) speakers"><td><strong>JLA</strong></td><td>Speakers agency</td><td>Rory Wilson (also Brogan)</td><td>rorywilson@jla.co.uk · +44 (0)20 7907 2800</td></tr><tr class="cb-row cb-hist" data-search="jla speakers agency rory wilson (also brogan) speakers"><td colspan="4" style="padding-top:0"><details class="visual-guide" style="margin:0"><summary>What they’ve done for us</summary><div style="font-size:13px;padding:8px 4px;color:var(--bm-blue)">Supplied Bronwen Maddox (Director and CEO, Chatham House) as after-dinner speaker for the New World Order roundtable.</div></details></td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title cb-head">External – film and photography</h3>
+  <table class="roles cb-table"><thead><tr><th>Supplier</th><th>Service</th><th>Main contact</th><th>Details</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="nick wilson photography photographer nick wilson photography photographer"><td><strong>Nick Wilson Photography</strong></td><td>Photographer</td><td>Nick Wilson</td><td>nick@nickwilsonphoto.com · +44 (0)7772 311 888</td></tr><tr class="cb-row cb-hist" data-search="nick wilson photography photographer nick wilson photography photographer"><td colspan="4" style="padding-top:0"><details class="visual-guide" style="margin:0"><summary>What they’ve done for us</summary><div style="font-size:13px;padding:8px 4px;color:var(--bm-blue)">Has done all Bowmark photography since the 2019 brand refresh – team headshots (twice-yearly cadence), reportage and event photography.</div></details></td></tr><tr class="cb-row" data-search="greg woodward video – recommended for agm case study videos greg woodward video film agm case study greg woodward"><td><strong>Greg Woodward</strong></td><td>Video – recommended for AGM case study videos</td><td>Greg Woodward</td><td>–</td></tr><tr class="cb-row cb-hist" data-search="greg woodward video – recommended for agm case study videos greg woodward video film agm case study greg woodward"><td colspan="4" style="padding-top:0"><details class="visual-guide" style="margin:0"><summary>What they’ve done for us</summary><div style="font-size:13px;padding:8px 4px;color:var(--bm-blue)">Recommended supplier for AGM case study videos. Previous work for us: the Altia AGM video.</div></details></td></tr><tr class="cb-row" data-search="ellie tobin make-up & hair (primary) ellie tobin makeup hair"><td><strong>Ellie Tobin</strong></td><td>Make-up &amp; hair (primary)</td><td>Ellie Tobin</td><td>ellie@ellietobin.com · 07815 777987</td></tr><tr class="cb-row" data-search="claudia savage make-up & hair (backup) claudia savage makeup hair"><td><strong>Claudia Savage</strong></td><td>Make-up &amp; hair (backup)</td><td>Claudia Savage</td><td>claudia@claudiasavage.co.uk · +44 (0)7921 820 327</td></tr><tr class="cb-row" data-search="tracc video production (previous) richard kaye video inactive"><td><strong>Tracc</strong></td><td>Video production (previous)</td><td>Richard Kaye</td><td>richard.kaye@tracc.co.uk · 0207 234 3534</td></tr><tr class="cb-row" data-search="ideal insight video production (previous) nick twigg video inactive"><td><strong>Ideal Insight</strong></td><td>Video production (previous)</td><td>Nick Twigg</td><td>nick.twigg@idealinsight.co.uk</td></tr>
+  </tbody></table>
+
+  <h3 class="sub-title cb-head">Portfolio company marketing contacts</h3>
+  <p class="sop-para" style="font-size:12px;color:var(--bm-lilacgrey)">Used when portfolio news needs company sign-off (see <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p013')">Portfolio news →</a>). Deal team and VCT columns use initials. Where a marketing contact is blank, there isn’t a dedicated one – route via the deal team.</p>
+  <div style="overflow-x:auto">
+  <table class="roles cb-table"><thead><tr><th>Company</th><th>Fund</th><th>Invested</th><th>Business model</th><th>Marketing contact</th><th>Deal team</th><th>VCT</th></tr></thead><tbody>
+  <tr class="cb-row" data-search="altia   software bgp"><td><strong>Altia</strong></td><td>BGP</td><td>24/01/2025</td><td>Software</td><td>–</td><td style="font-size:12px">DT / LC / IL</td><td style="font-size:12px">SP</td></tr><tr class="cb-row" data-search="bcis samantha moore marketing director data and insight bcp vii"><td><strong>BCIS</strong></td><td>BCP VII</td><td>08/05/2026</td><td>Data and insight</td><td>Samantha Moore<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Marketing Director</span><br><a href="mailto:smoore@bcis.co.uk">smoore@bcis.co.uk</a></td><td style="font-size:12px">TS / SK / BC / FS</td><td style="font-size:12px">SM</td></tr><tr class="cb-row" data-search="cornwall insight vicky haverson marketing manager data and insight bgp"><td><strong>Cornwall Insight</strong></td><td>BGP</td><td>24/06/2022</td><td>Data and insight</td><td>Vicky Haverson<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Marketing Manager</span><br><a href="mailto:v.haverson@cornwall-insight.com">v.haverson@cornwall-insight.com</a></td><td style="font-size:12px">RS</td><td style="font-size:12px">SB</td></tr><tr class="cb-row" data-search="cubelogic felecia hancock global marketing manager software bcp vi"><td><strong>CubeLogic</strong></td><td>BCP VI</td><td>15/02/2024</td><td>Software</td><td>Felecia Hancock<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Global Marketing Manager</span><br><a href="mailto:felecia.hancock@cubelogic.com">felecia.hancock@cubelogic.com</a></td><td style="font-size:12px">MI / BC</td><td style="font-size:12px">SM</td></tr><tr class="cb-row" data-search="eque2 chloe hughes head of marketing software bcp vii"><td><strong>Eque2</strong></td><td>BCP VII</td><td>29/05/2024</td><td>Software</td><td>Chloe Hughes<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Head of Marketing</span><br><a href="mailto:chloe.hughes@eque2.com">chloe.hughes@eque2.com</a></td><td style="font-size:12px">SK / TK / FS</td><td style="font-size:12px">SM / SB</td></tr><tr class="cb-row" data-search="focus group sonia older brand and campaign manager managed it services bcp vii"><td><strong>Focus Group</strong></td><td>BCP VII</td><td>14/10/2024</td><td>Managed IT services</td><td>Sonia Older<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Brand and Campaign Manager</span><br><a href="mailto:sonia.older@focusgroup.co.uk">sonia.older@focusgroup.co.uk</a></td><td style="font-size:12px">TS / TK / MG</td><td style="font-size:12px">–</td></tr><tr class="cb-row" data-search="infraxmedia tbc tbc – bcp vii"><td><strong>InfraXmedia</strong></td><td>BCP VII</td><td>TBC</td><td>–</td><td>TBC</td><td style="font-size:12px">SD / FM / JL / BC / MG / MA</td><td style="font-size:12px">–</td></tr><tr class="cb-row" data-search="kubrick group matthew rayner head of marketing tech-enabled business services bcp vi"><td><strong>Kubrick Group</strong></td><td>BCP VI</td><td>16/11/2021</td><td>Tech-enabled business services</td><td>Matthew Rayner<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Head of Marketing</span><br><a href="mailto:matthewrayner@kubrickgroup.com">matthewrayner@kubrickgroup.com</a></td><td style="font-size:12px">TS / AC / OR</td><td style="font-size:12px">BH / MH</td></tr><tr class="cb-row" data-search="lendscape lenore gibson head of marketing software bcp vi"><td><strong>Lendscape</strong></td><td>BCP VI</td><td>17/07/2023</td><td>Software</td><td>Lenore Gibson<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Head of Marketing</span><br><a href="mailto:Lenore.Gibson@lendscape.com">Lenore.Gibson@lendscape.com</a></td><td style="font-size:12px">TS / SK / JL</td><td style="font-size:12px">BH / SB</td></tr><tr class="cb-row" data-search="littlefish bill griffiths head of marketing managed it services bcp vi"><td><strong>Littlefish</strong></td><td>BCP VI</td><td>02/09/2022</td><td>Managed IT services</td><td>Bill Griffiths<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Head of Marketing</span><br><a href="mailto:Bill.Griffiths@littlefish.co.uk">Bill.Griffiths@littlefish.co.uk</a></td><td style="font-size:12px">SD / SK / AL / MA</td><td style="font-size:12px">MH</td></tr><tr class="cb-row" data-search="pirum markus coleman marketing director software bcp vi"><td><strong>Pirum</strong></td><td>BCP VI</td><td>19/04/2019</td><td>Software</td><td>Markus Coleman<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Marketing Director</span><br><a href="mailto:markus.coleman@pirum.com">markus.coleman@pirum.com</a></td><td style="font-size:12px">FM / RP</td><td style="font-size:12px">SB</td></tr><tr class="cb-row" data-search="sfg20 tbc tbc – bcp vii"><td><strong>SFG20</strong></td><td>BCP VII</td><td>TBC</td><td>–</td><td>TBC</td><td style="font-size:12px">TS / TK / FM / FS</td><td style="font-size:12px">MH</td></tr><tr class="cb-row" data-search="transparity   managed it services bcp vii"><td><strong>Transparity</strong></td><td>BCP VII</td><td>26/09/2024</td><td>Managed IT services</td><td>–</td><td style="font-size:12px">SD / FM / RP</td><td style="font-size:12px">MH</td></tr><tr class="cb-row" data-search="turnkey   software bgp"><td><strong>Turnkey</strong></td><td>BGP</td><td>02/08/2024</td><td>Software</td><td>–</td><td style="font-size:12px">TE / GY / LC</td><td style="font-size:12px">SP</td></tr><tr class="cb-row" data-search="wsd aneliese hirst external software bcp vi"><td><strong>WSD</strong></td><td>BCP VI</td><td>20/04/2022</td><td>Software</td><td>Aneliese Hirst<br><span style="font-size:11px;color:var(--bm-lilacgrey)">External</span><br><a href="mailto:aneliese.hirst@wsd.com">aneliese.hirst@wsd.com</a></td><td style="font-size:12px">TS / MI / JL</td><td style="font-size:12px">BH</td></tr><tr class="cb-row" data-search="xperience kristina king head of marketing managed it services bgp"><td><strong>Xperience</strong></td><td>BGP</td><td>08/11/2022</td><td>Managed IT services</td><td>Kristina King<br><span style="font-size:11px;color:var(--bm-lilacgrey)">Head of Marketing</span><br><a href="mailto:kristina.king@xperience-group.com">kristina.king@xperience-group.com</a></td><td style="font-size:12px">TE</td><td style="font-size:12px">–</td></tr>
+  </tbody></table>
+  </div>
+
+  <div class="callout"><strong>Keeping this current.</strong> Update when a supplier, portfolio contact or team member changes. Logins live on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-logins')">Useful logins →</a>; supplier links on <a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('useful-links')">Useful links →</a>. Source: Marketing Suppliers and Portfolio lead contacts.</div>
+</div>
+<script>
+function filterContacts(){
+  var q=(document.getElementById('cb-search').value||'').toLowerCase().trim();
+  var any=false;
+  document.querySelectorAll('#contact-book .cb-row').forEach(function(r){
+    var hit = !q || (r.getAttribute('data-search')||'').indexOf(q)>-1;
+    r.style.display = hit ? '' : 'none';
+    if(hit) any=true;
+  });
+  // hide a table + its heading if it has no visible rows
+  document.querySelectorAll('#contact-book .cb-table').forEach(function(t){
+    var visible=[...t.querySelectorAll('.cb-row')].some(function(r){return r.style.display!=='none';});
+    t.style.display = visible ? '' : 'none';
+    var h=t.previousElementSibling;
+    // walk back to the nearest cb-head
+    while(h && !h.classList.contains('cb-head')) h=h.previousElementSibling;
+    if(h) h.style.display = visible ? '' : 'none';
+  });
+  var nr=document.getElementById('cb-noresults'); if(nr) nr.style.display = any ? 'none' : 'block';
+}
+</script>
+
+
+<!-- HANDOVER PROGRESS -->
+<div id="handover-progress" class="section">
+  <a class="back-link" onclick="showSection('home')">← Back to action plan</a>
+  <p class="eyebrow">Getting started</p>
+  <h2 class="section-title">Handover progress and build plan</h2>
+  <p class="sop-para">The working plan for completing the handbook before handover – the file scour, outstanding items for Maya, verbal capture sessions, Scribe captures still to record, and close-out. Ticks are saved in this browser.</p>
+<h3 class="sub-title">1 – Finish the file scour (this week)</h3>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('home')">Reset all plan ticks</button></div>
+  <ul class="checklist"><li><input type="checkbox" id="pl1" onchange="toggleCheck(this)"><label for="pl1">Read the DealCloud contact tiers guide (Marketing > 04 – Events > General > DealCloud) and draft DealCloud SOP content</label><span class="owner">Claude + Maya</span></li>
+<li><input type="checkbox" id="pl2" onchange="toggleCheck(this)"><label for="pl2">Read Event Checklist – Dinners or Drinks.xlsx and build the origination events section</label><span class="owner">Claude + Maya</span></li>
+<li><input type="checkbox" id="pl3" onchange="toggleCheck(this)"><label for="pl3">Read the 2024 LinkedIn Performance Review for reporting / KPI content</label><span class="owner">Claude + Maya</span></li>
+<li><input type="checkbox" id="pl4" onchange="toggleCheck(this)"><label for="pl4">Probe Outlook: approval threads, crisis / no comment examples, alumni newsletter sends</label><span class="owner">Claude + Maya</span></li>
+<li><input type="checkbox" id="pl5" onchange="toggleCheck(this)"><label for="pl5">Probe Teams: Xuti design threads, Brandpie dev support threads</label><span class="owner">Claude + Maya</span></li>
+<li><input type="checkbox" id="pl6" onchange="toggleCheck(this)"><label for="pl6">Verify recovered AGM SOP against current arrangements (2023 source)</label><span class="owner">Maya</span></li></ul>
+  <h3 class="sub-title">Outstanding for Maya</h3>
+  <p class="sop-para">Specific to-dos surfaced during the handover reviews – things only Maya can complete (account moves, decisions, source material, guides to record). Each links to the page it affects.</p>
+  <div class="toolbar"><button class="btn" onclick="resetAllChecks('home')">Reset (affects all plan ticks)</button></div>
+  <ul class="checklist">
+<li><input type="checkbox" id="om1" onchange="toggleCheck(this)"><label for="om1">Supply the two award URLs (Emerging Markets / British PE Awards; Real Deals PE Awards) to link on the page and Useful links (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p027')">Awards submissions →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om2" onchange="toggleCheck(this)"><label for="om2">Move the WeTransfer account to the marketing email address and confirm the login (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p056')">WeTransfer →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om3" onchange="toggleCheck(this)"><label for="om3">Move the Vimeo account to the generic marketing email address and confirm the login (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om4" onchange="toggleCheck(this)"><label for="om4">Record a guide for the Glassdoor macro (Scribe → Word export → embed) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p081')">Glassdoor →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om5" onchange="toggleCheck(this)"><label for="om5">Add a generic WeTransfer how-to guide (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p056')">WeTransfer →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om6" onchange="toggleCheck(this)"><label for="om6">Add generic Vimeo management instructions (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p055')">Vimeo →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om7" onchange="toggleCheck(this)"><label for="om7">Add Brandpie contact details and a website-infrastructure diagram (hosting / image hosting / ownership) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p050')">Hosting and dev support →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om8" onchange="toggleCheck(this)"><label for="om8">Clean up the LinkedIn Report spreadsheet and set the year-end 365-day export reminder (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p054')">LinkedIn admin and analytics →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om9" onchange="toggleCheck(this)"><label for="om9">Event email templates – now built in as a page (Event email templates) (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p044')">Event follow-up →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om10" onchange="toggleCheck(this)"><label for="om10">Agree the marketing data bible update process with Sam Price; decide how it ties to the website data check (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p080')">Data bible update →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om11" onchange="toggleCheck(this)"><label for="om11">Confirm the smaller sector-focused dinner budget (~£3k) with Tom Shelford at next budget review (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p033')">Smaller sector-focused dinner →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om12" onchange="toggleCheck(this)"><label for="om12">Decide the thought-leadership notification flow (who is told when) as the process shifts (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p024')">Thought leadership process →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om13" onchange="toggleCheck(this)"><label for="om13">Decide whether Tone of voice governance is handed over, folded into another role, or removed (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p059')">Tone of voice governance →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om14" onchange="toggleCheck(this)"><label for="om14">Work out how to transfer the Artemis GPT and Brand Guardian skill to a successor (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p070')">Artemis →</a>)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="om15" onchange="toggleCheck(this)"><label for="om15">Confirm the Sam Price data-audit process, then revisit the website sweep data section (<a style="cursor:pointer;color:var(--bm-coral)" onclick="showSection('p049')">Website sweep →</a>)</label><span class="owner">Maya</span></li>
+  </ul>
+
+
+  <h3 class="sub-title">2 – Verbal capture sessions (45–60 min each)</h3>
+  <ul class="checklist"><li><input type="checkbox" id="ps1" onchange="toggleCheck(this)"><label for="ps1">Session 1 – Governance and approvals: senior approvals decision tree, deal team approvals, portfolio contacts, suppliers, escalation, crisis comms</label><span class="owner">Maya + Claude</span></li>
+<li><input type="checkbox" id="ps2" onchange="toggleCheck(this)"><label for="ps2">Session 2 – Origination and other events: flagship / roundtable / drinks / sector dinners, internal, hospitality, third-party, follow-up, AGM verify</label><span class="owner">Maya + Claude</span></li>
+<li><input type="checkbox" id="ps3" onchange="toggleCheck(this)"><label for="ps3">Session 3 – Planning, budget and reporting: annual planning top-up, strategy history, team rhythm, reporting cadence, budget year, info audit</label><span class="owner">Maya + Claude</span></li>
+<li><input type="checkbox" id="ps4" onchange="toggleCheck(this)"><label for="ps4">Session 4 – Digital, data and access: website sweep, Brandpie escalation, SEO, data bible top-up, Glassdoor, passwords handover</label><span class="owner">Maya + Claude</span></li>
+<li><input type="checkbox" id="ps5" onchange="toggleCheck(this)"><label for="ps5">Session 5 – Brand and AI: brand guidelines, tone of voice, slide library, asset library, merchandise, Artemis, Brand Guardian, AI protocol, Zapier</label><span class="owner">Maya + Claude</span></li>
+<li><input type="checkbox" id="ps6" onchange="toggleCheck(this)"><label for="ps6">Session 6 – Quick reference scenarios: portco acquisition, panel appearances, logo / headshot / boilerplate requests, Word and Excel templates</label><span class="owner">Maya + Claude</span></li></ul>
+
+  <h3 class="sub-title">3 – Scribe captures still to record</h3>
+  <ul class="checklist"><li><input type="checkbox" id="pc1" onchange="toggleCheck(this)"><label for="pc1">rss.app – feed management</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc2" onchange="toggleCheck(this)"><label for="pc2">rss.app – daily digest email</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc3" onchange="toggleCheck(this)"><label for="pc3">DealCloud – email campaigns</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc4" onchange="toggleCheck(this)"><label for="pc4">DealCloud – pages</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc5" onchange="toggleCheck(this)"><label for="pc5">DealCloud – event campaign</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc6" onchange="toggleCheck(this)"><label for="pc6">DealCloud – mailing / master lists</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc7" onchange="toggleCheck(this)"><label for="pc7">DealCloud – sequences</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc8" onchange="toggleCheck(this)"><label for="pc8">DealCloud – templates</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc9" onchange="toggleCheck(this)"><label for="pc9">DealCloud – views</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc10" onchange="toggleCheck(this)"><label for="pc10">DealCloud – unsubscribes / hard bounces</label><span class="owner">Lauren</span></li>
+<li><input type="checkbox" id="pc11" onchange="toggleCheck(this)"><label for="pc11">LinkedIn – LinkedIn management</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc12" onchange="toggleCheck(this)"><label for="pc12">LinkedIn – feed management</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc13" onchange="toggleCheck(this)"><label for="pc13">LinkedIn – posts</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc14" onchange="toggleCheck(this)"><label for="pc14">Craft CMS – member area user setup (detailed)</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc15" onchange="toggleCheck(this)"><label for="pc15">Craft CMS – creating / editing team members</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pc16" onchange="toggleCheck(this)"><label for="pc16">Excel macro – updating Glassdoor</label><span class="owner">Xuti</span></li>
+<li><input type="checkbox" id="pc17" onchange="toggleCheck(this)"><label for="pc17">Canva – using templates</label><span class="owner">Xuti</span></li>
+<li><input type="checkbox" id="pc18" onchange="toggleCheck(this)"><label for="pc18">UpSlide – updating existing templates</label><span class="owner">Xuti</span></li></ul>
+
+  <h3 class="sub-title">4 – Close out</h3>
+  <ul class="checklist"><li><input type="checkbox" id="pf1" onchange="toggleCheck(this)"><label for="pf1">Full review pass of all 82 pages (links, owners, sign-offs, wording)</label><span class="owner">Maya + Claude</span></li>
+<li><input type="checkbox" id="pf2" onchange="toggleCheck(this)"><label for="pf2">Walk-through with Alice</label><span class="owner">Maya</span></li>
+<li><input type="checkbox" id="pf3" onchange="toggleCheck(this)"><label for="pf3">Final review with Charles Ind</label><span class="owner">Maya</span></li><li><input type="checkbox" id="pf4" onchange="toggleCheck(this)"><label for="pf4">Export every remaining Scribe guide as a Word document (embeds images) and share for embedding into the handbook</label><span class="owner">Maya</span></li><li><input type="checkbox" id="pf5" onchange="toggleCheck(this)"><label for="pf5">Delete Scribe account – only once all guides are embedded</label><span class="owner">Maya</span></li></ul>
+
+  <h3 class="sub-title">In-progress pages needing completion</h3>
+  <ul class="sop-list plan-links" id="partial-links"></ul>
+
+  <h3 class="sub-title">Scribe guide directory</h3>
+  <div class="callout"><strong>All recorded guides are embedded.</strong> Every guide below lives permanently inside this handbook with screenshots – no dependency on Scribe or hotlinked images. For any new capture: record in Scribe, export as a Word document (this embeds the images), and add it to the handbook before deleting the account.</div>
+  <p class="sop-para">Recorded guides live in Marketing – Documents &gt; 00 – Marketing Playbook &gt; Scribe.</p>
+  <table class="roles"><thead><tr><th>Guide</th><th>In handbook</th><th>Links</th></tr></thead><tbody>
+    <tr><td>How to Publish a Press Release Article</td><td>Website CMS management</td><td><strong>Embedded in handbook ✓</strong></td></tr>
+    <tr><td>Managing Content And User Entries In Bowmark Capital CMS</td><td>Website CMS management</td><td><strong>Embedded in handbook ✓</strong></td></tr>
+    <tr><td>How To Add A New Investment Entry In The Dashboard</td><td>Website investment pages</td><td><strong>Embedded in handbook ✓</strong></td></tr>
+    <tr><td>Starting a new management presentation using UpSlide</td><td>PowerPoint template and UpSlide system</td><td><strong>Embedded in handbook ✓</strong></td></tr>
+    <tr><td>Update Event Pages in GitHub Repository</td><td>GitHub / technical workflows</td><td><strong>Embedded in handbook ✓</strong></td></tr>
+    <tr><td>Updating and Managing PowerPoint Presentation Elements via UpSlide</td><td>Slide library management</td><td><strong>Embedded in handbook ✓</strong></td></tr>
+  </tbody></table>
+
+</div>
+
 <!-- GENERIC PLACEHOLDER -->
 <div id="process-placeholder" class="section">
   <a class="back-link" onclick="showSection('registry')">← Back to registry</a>
@@ -5339,7 +5456,7 @@ const processes = [
 ];
 
 // IDs with fully built dedicated sections
-const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','p084','p085','p086','p087','p088','creating-with-claude','strategy','useful-logins','useful-links','process-placeholder']);
+const dedicatedSections = new Set(['home','registry','p001','p002','p003','p004','p012','p013','p014','p015','p016','p017','p018','p018-checklist','p019','p020','p021','p024','p025','p026','p027','p030','p033','p034','p043','p045','p046','p047','p051','p060','p061','p063','p064','p065','p066','p067','p068','p070','p007','p073','p076','p077','p078','p079','p080','p081','p082','p083','p023','p044','p040','p041','p053','p054','p056','p055','p050','p074','p058','p069','p049','p022','p048','p028','p029','p059','p071','p084','p085','p086','p087','p088','creating-with-claude','strategy','handover-progress','contact-book','useful-logins','useful-links','process-placeholder']);
 
 let activeFilters = {p1:false, live:false, partial:false};
 
@@ -5465,7 +5582,7 @@ function resetAllChecks(sectionId){
 
 buildRegistry(processes);
 // Build stamp - single source of truth. Update BUILD and UPDATED together on every revision.
-const BUILD='4.7';
+const BUILD='5.1';
 const UPDATED='14 August 2026';
 (function(){
   var v=document.getElementById('vb-version'); if(v)v.textContent=BUILD;
