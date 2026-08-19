@@ -183,6 +183,8 @@
   .rr-chip:hover{border-color:var(--bm-coral);}
   .rr-chip-active{background:var(--bm-blue);color:#fff;border-color:var(--bm-blue);}
   .rr-table td{vertical-align:top;}
+
+  
 </style>
 </head>
 <body>
@@ -247,7 +249,7 @@
   <a class="nav-item" onclick="showSection('strategy')">Strategy and judgement</a>
   <a class="nav-item" onclick="showSection('creating-with-claude')">Creating with Claude</a>
   <a class="nav-item" onclick="showSection('roles')">Roles and responsibilities</a>
-  <a class="nav-item" onclick="showSection('roles','handover-progress')">Handover progress</a>
+  <a class="nav-item" onclick="showSection('handover-progress')">Handover progress</a>
 
   <div class="nav-section-label" onclick="toggleNavSection(this)"><span>Shared reference</span><span class="nav-chevron">▼</span></div>
   <a class="nav-item" onclick="showSection('contact-book')">Contact book</a>
@@ -371,10 +373,10 @@
   <h2 class="section-title">Bowmark marketing handbook</h2>
   <p class="sop-para">The complete reference for how Bowmark’s marketing function works – every process, template, contact and standard, in one place. Use the sidebar to browse by category, the process registry to see everything at a glance, or the search on each page to find what you need.</p>
   <div class="version-bar">
-    <span><strong>Version</strong> <span id="vb-version">6.2</span></span>
+    <span><strong>Version</strong> <span id="vb-version">6.4</span></span>
     <span><strong>Owner</strong> Marketing</span>
     <span><strong>Processes</strong> <span id="vb-count">82</span></span>
-    <span><strong>Last updated</strong> <span id="vb-updated">14 August 2026 – build 6.2</span></span>
+    <span><strong>Last updated</strong> <span id="vb-updated">19 August 2026 – build 6.4</span></span>
   </div>
 
   <h3 class="sub-title">New here? Start with these</h3>
@@ -5546,6 +5548,8 @@ function filterContacts(){
   <h2 class="section-title">Roles and responsibilities</h2>
   <p class="sop-para">Who owns and supports each marketing workstream. Filter by person to see everything someone is involved in, or by category to focus on one area. Hover a name to see that person’s specific role on a workstream. Owners are accountable for the workstream; the people listed under “Team involved” support it.</p>
 
+  
+
   <div class="rr-filters">
     <div class="rr-filter-label">Filter by person</div>
     <div class="rr-chips"><button class="rr-chip rr-chip-active" data-person="" onclick="rrPerson(this)">Everyone</button><button class="rr-chip" data-person="alice fyffe" onclick="rrPerson(this)">Alice Fyffe</button><button class="rr-chip" data-person="anna lee" onclick="rrPerson(this)">Anna Lee</button><button class="rr-chip" data-person="lauren welman" onclick="rrPerson(this)">Lauren Welman</button><button class="rr-chip" data-person="meagan barton" onclick="rrPerson(this)">Meagan Barton</button><button class="rr-chip" data-person="sam price" onclick="rrPerson(this)">Sam Price</button><button class="rr-chip" data-person="xuti zhou" onclick="rrPerson(this)">Xuti Zhou</button></div>
@@ -5808,12 +5812,13 @@ function resetAllChecks(sectionId){
 
 buildRegistry(processes);
 // Build stamp - single source of truth. Update BUILD and UPDATED together on every revision.
-const BUILD='6.2';
-const UPDATED='14 August 2026';
-(function(){
+const BUILD='6.4';
+const UPDATED='19 August 2026';
+function stampVersion(){
   var v=document.getElementById('vb-version'); if(v)v.textContent=BUILD;
   var u=document.getElementById('vb-updated'); if(u)u.textContent=UPDATED+' \u2013 build '+BUILD;
-})();
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stampVersion);}else{stampVersion();}
 // Dynamic process counts
 (function(){
   var n=processes.length;
